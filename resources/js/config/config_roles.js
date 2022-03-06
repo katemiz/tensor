@@ -32,7 +32,7 @@ export const pageprops = {
 
     commands:{
         add:{
-        label:"Add Role"
+          label:"Add Role"
         }
     }
 }

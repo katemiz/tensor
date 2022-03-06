@@ -54,7 +54,7 @@
                 <div class="navbar-dropdown">
                     <a class="navbar-item" href="/bcategory">Business Categories</a>
                     <a class="navbar-item" href="/">Training Categories</a>
-                    <a class="navbar-item" href="/">Professions</a>
+                    <a class="navbar-item" href="/profession">Professions</a>
                     <a class="navbar-item" href="/education">Education</a>
 
                     <hr class="navbar-divider">

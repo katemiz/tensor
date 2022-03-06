@@ -11,12 +11,14 @@ use Illuminate\Support\Facades\Event;
 use App\Models\Education;
 use App\Models\Skill;
 use App\Models\Category;
+use App\Models\Profession;
 use App\Models\Role;
 
 use App\Observers\SkillObserver;
 use App\Observers\EducationObserver;
 use App\Observers\CategoryObserver;
 use App\Observers\RoleObserver;
+use App\Observers\ProfessionObserver;
 
 
 
@@ -44,6 +46,6 @@ class EventServiceProvider extends ServiceProvider
         Education::observe(EducationObserver::class);
         Category::observe(CategoryObserver::class);
         Role::observe(RoleObserver::class);
-
+        Profession::observe(ProfessionObserver::class);
     }
 }
