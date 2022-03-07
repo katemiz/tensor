@@ -2,6 +2,7 @@
 
     import { params,gui } from '@/config/config.js'
     import { pageprops } from '@/config/config_profession.js'
+    import { parseDateTime } from '@/Pages/Shared/Functions/time.js'
 
     import { Inertia } from '@inertiajs/inertia'
     import Layout from '@/Pages/Shared/Layout.svelte'
@@ -35,17 +36,6 @@
         hidden:false
       }
     }
-
-
-
-    function printDate(d) {
-
-      let zaman = new Date(d)
-
-      return zaman.toLocaleString('tr-TR', { timeZone: 'UTC' })
-      //return zaman.getDay()+' '+zaman.getMonth()+' '+zaman.getFullYear()
-    }
-
 
     function handleSort(col,id) {
 
@@ -207,7 +197,7 @@
                     </a>
                   </td>
 
-                  <td>{printDate(item.created_at)}</td>
+                  <td>{parseDateTime(item.created_at)}</td>
 
                   <td class="has-text-right">
                     <a href="/profession/{item.id}" class="icon">
