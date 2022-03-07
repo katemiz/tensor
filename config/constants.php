@@ -1,4 +1,24 @@
 <?php
+
+
+
+
+
+return [
+
+    'table' => [
+        'no_of_results' => 12,
+    ],
+
+];
+
+
+
+
+
+
+
+
 /* 
 return [
 

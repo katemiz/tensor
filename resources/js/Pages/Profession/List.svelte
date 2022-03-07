@@ -15,23 +15,78 @@
     export let notification
   
     let filterquery = filters.search
+    let userid
+    let sortcolumn
+    let sortorder
+    let sortstatus = {
+
+      title:{
+        order:'asc',
+        hidden:false
+      },
+
+      created_by:{
+        order:'asc',
+        hidden:false
+      },
+
+      created_at:{
+        order:'asc',
+        hidden:false
+      }
+    }
+
+
+
+    function printDate(d) {
+
+      let zaman = new Date(d)
+
+      return zaman.toLocaleString('tr-TR', { timeZone: 'UTC' })
+      //return zaman.getDay()+' '+zaman.getMonth()+' '+zaman.getFullYear()
+    }
+
+
+    function handleSort(col,id) {
+
+      sortstatus[col].order = (sortstatus[col].order == 'desc') ? 'asc': 'desc'
+      sortstatus[col].hidden = !sortstatus[col].hidden
+
+      sortcolumn = col
+      sortorder = sortstatus[col].order
+      userid = id
+
+      handleQuery()
+    }
   
+
     function handleQuery () {
-      Inertia.get("/profession",{"search":filterquery}, {
+
+      let params = {}
+
+      params.sortcolumn = sortcolumn
+      params.sortorder = sortorder
+
+      if (filterquery) {
+        params.search = filterquery
+      }
+
+      if (userid) {
+        params.userid = userid
+      }
+
+      Inertia.get("/profession",params, {
         preserveState:true
       })
     }
   
+
     function handleReset () {
       filterquery = ''
       Inertia.get("/profession")
     }
-  
-  
-  
-  </script>
-  
-  
+
+  </script> 
   
   
   <svelte:head>
@@ -71,10 +126,11 @@
       <!-- ************************ -->
   
       <div class="columns is-mobile">
-        <div class="column is-4 is-offset-8">
+
+        <div class="column">
   
           <!-- Filter Tree Search Box -->
-          <div class="field has-addons is-fullwidth">
+          <div class="field has-addons is-fullwidth is-pulled-right">
   
               <p class="control has-icons-left has-icons-right">
                   <input class="input" type="text" placeholder="{pageprops.table.filter.placeholder}" bind:value={filterquery} on:input="{handleQuery}">
@@ -101,12 +157,36 @@
         <!-- ************************ -->
   
         <table class="table is-fullwidth">
+
+          <caption>Total <b>{professions.total}</b> Results</caption>
   
           <thead>
             <tr>
-              <th>Id</th>
-              <th>Profession Title</th>
-              <th>Created At</th>
+              <th>
+                <span class="icon-text" on:click="{() => handleSort("title",false)}">
+                  <span class="icon" class:is-hidden="{sortstatus['title'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                  <span class="icon" class:is-hidden="{!sortstatus['title'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                  <span>Profession Title</span>
+                </span>
+              </th>
+
+              <th>
+                <span class="icon-text" on:click="{() => handleSort("created_by",false)}">
+                  <span class="icon" class:is-hidden="{sortstatus['created_by'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                  <span class="icon" class:is-hidden="{!sortstatus['created_by'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                  <span>Created By</span>
+                </span>
+              </th>
+
+              <th>
+              <span class="icon-text" on:click="{() => handleSort("created_at",false)}">
+                <span class="icon" class:is-hidden="{sortstatus['created_at'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                <span class="icon" class:is-hidden="{!sortstatus['created_at'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                <span>Created At</span>
+              </span>
+              </th>
+
+
               <th class="has-text-right">Actions</th>
             </tr>
           </thead>
@@ -115,16 +195,27 @@
             {#each professions.data as item}
   
               <tr>
-                  <td>{item.id}</td>
-                  <td>{@html item.title}</td>
-                  <td>{@html item.created_at}</td>
+                  <td>                      
+                    <a href="/profession/{item.id}">
+                      {@html item.title}
+                    </a>
+                  </td>
+
+                  <td>
+                    <a href="{"#"}" on:click="{() => handleSort("created_by",item.created_by.id)}">
+                      {item.created_by.email}
+                    </a>
+                  </td>
+
+                  <td>{printDate(item.created_at)}</td>
+
                   <td class="has-text-right">
-                      <a href="/profession/{item.id}" class="icon">
-                          <Icon name="eye" size="{gui.icons.size}" color="{gui.icons.color}"/>
-                      </a>
-                      <a href="/profession/form/{item.id}" class="icon">
-                          <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
-                      </a>
+                    <a href="/profession/{item.id}" class="icon">
+                      <Icon name="eye" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                    </a>
+                    <a href="/profession/form/{item.id}" class="icon">
+                      <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                    </a>
                   </td>
               </tr>
   

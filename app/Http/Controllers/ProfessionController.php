@@ -2,30 +2,53 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Config;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Models\Profession;
 
 class ProfessionController extends Controller
 {
-
     public function prepareArray ($request,$notification) {
+
+        $sortcolumn = 'title';
+        $sortorder = 'asc';
+
+        if ($request->input('sortcolumn')) {
+            $sortcolumn = $request->input('sortcolumn');
+        }
+
+        if ($request->input('sortorder')) {
+            $sortorder = $request->input('sortorder');
+        }
+
+        $params = false;
+
+        if ( $request->input('search') ) {
+            $params["search"] = $request->input('search');
+        }
+
+        if ($request->input('userid')) {
+            $params["created_by"] = $request->input('userid');
+        }
 
         return [
             "item" => false,
             "professions" => Profession::query()
-                ->when($request->input('search'),function($query,$search) {
-                    $query->where('title','like','%'.$search.'%');
-                })
-                ->paginate(6)
-                ->withQueryString()
-                ->through(fn($item) =>[
-                    'id'=>$item->id,
-                    'title'=>$item->title,
-                    'remarks'=>$item->remarks,
-                    'remarks_title'=>$item->remarks_title,
-                    'created_at'=>$item->created_at->format('d M Y')
-                ]),
+                ->orderBy($sortcolumn,$sortorder)
+                ->when($params ,function($query,$params) {
+
+                    if (isset($params['search']) && !empty($params['search'])) {
+                        $query->where('title','like','%'.$params['search'].'%');
+                    }
+
+                    if (isset($params['created_by']) && !empty($params['created_by'])) {
+                        $query->where('created_by','=',$params['created_by']);
+                    }
+                })                
+                ->paginate(Config::get('constants.table.no_of_results'))
+                ->through(fn($item) =>Profession::setUserTime($item))
+                ->withQueryString(),
             "filters" => $request->only(["search"]),
             "notification" => $notification
         ];

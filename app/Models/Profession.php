@@ -21,10 +21,10 @@ class Profession extends Model
 
     public static function setUserTime($row) {
 
-        $row["created_by"] = User::select('name','lastname','email')->where('id', $row["created_by"])->first();
+        $row["created_by"] = User::select('id','name','lastname','email')->where('id', $row["created_by"])->first();
         $row["created_diff"] = Carbon::parse($row["created_at"])->diffForHumans();
 
-        $row["updated_by"] = User::select('name','lastname','email')->where('id', $row["updated_by"])->first();
+        $row["updated_by"] = User::select('id','name','lastname','email')->where('id', $row["updated_by"])->first();
         $row["updated_diff"] = Carbon::parse($row["updated_at"])->diffForHumans();
 
         return $row;
