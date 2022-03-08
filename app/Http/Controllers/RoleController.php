@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Inertia\Inertia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 use App\Models\Role;
 use App\Models\Category;
@@ -18,40 +19,66 @@ class RoleController extends Controller
 
 
     public function list(Request $request)
-    {       
+    {      
+        
+        $sortcolumn = 'title_en';
+        $sortorder = 'asc';
 
-    
+        if ($request->input('sortcolumn')) {
+            $sortcolumn = $request->input('sortcolumn');
+        }
+
+        if ($request->input('sortorder')) {
+            $sortorder = $request->input('sortorder');
+        }
+
+        $params = false;
+
+        if ( $request->input('search') ) {
+            $params["search"] = $request->input('search');
+        }
+
+        if ($request->input('category')) {
+            $params["category"] = $request->input('category');
+        }
+
+        if ($request->input('userid')) {
+            $params["userid"] = $request->input('userid');
+        }
+
+
         return Inertia::render('Roles/List',[
-            "paction" => 'index',
-            "categorytree" =>Category::getTreeData(),
+            // "paction" => 'index',
+            // "categorytree" =>Category::getTreeData(),
             "roles" => Role::query()
-                ->when($request->input('search') && $request->input('category'),function($query,$search,$category) {
-                    $query->where([
-                        'title-en','like','%'.$search.'%',
-                        'category','=',$category
-                    ]);
-                })
-                ->when($request->input('search') && !$request->input('category'),function($query,$search) {
-                    $query->where('title_en','like','%'.$search.'%');
-                })
+                ->orderBy($sortcolumn,$sortorder)
+                ->when($params,function($query,$params) {
 
-                ->when($request->input('category'),function($query,$category) {
-                    $query->where('category','=',$category);
-                })
+                    if (isset($params['search']) && !empty($params['search'])) {
+                        $query->where('title_en','like','%'.$params['search'].'%');
+                    }
 
-                ->paginate(6)
-                ->withQueryString()
-                ->through(fn($item) =>[
-                    'id'=>$item->id,
-                    'category'=>Category::getItemById($item->category),
-                    'title_en'=>$item->title_en,
-                    'desc_en'=>$item->desc_en,
-                    'created_at'=>$item->created_at->format('d M Y')
-                ]),
+                    if (isset($params['category']) && !empty($params['category'])) {
+                        $query->where('category','=',$params['category']);
+                    }
+
+                    if (isset($params['userid']) && !empty($params['userid'])) {
+                        $query->where('created_by','=',$params['userid']);
+                    }
+
+                })
+                ->paginate(Config::get('constants.table.no_of_results'))
+                ->through(fn($item) =>Role::processItem($item))
+                ->withQueryString(),
             "filters" => $request->only(["search","category"]),
             "notification" => false
         ]);
     }
+
+
+
+
+
 
 
     public function form (Request $request) {

@@ -3,7 +3,8 @@
   import {params,gui} from '@/config/config.js'
   import {pageprops,formprops,categoryprops} from '@/config/config_roles.js'
 
-  //import { page } from '@inertiajs/inertia-svelte'
+  import { parseDateTime } from '@/Pages/Shared/Functions/time.js'
+
 
   import Layout from '@/Pages/Shared/Layout.svelte'
 
@@ -14,28 +15,83 @@
   import Header from '@/Pages/Shared/Header/Header.svelte'
   import Icon from '@/Pages/Shared/Icon.svelte'
 
-
   export let roles
   export let filters
   export let notification
 
-  // export let roles
-  // export let filters
-  // export let notification
-  // export let selectedCategory
-
   let filterquery = filters.search ? filters.search:''
-  let category = filters.category
+  let category
+  //let category = filters.category
 
-  function handleQuery (category) {
 
-    console.log("catgory and filterquery ", category,filterquery)
+  let userid
+  let sortcolumn
+  let sortorder
+  let sortstatus = {
 
-    if (category > 0 || filterquery.length > 2 ) {
-      Inertia.get("/roles-list",{search:filterquery,category:category}, {
-        preserveState:true
-      })
+    category:{
+      order:'asc',
+      hidden:false
+    },
+
+    title_en:{
+      order:'asc',
+      hidden:false
+    },
+
+    created_by:{
+      order:'asc',
+      hidden:false
+    },
+
+    created_at:{
+      order:'asc',
+      hidden:false
     }
+  }
+
+  function handleSort(col,id) {
+
+    sortstatus[col].order = (sortstatus[col].order == 'desc') ? 'asc': 'desc'
+    sortstatus[col].hidden = !sortstatus[col].hidden
+
+    sortcolumn = col
+    sortorder = sortstatus[col].order
+
+    if (col == 'created_by') {
+      userid = id
+    }
+
+    if (col == 'category') {
+      category = id
+    }
+
+    handleQuery()
+  }
+  
+
+  function handleQuery () {
+
+    let params = {}
+
+    params.sortcolumn = sortcolumn
+    params.sortorder = sortorder
+
+    if (filterquery) {
+      params.search = filterquery
+    }
+
+    if (userid) {
+      params.userid = userid
+    }
+
+    if (category) {
+      params.category = category
+    }
+
+    Inertia.get("/roles-list",params, {
+      preserveState:true
+    })
 
   }
 
@@ -44,11 +100,6 @@
     category= ''
     Inertia.get("/roles-list")
   }
-
-
-/*   function deleteItem(event) {
-    alert("deleteItem"+event.target.dataset.item)
-  } */
 
 </script>
 
@@ -129,11 +180,43 @@
 
     <table class="table is-fullwidth">
 
+      <caption>Total <b>{roles.total}</b> Results</caption>
+
       <thead>
         <tr>
-          <th>Category</th>
-          <th>Title</th>
-          <th>Date</th>
+
+          <th>
+            <span class="icon-text" on:click="{() => handleSort("category",false)}">
+              <span class="icon" class:is-hidden="{sortstatus['category'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+              <span class="icon" class:is-hidden="{!sortstatus['category'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+              <span>Category</span>
+            </span>
+          </th>
+
+          <th>
+            <span class="icon-text" on:click="{() => handleSort("title_en",false)}">
+              <span class="icon" class:is-hidden="{sortstatus['title_en'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+              <span class="icon" class:is-hidden="{!sortstatus['title_en'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+              <span>Title</span>
+            </span>
+          </th>
+
+          <th>
+            <span class="icon-text" on:click="{() => handleSort("created_at",false)}">
+              <span class="icon" class:is-hidden="{sortstatus['created_at'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+              <span class="icon" class:is-hidden="{!sortstatus['created_at'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+              <span>Created At</span>
+            </span>
+          </th>
+
+          <th>
+            <span class="icon-text" on:click="{() => handleSort("created_by",false)}">
+              <span class="icon" class:is-hidden="{sortstatus['created_by'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+              <span class="icon" class:is-hidden="{!sortstatus['created_by'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+              <span>Created By</span>
+            </span>
+          </th>
+
           <th class="has-text-right">Actions</th>
         </tr>
       </thead>
@@ -142,9 +225,16 @@
         {#each roles.data as item}
 
           <tr>
-              <td><a href="{"#"}" on:click="{() =>handleQuery(item.category.id)}">{@html item.category.title_en}</a></td>
+              <td><a href="{"#"}" on:click="{() =>handleSort("category",item.category.id)}">{@html item.category.title_en}</a></td>
               <td><a href="/roles/{item.id}">{@html item.title_en}</a></td>
-              <td>{@html item.created_at}</td>
+              <td>{parseDateTime(item.created_at)}</td>
+
+              <td>
+                <a href="{"#"}" on:click="{() => handleSort("created_by",item.created_by.id)}">
+                  {item.created_by.email}
+                </a>
+              </td>
+
               <td class="has-text-right">
                   <a href="/roles/{item.id}" class="icon">
                       <Icon name="eye" size="{gui.icons.size}" color="{gui.icons.color}"/>
@@ -152,9 +242,6 @@
                   <a href="/roles/form/{item.id}" class="icon">
                       <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
                   </a>
-                  <!-- <a href="{"#"}" class="icon" on:click="{deleteItem(item.id)}" >
-                      <Icon name="delete" size="{$iconprops.size}" color="danger"/>
-                  </a>                         -->
               </td>
           </tr>
 
@@ -174,14 +261,6 @@
     <div class="notification is-warning is-light">No roles found in system yet!</div>
 
   {/if}
-
-
-
-<!--     <p>Roles are classified according to business categories</p>
-
-    <div class="message-body">
-      To add new role, please select category from the left menu first.
-    </div> -->
 
   </div>
 

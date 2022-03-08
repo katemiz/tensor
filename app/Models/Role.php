@@ -23,12 +23,14 @@ class Role extends Model
         'updated_by'
     ];
 
-    public static function setUserTime($row) {
+    public static function processItem($row) {
 
-        $row["created_by"] = User::select('name','lastname','email')->where('id', $row["created_by"])->first();
+        $row["category"] = Category::getItemById($row["category"]);
+
+        $row["created_by"] = User::select('id','name','lastname','email')->where('id', $row["created_by"])->first();
         $row["created_diff"] = Carbon::parse($row["created_at"])->diffForHumans();
 
-        $row["updated_by"] = User::select('name','lastname','email')->where('id', $row["updated_by"])->first();
+        $row["updated_by"] = User::select('id','name','lastname','email')->where('id', $row["updated_by"])->first();
         $row["updated_diff"] = Carbon::parse($row["updated_at"])->diffForHumans();
 
         return $row;
@@ -36,12 +38,12 @@ class Role extends Model
 
 
     public static function getItemById($id) {
-        return Role::setUserTime(Role::find($id));
+        return Role::processItem(Role::find($id));
     }
 
 
     public static function getLatestItem() {
-        return Role::setUserTime(Role::latest()->first());
+        return Role::processItem(Role::latest()->first());
     }
 
 }
