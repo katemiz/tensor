@@ -11,17 +11,20 @@ class Role extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'category',
-        'title_en',
-        'title_tr',
-        'desc_en',
-        'desc_tr',
-        'desc_en_text',
-        'desc_tr_text',
-        'created_by',
-        'updated_by'
-    ];
+    protected $guarded = ['id'];
+
+
+
+
+
+
+    public function skills()
+    {
+        return $this->belongsToMany(Skill::class)->withTimestamps();
+    }
+
+
+
 
     public static function processItem($row) {
 

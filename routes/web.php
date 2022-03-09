@@ -49,12 +49,18 @@ Route::middleware(['auth'])->group(function () {
     Route::put('roles',[RoleController::class,'update']);
     Route::delete('roles',[RoleController::class,'destroy']);
 
+    Route::get('select-skills',[RoleController::class,'select']);
 
-    // SKILLS TREE
+
+
+    // SKILLS TREE (AND SLEVELS)
+    Route::get('slevels',[SkillController::class,'slevels']);
     Route::get('skills',[SkillController::class,'index']);
     Route::post('skills',[SkillController::class,'create']);
     Route::put('skills',[SkillController::class,'update']);
     Route::delete('skills',[SkillController::class,'destroy']);
+
+
 
 
     // BUSINESS CATEGORY

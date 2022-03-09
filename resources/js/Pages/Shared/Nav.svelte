@@ -58,7 +58,7 @@
                     <a class="navbar-item" href="/education">Education</a>
 
                     <hr class="navbar-divider">
-                    <a class="navbar-item" href="/">Proficiency Levels</a>
+                    <a class="navbar-item" href="/slevels">Proficiency Levels</a>
 
                     <hr class="navbar-divider">
                     <a class="navbar-item" href="/">Responsibilities</a>

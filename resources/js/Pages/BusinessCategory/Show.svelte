@@ -30,7 +30,7 @@
         })
         .then((result) => {
 
-            Inertia.delete('skills', {
+            Inertia.delete('bcategory', {
                 method:'delete',
                 preserveState:false,
                 data:{

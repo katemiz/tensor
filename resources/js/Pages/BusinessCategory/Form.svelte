@@ -1,6 +1,7 @@
 <script>
 
-    import { treeprops,formprops,topnode } from '@/Pages/BusinessCategory/store.js'
+    import { treeprops,formprops,topnode } from '@/config/config_category.js'
+
     import { printOrder } from "@/Pages/Shared/Functions/tree.js";
 
     import EditorQuill from '@/Pages/Shared/Editor/EditorQuill.svelte'
@@ -24,8 +25,8 @@
     let processing = false
     let values = {}
 
-    let editorProps_en = $formprops.editor_en
-    let editorProps_tr = $formprops.editor_tr
+    let editorProps_en = formprops.editor_en
+    let editorProps_tr = formprops.editor_tr
 
     // IF THIS IS EDIT
     if (itemValues) {
@@ -39,8 +40,8 @@
         editorProps_en.content = itemValues.desc_en
         editorProps_tr.content = itemValues.desc_tr
 
-        desc_en = itemValues.desc_en
-        desc_tr = itemValues.desc_tr
+        desc_en = {html:itemValues.desc_en,text:itemValues.desc_en_text}
+        desc_tr = {html:itemValues.desc_tr,text:itemValues.desc_tr_text}
 
         is_edit = true
 
@@ -53,8 +54,8 @@
 
         title_en = ''
         title_tr = ''
-        editorProps_en = $formprops.editor_en
-        editorProps_tr = $formprops.editor_tr
+        editorProps_en = formprops.editor_en
+        editorProps_tr = formprops.editor_tr
 
         editorProps_en.content = ''
         editorProps_tr.content = ''
@@ -64,29 +65,29 @@
 
     if (!is_edit) {
 
-        header = $formprops.header.new
-        submit_label = $formprops.submit.new.label
+        header = formprops.header.new
+        submit_label = formprops.submit.new.label
 
     } else {
 
-        header = $formprops.header.update
-        submit_label = $formprops.submit.update.label
+        header = formprops.header.update
+        submit_label = formprops.submit.update.label
     }
 
     // PARENT OPTIONS
     parent_options = treedata
 
     parent_options = printOrder(parent_options)
-    parent_options.unshift($topnode)
+    parent_options.unshift(topnode)
 
     function readContent(event) {
 
-        if (event.detail.id == $formprops.editor_en.id) {
-            desc_en = event.detail.icerik.html
+        if (event.detail.id == formprops.editor_en.id) {
+            desc_en = event.detail.icerik
         }
 
-        if (event.detail.id == $formprops.editor_tr.id) {
-            desc_tr = event.detail.icerik.html
+        if (event.detail.id == formprops.editor_tr.id) {
+            desc_tr = event.detail.icerik
         }
     }
 
@@ -132,8 +133,8 @@
         
         <div class="field">
 
-            <label class="label" for="{$formprops.parent.id}">{$formprops.parent.label}</label>
-            <div class="control" id="{$formprops.parent.id}">
+            <label class="label" for="{formprops.parent.id}">{formprops.parent.label}</label>
+            <div class="control" id="{formprops.parent.id}">
 
                 <div class="select is-fullwidth">
                     <select bind:value={parent_id}>
@@ -145,7 +146,7 @@
                                 &nbsp; &nbsp; &nbsp; &nbsp;
                                 {/each}
                                 
-                                {option[$treeprops.titleColumn]}
+                                {option[treeprops.titleColumn]}
                             </option>
                         {/each}
                     </select>
@@ -155,16 +156,16 @@
         </div>
             
         <div class="field">
-            <label class="label" for="{$formprops.title_en.id}">{$formprops.title_en.label}</label>
-            <div class="control" id="{$formprops.title_en.id}">
-                <input class="input" bind:value={title_en} type="text" placeholder="{$formprops.title_en.placeholder}" >
+            <label class="label" for="{formprops.title_en.id}">{formprops.title_en.label}</label>
+            <div class="control" id="{formprops.title_en.id}">
+                <input class="input" bind:value={title_en} type="text" placeholder="{formprops.title_en.placeholder}" >
             </div>
         </div>
 
         <div class="field">
-            <label class="label" for="{$formprops.title_tr.id}">{$formprops.title_tr.label}</label>
-            <div class="control" id="{$formprops.title_tr.id}">
-                <input class="input" bind:value={title_tr} type="text" placeholder="{$formprops.title_tr.placeholder}" >
+            <label class="label" for="{formprops.title_tr.id}">{formprops.title_tr.label}</label>
+            <div class="control" id="{formprops.title_tr.id}">
+                <input class="input" bind:value={title_tr} type="text" placeholder="{formprops.title_tr.placeholder}" >
             </div>
         </div>
 

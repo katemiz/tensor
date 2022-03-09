@@ -16,11 +16,11 @@
   export let paction
   export let notification = false
 
-  let rawdata = flat(treedata)
+  $: rawdata = flat(treedata)
+  $: parent = findParent(item)
 
   let itemValues = false
   let selectedParentId = false
-  let parent
 
 
   function editNode (event) {
@@ -57,14 +57,17 @@
     // event.target.dataset.id is id of node clicked on tree
     item = rawdata.filter( el => el.id == event.target.dataset.id)[0]
 
-    if (item.parent_id == 0) {
-      parent = topnode
-    } else {
-      parent = rawdata.filter( el => el.id == item.parent_id)[0]
-    }
+    parent = findParent(item)
   }
 
+  function findParent(item) {
 
+    if (item.parent_id == 0) {
+      return topnode
+    } else {
+      return rawdata.filter( el => el.id == item.parent_id)[0]
+    }
+  }
 
 
 </script>

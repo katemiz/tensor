@@ -1,7 +1,6 @@
 <script>
 
     import { treeprops,formprops,topnode } from '@/config/config_skill.js'
-
     import { printOrder } from "@/Pages/Shared/Functions/tree.js";
 
     import EditorQuill from '@/Pages/Shared/Editor/EditorQuill.svelte'
@@ -40,8 +39,8 @@
         editorProps_en.content = itemValues.desc_en
         editorProps_tr.content = itemValues.desc_tr
 
-        desc_en = itemValues.desc_en
-        desc_tr = itemValues.desc_tr
+        desc_en = {html:itemValues.desc_en,text:itemValues.desc_en_text}
+        desc_tr = {html:itemValues.desc_tr,text:itemValues.desc_tr_text}
 
         is_edit = true
 
@@ -83,11 +82,11 @@
     function readContent(event) {
 
         if (event.detail.id == formprops.editor_en.id) {
-            desc_en = event.detail.icerik.html
+            desc_en = event.detail.icerik
         }
 
         if (event.detail.id == formprops.editor_tr.id) {
-            desc_tr = event.detail.icerik.html
+            desc_tr = event.detail.icerik
         }
     }
 

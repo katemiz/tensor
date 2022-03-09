@@ -34,14 +34,16 @@
         <div class="columns">
     
             <div class="column is-3">
+
+                <a href="/roles-list">All Roles List</a>
                 <aside class="menu">
-                    <p class="menu-label">Menu</p>
+                    <p class="menu-label">Requirements</p>
                     <ul class="menu-list">
                         <li><a href="/roles/list">Role Definition</a></li>
                         <li><a href="/roles/form/new">Education</a></li>
                         <li><a href="/roles/form/new">Profession</a></li>
                         <li><a href="/roles/form/new">Experience</a></li>
-                        <li><a href="/roles/form/new">Skills</a></li>
+                        <li><a href="/select-skills">Skills</a></li>
                         <li><a href="/roles/form/new">Trainings</a></li>
                         <li><a href="/roles/form/new">Language</a></li>
                     </ul>
@@ -95,6 +97,18 @@
 
                 <ItemInfo {item} />
 
+
+                <Header header="{{ title:"Education Requirements" }}" />
+
+
+                <Header header="{{ title:"Profession Requirements" }}" />
+
+                <Header header="{{ title:"Experience Requirements" }}" />
+
+
+                <Header header="{{ title:"Required Skills and Skill Levels" }}" />
+
+                <Header header="{{ title:"Language Requirements" }}" />
 
 
 

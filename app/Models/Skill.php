@@ -13,15 +13,7 @@ class Skill extends Model
 
     protected $parentColumn = 'parent_id';
 
-    protected $fillable = [
-        'parent_id',
-        'title_en',
-        'title_tr',
-        'desc_en',
-        'desc_tr',
-        'created_by',
-        'updated_by'
-    ];
+    protected $guarded = ['id'];
 
 
     public function parent()
@@ -39,6 +31,12 @@ class Skill extends Model
     public function allChildren()
     {
         return $this->children()->with('allChildren');
+    }
+
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class)->withTimestamps();
     }
 
 

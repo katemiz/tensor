@@ -12,35 +12,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $parentColumn = 'parent_id';
-
-    protected $fillable = [
-        'parent_id',
-        'title_en',
-        'title_tr',
-        'desc_en',
-        'desc_tr',
-        'created_by',
-        'updated_by'
-    ];
-
-
-    public function parent()
-    {
-        return $this->belongsTo(Category::class,$this->parentColumn);
-    }
-
-    public function children()
-    {
-        return $this->hasMany(Category::class, $this->parentColumn);
-    }
-
-    public function allChildren()
-    {
-        return $this->children()->with('allChildren');
-    }
-
-
+    protected $guarded = ['id'];
 
     public static function convertToTree(array $array)
     {
@@ -89,7 +61,9 @@ class Category extends Model
     }
 
     public static function getLatestItem() {
-        return Category::setUserTime(Category::latest()->first());
+
+        $latest = Category::latest()->first();
+        return Category::setUserTime($latest);
     }
 
 
@@ -110,7 +84,5 @@ class Category extends Model
 
         return $item;
     }
-
-
 
 }

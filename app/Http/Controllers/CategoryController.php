@@ -36,8 +36,10 @@ class CategoryController extends Controller
             'parent_id' => $attributes['parent_id'],
             'title_en' => ucfirst($attributes['title_en']),
             'title_tr' => ucfirst($attributes['title_tr']),
-            'desc_en' => ucfirst($request['desc_en']),
-            'desc_tr' => ucfirst($request['desc_tr']),
+            'desc_en' => ucfirst($request['desc_en']['html']),
+            'desc_tr' => ucfirst($request['desc_tr']['html']),
+            'desc_en_text' => ucfirst($request['desc_en']['text']),
+            'desc_tr_text' => ucfirst($request['desc_tr']['text']),
         ]);
 
         return Inertia::render('BusinessCategory/Category',[
@@ -70,8 +72,10 @@ class CategoryController extends Controller
             'parent_id' => $attributes['parent_id'],
             'title_en' => ucfirst($attributes['title_en']),
             'title_tr' => ucfirst($attributes['title_tr']),
-            'desc_en' => ucfirst($request['desc_en']),
-            'desc_tr' => ucfirst($request['desc_tr'])
+            'desc_en' => ucfirst($request['desc_en']['html']),
+            'desc_tr' => ucfirst($request['desc_tr']['html']),
+            'desc_en_text' => ucfirst($request['desc_en']['text']),
+            'desc_tr_text' => ucfirst($request['desc_tr']['text']),
         ]);
 
         return Inertia::render('BusinessCategory/Category',[

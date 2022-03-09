@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Config;
 
 use App\Models\Role;
 use App\Models\Category;
+use App\Models\Skill;
 
 
 class RoleController extends Controller
@@ -19,8 +20,7 @@ class RoleController extends Controller
 
 
     public function list(Request $request)
-    {      
-        
+    {             
         $sortcolumn = 'title_en';
         $sortorder = 'asc';
 
@@ -74,10 +74,6 @@ class RoleController extends Controller
             "notification" => false
         ]);
     }
-
-
-
-
 
 
 
@@ -177,4 +173,17 @@ class RoleController extends Controller
         ]); 
     }
 
+
+    public function select(Request $request)
+    {
+
+        return Inertia::render('Roles/SelectSkills',[
+            "skilltree" =>  Skill::getTreeData(),
+
+        ]); 
+    }
+
+
 }
+
+

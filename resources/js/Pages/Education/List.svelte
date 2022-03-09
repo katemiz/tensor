@@ -55,16 +55,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
   function handleQuery () {
 
     let params = {}
