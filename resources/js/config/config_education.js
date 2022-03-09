@@ -1,7 +1,4 @@
-import { writable } from 'svelte/store';
-
-
-export const pageprops = writable({
+export const pageprops ={
 
     header: {
         list:"List of Education Levels",
@@ -64,10 +61,4 @@ export const pageprops = writable({
         },
 
     }
-})
-
-
-export let iconprops = writable({
-    size:'S',
-    color:'link'
-})
+}

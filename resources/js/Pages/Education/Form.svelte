@@ -3,7 +3,8 @@
     import { Link } from '@inertiajs/inertia-svelte'
     import { Inertia } from '@inertiajs/inertia'
 
-    import { pageprops } from '@/Pages/Education/store.js'
+    import { pageprops } from '@/config/config_education.js'
+
 
     import Layout from '@/Pages/Shared/Layout.svelte'
     import EditorQuill from '@/Pages/Shared/Editor/EditorQuill.svelte'
@@ -19,7 +20,7 @@
     let submitbutton
     let header
 
-    editorProps = $pageprops.form.remarks
+    editorProps = pageprops.form.remarks
 
     // IF THIS IS EDIT
     if (item) {
@@ -31,12 +32,12 @@
         }
         editorProps.content = item.remarks
 
-        header = $pageprops.header.update
-        submitbutton = $pageprops.form.submit.update.label
+        header = pageprops.header.update
+        submitbutton = pageprops.form.submit.update.label
     } else {
 
-        header = $pageprops.header.new
-        submitbutton = $pageprops.form.submit.new.label
+        header = pageprops.header.new
+        submitbutton = pageprops.form.submit.new.label
     }
 
 
@@ -98,7 +99,7 @@
         <div class="box">
                             
             <div class="field">
-                <label class="label" for="titleid">{$pageprops.form.title.label}</label>
+                <label class="label" for="titleid">{pageprops.form.title.label}</label>
                 <div class="control" id="titleid">
                     <input class="input" bind:value={title} type="text" placeholder="Enter education level title" >
                 </div>

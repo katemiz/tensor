@@ -1,8 +1,10 @@
 <script>
 
   import { params,gui } from '@/config/config.js'
+  import { pageprops } from '@/config/config_education.js'
+  import { parseDateTime } from '@/Pages/Shared/Functions/time.js'
 
-  import { pageprops } from '@/Pages/Education/store.js'
+
   import { Inertia } from '@inertiajs/inertia'
   import Layout from '@/Pages/Shared/Layout.svelte'
   import Pagination from '@/Pages/Shared/Pagination/Pagination.svelte'
@@ -16,8 +18,69 @@
 
   let filterquery = filters.search
 
+
+  let userid
+  let sortcolumn
+  let sortorder
+  let sortstatus = {
+
+    title:{
+      order:'asc',
+      hidden:false
+    },
+
+    created_by:{
+      order:'asc',
+      hidden:false
+    },
+
+    created_at:{
+      order:'asc',
+      hidden:false
+    }
+  }
+
+  function handleSort(col,id) {
+
+    sortstatus[col].order = (sortstatus[col].order == 'desc') ? 'asc': 'desc'
+    sortstatus[col].hidden = !sortstatus[col].hidden
+
+    sortcolumn = col
+    sortorder = sortstatus[col].order
+
+    userid = id
+
+    handleQuery()
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
   function handleQuery () {
-    Inertia.get("/education",{"search":filterquery}, {
+
+    let params = {}
+
+    params.sortcolumn = sortcolumn
+    params.sortorder = sortorder
+
+    if (filterquery) {
+      params.search = filterquery
+    }
+
+    if (userid) {
+      params.userid = userid
+    }
+
+    Inertia.get("/education",params, {
       preserveState:true
     })
   }
@@ -26,11 +89,6 @@
     filterquery = ''
     Inertia.get("/education")
   }
-
-
-/*   function deleteItem(event) {
-    alert("deleteItem"+event.target.dataset.item)
-  } */
 
 </script>
 
@@ -45,7 +103,7 @@
 
   <div class="section container">
 
-    <Header header="{{ title:$pageprops.header.list }}" />
+    <Header header="{{ title:pageprops.header.list }}" />
 
     {#if notification}
       <Notification {notification} />
@@ -63,7 +121,7 @@
             <span class="icon is-small">
                 <Icon name="add" size="{gui.icons.size}" color="{gui.icons.color}"/>
             </span>
-            <span>{$pageprops.commands.add.label}</span>
+            <span>{pageprops.commands.add.label}</span>
           </a>
       
       </div>
@@ -80,7 +138,7 @@
         <div class="field has-addons is-fullwidth">
 
             <p class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="{$pageprops.table.filter.placeholder}" bind:value={filterquery} on:input="{handleQuery}">
+                <input class="input" type="text" placeholder="{pageprops.table.filter.placeholder}" bind:value={filterquery} on:input="{handleQuery}">
                 <span class="icon is-small is-left">
                     <Icon name="search" size="{gui.icons.size}" color="{gui.icons.color}"/>
                 </span>
@@ -105,11 +163,35 @@
 
       <table class="table is-fullwidth">
 
+        <caption>Total <b>{educations.total}</b> Results</caption>
+
         <thead>
           <tr>
-            <th>Id</th>
-            <th>Education Level Title</th>
-            <th>Created At</th>
+
+            <th>
+              <span class="icon-text" on:click="{() => handleSort("title",false)}">
+                <span class="icon" class:is-hidden="{sortstatus['title'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                <span class="icon" class:is-hidden="{!sortstatus['title'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                <span>Education Level Title</span>
+              </span>
+            </th>
+
+            <th>
+              <span class="icon-text" on:click="{() => handleSort("created_at",false)}">
+                <span class="icon" class:is-hidden="{sortstatus['created_at'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                <span class="icon" class:is-hidden="{!sortstatus['created_at'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                <span>Created At</span>
+              </span>
+            </th>
+  
+            <th>
+              <span class="icon-text" on:click="{() => handleSort("created_by",false)}">
+                <span class="icon" class:is-hidden="{sortstatus['created_by'].hidden}"><Icon name="arrow_up" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                <span class="icon" class:is-hidden="{!sortstatus['created_by'].hidden}"><Icon name="arrow_down" size="{gui.icons.size}" color="{gui.icons.color}"/></span>
+                <span>Created By</span>
+              </span>
+            </th>
+
             <th class="has-text-right">Actions</th>
           </tr>
         </thead>
@@ -118,9 +200,15 @@
           {#each educations.data as item}
 
             <tr>
-                <td>{item.id}</td>
-                <td>{@html item.title}</td>
-                <td>{@html item.created_at}</td>
+                <td><a href="/education/{item.id}">{@html item.title}</a></td>
+                <td>{parseDateTime(item.created_at)}</td>
+
+                <td>
+                  <a href="{"#"}" on:click="{() => handleSort("created_by",item.created_by.id)}">
+                    {item.created_by.email}
+                  </a>
+                </td>
+
                 <td class="has-text-right">
                     <a href="/education/{item.id}" class="icon">
                         <Icon name="eye" size="{gui.icons.size}" color="{gui.icons.color}"/>
@@ -128,9 +216,6 @@
                     <a href="/education/form/{item.id}" class="icon">
                         <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
                     </a>
-                    <!-- <a href="{"#"}" class="icon" on:click="{deleteItem(item.id)}" >
-                        <Icon name="delete" size="{$iconprops.size}" color="danger"/>
-                    </a>                         -->
                 </td>
             </tr>
 

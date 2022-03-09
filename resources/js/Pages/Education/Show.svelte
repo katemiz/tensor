@@ -1,8 +1,8 @@
 <script>
 
     import { params,gui } from '@/config/config.js'
+    import { pageprops } from '@/config/config_education.js'
 
-    import { pageprops } from '@/Pages/Education/store.js'
     import { Link } from '@inertiajs/inertia-svelte'
     import { Inertia } from '@inertiajs/inertia'
 
@@ -54,7 +54,7 @@
 
     <div class="section container">
 
-        <Header header="{{ title:$pageprops.header.show }}" />
+        <Header header="{{ title:pageprops.header.show }}" />
 
         {#if notification}
             <Notification {notification} />
