@@ -43,7 +43,7 @@
                         <li><a href="/roles/form/new">Education</a></li>
                         <li><a href="/roles/form/new">Profession</a></li>
                         <li><a href="/roles/form/new">Experience</a></li>
-                        <li><a href="/select-skills">Skills</a></li>
+                        <li><a href="/select-skills/{item.id}">Skills</a></li>
                         <li><a href="/roles/form/new">Trainings</a></li>
                         <li><a href="/roles/form/new">Language</a></li>
                     </ul>

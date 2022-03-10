@@ -11,7 +11,7 @@ export const slevels = [
         title:"Capable",
         knowledge:"Limited knowledge of the subject, its main processes, methods and tools",
         experience : 'Sufficient experience to deal with recurrent activity',
-        autonomy : 'Is capable to perform standard tasks under punctiual supervision'
+        autonomy : 'Is capable to perform standard tasks under punctual supervision'
     },
     {
         level:3,
