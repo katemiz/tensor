@@ -16,6 +16,7 @@ class CreateRoleSkillTable extends Migration
         Schema::create('role_skill', function (Blueprint $table) {
             $table->foreignId('role_id')->constrained();
             $table->foreignId('skill_id')->constrained();
+            $table->integer('level')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

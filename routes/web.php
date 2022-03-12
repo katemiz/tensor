@@ -50,7 +50,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('roles',[RoleController::class,'destroy']);
 
     Route::get('select-skills/{id}',[RoleController::class,'select']);
-    Route::put('role-skill',[RoleController::class,'roleskill']);
+    Route::post('role-skill',[RoleController::class,'roleskill']);
 
 
 

@@ -102,7 +102,8 @@ class RoleController extends Controller
 
         return Inertia::render('Roles/Show',[
             "item" => $item,
-            "notification" => false
+            "notification" => false,
+            "skills" => $item->skills()->get()
         ]);
     }
 
@@ -166,6 +167,7 @@ class RoleController extends Controller
 
         return Inertia::render('Roles/Show',[
             "item" =>  $item,
+            "skills" => Role::getItemById($request->id)->skills()->get(),
             "notification" =>  [
                 "type" =>'success',
                 "message" => 'Role has been updated successfully.'
@@ -179,39 +181,47 @@ class RoleController extends Controller
         return Inertia::render('Roles/SelectSkills',[
             "id" => $request->id,
             "skilltree" =>  Skill::getTreeData(),
-            "roleSkills" => [ ["id"=>1,"level"=>2],["id" => 3, "level" => 3]]
+            "roleSkills" => Role::getItemById($request->id)->skills()->get()
         ]); 
     }
 
 
     public function roleskill(Request $request)
     {
-        // validate
-        $attributes = $request->validate([
-            'category' => 'required',
-            'title_en'=>'required'
-        ]);
 
-        // Add new record
-        Role::create([
-            'category' => ucfirst($attributes['category']),
-            'title_en' => ucfirst($attributes['title_en']),
-            'title_tr' => ucfirst($request['title_tr']),
-            'desc_en' => ucfirst($request['desc_en']['html']),
-            'desc_en_text' => ucfirst($request['desc_en']['text']),
-            'desc_tr' => ucfirst($request['desc_tr']['html']),
-            'desc_tr_text' => ucfirst($request['desc_tr']['text'])
-        ]);
 
-        $item = Role::getLatestItem();
+
+
+
+        $role = Role::find($request->id);
+
+        //dd($request->id);
+        //dd($request->skills);
+
+        $role->skills()->detach();
+
+
+
+        foreach ($request->skills as $record) {
+
+            //dd($record);
+
+            $role->skills()->attach($record["skill"],['level' => $record["level"]]);
+
+        }
+
+        //$item = Role::getItemById($id);
 
         return Inertia::render('Roles/Show',[
-            "item" => $item,
+            "item" => $role,
+            "notification" => false,
+            "skills" => Role::getItemById($request->id)->skills()->get(),
             "notification" =>  [
                 "type" =>'success',
-                "message" => 'New role has been created successfully.'
+                "message" => 'Required skills have been updated successfully.'
             ]
-        ]); 
+
+        ]);
     }
 
 

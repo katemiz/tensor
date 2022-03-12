@@ -28,10 +28,18 @@
     let requirements = []
     let roleLevels = []
 
+    console.log("roleSkills ",roleSkills)
+
     roleSkills.forEach(element => {
+
+      console.log("element ",element)
+
       requirements[requirements.length] = rawdata.filter( el => el.id == element.id)[0]
-      roleLevels[element.id] = element.level
+      roleLevels[element.id] = element.pivot.level
     });
+
+
+    console.log("roleLevels ",roleLevels)
 
     let selectedSkill
 
@@ -71,7 +79,21 @@
 
     function save () {
 
-      Inertia.put('role-skill', roleLevels,{
+      let skills = []
+
+      roleLevels.forEach( (value,key) => {
+
+        if (value !== undefined && value !== null) {
+
+          if (value === 'NotSelected') {
+            value = null
+          }
+          skills.push({skill:key,level:value})
+        }
+        console.log("****** ", key,value)
+      })
+
+      Inertia.post('/role-skill', {id:id,skills: skills},{
         preserveState:false
       })
 
@@ -79,9 +101,7 @@
       console.log("save roleLevels ",roleLevels)
 
 
-      roleLevels.forEach( (value,key) => {
-        console.log("****** ", key,value)
-      })
+
 
 
     }
@@ -151,7 +171,7 @@
     
                     <div class="select is-fullwidth">
                         <select bind:value={roleLevels[requirement.id]}>
-                            <option value="NotSelected">Select ...</option>
+                            <option value="0">Select ...</option>
     
                             {#each slevels as level}
                                 <option value="{level.level}">{level.level} - {level.title}</option>

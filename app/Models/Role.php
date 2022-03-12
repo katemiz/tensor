@@ -20,11 +20,10 @@ class Role extends Model
 
     public function skills()
     {
-        return $this->belongsToMany(Skill::class)->withTimestamps();
+        return $this->belongsToMany(Skill::class)->withPivot('level', 'created_by')->withTimestamps();
     }
 
-
-
+    
 
     public static function processItem($row) {
 

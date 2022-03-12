@@ -1,8 +1,8 @@
-
 <script>
 
     import {params,gui} from '@/config/config.js'
-    import {pageprops} from '@/config/config_roles.js'
+    import {pageprops,formprops} from '@/config/config_roles.js'
+    import { slevels } from '@/config/config_slevels.js'
 
     import Layout from '@/Pages/Shared/Layout.svelte'
     import Header from '@/Pages/Shared/Header/Header.svelte'
@@ -12,6 +12,7 @@
     import ItemInfo from '@/Pages/Shared/Notification/ItemInfo.svelte'
 
     export let item
+    export let skills
     export let notification
 
     console.log(item)
@@ -26,97 +27,122 @@
 <Layout>
 
     <section class="section container">
-  
-        <Header header="{{ title:pageprops.page.title,subtitle:pageprops.page.subtitle,type:pageprops.page.type.type }}" />
+
+
+        <div class="columns">
+
+            <div class="column">
+                <h1 class="title has-text-weight-semibold">{item.title_en}</h1>
+                <h2 class="subtitle has-text-info">{item.title_tr}</h2>
+            </div>
+
+            <div class="column is-1 is-pulled-right">
+                <a href="/roles/form/{item.id}">
+                <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                </a>
+            </div>
+
+        </div>
 
         <Notification {notification} />
 
+        {#if item.desc_en.length > 0}
+
+        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">{formprops.editor_en.label}</h6>
+
+        {@html item.desc_en}
+
+        {/if}
+
+        
+        {#if item.desc_tr.length > 0}
+
+        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">{formprops.editor_tr.label}</h6>
+
+        {@html item.desc_tr}
+
+        {/if}
+
+    
+        <!-- EDUCATION LEVELS -->
+
+        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Education Requirements</h6>
+
+
+
+
+        <!-- PROFESSION       -->
+
+        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Profession Requirement</h6>
+
+
+
+
+
+        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Experience Requirements</h6>
+
+
+
+
+
+
+        <!-- SKILLS          -->
+
         <div class="columns">
-    
-            <div class="column is-3">
 
-                <a href="/roles-list">All Roles List</a>
-                <aside class="menu">
-                    <p class="menu-label">Requirements</p>
-                    <ul class="menu-list">
-                        <li><a href="/roles/list">Role Definition</a></li>
-                        <li><a href="/roles/form/new">Education</a></li>
-                        <li><a href="/roles/form/new">Profession</a></li>
-                        <li><a href="/roles/form/new">Experience</a></li>
-                        <li><a href="/select-skills/{item.id}">Skills</a></li>
-                        <li><a href="/roles/form/new">Trainings</a></li>
-                        <li><a href="/roles/form/new">Language</a></li>
-                    </ul>
-                </aside> 
-            </div>
-    
             <div class="column">
-
-                <Header header="{{ title:"Role Definition" }}" />
-
-
-                <div class="card">
-
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-4 my-1">{item.title_en}</p>
-                                <p class="title is-4 my-1 has-text-grey">{item.title_tr}</p>
-                                <p class="subtitle is-6 mt-3">{item.title_tr}</p>
-                            </div>
-                        </div>
-                    
-                        <div class="content">
-                
-                            {@html item.desc_en}
-                            {@html item.desc_tr}
-                
-                        </div>
-                    </div>
-                
-                
-                    <footer class="card-footer">
-                
-                        <a href="{"#"}" class="card-footer-item"  data-id={item.id}>
-                            <Icon name="add" size="{gui.icons.size}" color="{gui.icons.color}"/>&nbsp;Add Child
-                        </a>
-                
-                        <a href="{"#"}" class="card-footer-item" >
-                            <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>&nbsp;Edit
-                        </a>
-                
-                        {#if item.children == undefined || item.children.length == 0}
-                            <a href="{"#"}" class="card-footer-item"  data-id={item.id}>
-                                <Icon name="delete" size="{gui.icons.size}" color="danger"/>&nbsp;Delete
-                            </a>
-                        {/if}
-                
-                    </footer>
-                
-                </div>
-
-                <ItemInfo {item} />
-
-
-                <Header header="{{ title:"Education Requirements" }}" />
-
-
-                <Header header="{{ title:"Profession Requirements" }}" />
-
-                <Header header="{{ title:"Experience Requirements" }}" />
-
-
-                <Header header="{{ title:"Required Skills and Skill Levels" }}" />
-
-                <Header header="{{ title:"Language Requirements" }}" />
-
-
-
-
+                <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Required Skills and Skill Levels</h6>
             </div>
-    
+
+            <div class="column is-1 is-pulled-right">
+                <a href="/select-skills/{item.id}">
+                <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                </a>
+            </div>
+
         </div>
-  
+
+
+        
+
+        {#if skills.length > 0}
+        <table class="table is-narrow is-fullwidth">
+
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>Required Skill Title</th>
+                <th class="has-text-right">Required Skill Level</th>
+            </tr>
+            </thead>
+
+            {#each skills as skill,key}
+            <tr>
+                <td>{key+1}</td>
+                <td>{skill.title_en}</td>
+
+                {#if skill.pivot.level >0 }
+                <td class="has-text-right">{skill.pivot.level} - { slevels.filter(el => el.level === skill.pivot.level)[0].title}</td>
+                {:else}
+                <td class="has-text-right">Not Set</td>
+                {/if}
+            </tr>
+
+            {/each}
+
+        </table>
+        {:else}
+
+            <div class="notification is-warning is-light">
+            No skills for this role yet.
+            </div>
+
+        {/if}
+
+        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Language Requirement</h6>
+
+
+
     </section>
       
   </Layout>
