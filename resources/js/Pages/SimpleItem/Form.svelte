@@ -1,6 +1,6 @@
 <script>
     import { params,gui } from '@/config/config.js'
-    import { pageprops } from '@/config/config_profession.js'
+    import { sabitler } from '@/config/config_simpleitem.js'
     
     import { Link } from '@inertiajs/inertia-svelte'
     import { Inertia } from '@inertiajs/inertia'
@@ -10,6 +10,7 @@
     import Header from '@/Pages/Shared/Header/Header.svelte'
     import Icon from '@/Pages/Shared/Icon.svelte'
 
+    export let pagetype
     export let item
 
     let editorProps
@@ -19,7 +20,9 @@
     let submitbutton
     let header
 
-    editorProps = pageprops.form.remarks
+    let pageprops = sabitler[pagetype]
+
+    editorProps = pageprops.form.textarea
 
     // IF THIS IS EDIT
     if (item) {
@@ -56,14 +59,19 @@
 
             values.id = item.id
 
-            Inertia.put('/profession', values,{
+            console.log("update",values)
+
+            Inertia.put('/simpleitem-upsert/'+pagetype, values,{
                 onStart: () => {processing = true},
                 onFinish: () => {processing = false},
             })
 
         } else {
 
-            Inertia.post('/profession', values,{
+            console.log("insert",values)
+
+
+            Inertia.post('/simpleitem-upsert/'+pagetype, values,{
                 onStart: () => {processing = true},
                 onFinish: () => {processing = false},
             })
@@ -96,9 +104,9 @@
         <div class="box">
                             
             <div class="field">
-                <label class="label" for="titleid">{pageprops.form.title.label}</label>
+                <label class="label" for="titleid">{pageprops.form.input.label}</label>
                 <div class="control" id="titleid">
-                    <input class="input" bind:value={title} type="text" placeholder="{pageprops.form.title.placeholder}" >
+                    <input class="input" bind:value={title} type="text" placeholder="{pageprops.form.input.placeholder}" >
                 </div>
             </div>
                 

@@ -54,11 +54,13 @@
                 <div class="navbar-dropdown">
                     <a class="navbar-item" href="/bcategory">Business Categories</a>
                     <a class="navbar-item" href="/">Training Categories</a>
-                    <a class="navbar-item" href="/profession">Professions</a>
-                    <a class="navbar-item" href="/education">Education</a>
+                    <a class="navbar-item" href="/simpleitem/profession">Professions</a>
+                    <a class="navbar-item" href="/simpleitem/diploma">Diploma</a>
 
                     <hr class="navbar-divider">
                     <a class="navbar-item" href="/slevels">Proficiency Levels</a>
+                    <a class="navbar-item" href="/simpleitem/language">Foreign Language</a>
+
 
                     <hr class="navbar-divider">
                     <a class="navbar-item" href="/">Responsibilities</a>

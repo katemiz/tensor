@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Http\Request;
-use App\Models\Education;
+use App\Models\Diploma;
 use Inertia\Inertia;
 use App\Models\User;
 
 
-class EducationController extends Controller
+class DiplomaController extends Controller
 {
 
 
@@ -32,7 +32,7 @@ class EducationController extends Controller
             $params["search"] = $request->input('search');
         }
 
-        return Education::query()
+        return Diploma::query()
         ->orderBy($sortcolumn,$sortorder)
         ->when($params,function($query,$params) {
 
@@ -46,7 +46,7 @@ class EducationController extends Controller
 
         })
         ->paginate(Config::get('constants.table.no_of_results'))
-        ->through(fn($item) =>Education::processItem($item))
+        ->through(fn($item) =>Diploma::processItem($item))
         ->withQueryString();
     }
 
@@ -57,25 +57,7 @@ class EducationController extends Controller
 
     public function index(Request $request,$notification = false) {
 
-/*         return Inertia::render('Education/List',[
-            "item" => false,
-            "educations" => Education::query()
-                ->when($request->input('search'),function($query,$search) {
-                    $query->where('title','like','%'.$search.'%');
-                })
-                ->paginate(6)
-                ->withQueryString()
-                ->through(fn($item) =>[
-                    'id'=>$item->id,
-                    'title'=>$item->title,
-                    'remarks'=>$item->remarks,
-                    'created_at'=>$item->created_at->format('d M Y')
-                ]),
-            "filters" => $request->only(["search"]),
-            "notification" => $notification
-        ]); */
-
-        return Inertia::render('Education/List',[
+        return Inertia::render('Diploma/List',[
             "item" => false,
             "educations" => $this->prepareArray($request),
             "filters" => $request->only(["search"]),
@@ -88,12 +70,12 @@ class EducationController extends Controller
     {
         //dd($request->id);
         if (is_numeric($request->id) && is_numeric($request->id) > 0 ) {
-            $item = Education::find($request->id);
+            $item = Diploma::find($request->id);
         } else {
             $item = false;
         }
 
-        return Inertia::render('Education/Form',[
+        return Inertia::render('Diploma/Form',[
             "item" => $item
         ]);
     }
@@ -107,19 +89,19 @@ class EducationController extends Controller
         ]);
 
         // Add new record
-        Education::create([
+        Diploma::create([
             'title' => ucfirst($attributes['title']),
             'remarks' => $request['remarks']['html'],
             'remarks_text' => $request['remarks']['text']
         ]);
 
-        $item = Education::getLatestItem();
+        $item = Diploma::getLatestItem();
 
-        return Inertia::render('Education/Show',[
+        return Inertia::render('Diploma/Show',[
             "item" => $item,
             "notification" =>  [
                 "type" =>'success',
-                "message" => 'New education level has been created successfully.'
+                "message" => 'New Diploma level has been created successfully.'
             ]
         ]); 
     }
@@ -134,7 +116,7 @@ class EducationController extends Controller
         ]);
 
         // Update record
-        Education::find($attributes['id'])
+        Diploma::find($attributes['id'])
         ->update([
             'title' => ucfirst($attributes['title']),
             'remarks' => ucfirst($request['remarks']['html']),
@@ -142,20 +124,16 @@ class EducationController extends Controller
         ]);
 
 
-        // $item = $this->getUserTime(Education::find($attributes['id']));
-        $item = Education::getItemById($attributes['id']);;
+        $item = Diploma::getItemById($attributes['id']);;
 
 
 
-        //$item = Education::find($attributes['id']);
-        // $item["created_by"] = User::select('name','lastname','email')->where('id', $item["created_by"])->first();
-        // $item["created_diff"] = Carbon::parse($item["created_at"])->diffForHumans();
 
-        return Inertia::render('Education/Show',[
+        return Inertia::render('Diploma/Show',[
             "item" =>  $item,
             "notification" =>  [
                 "type" =>'success',
-                "message" => 'Education Level has been updated successfully.'
+                "message" => 'Diploma Level has been updated successfully.'
             ]
         ]); 
     }
@@ -163,9 +141,9 @@ class EducationController extends Controller
 
     public function show($id)
     {
-        $item = Education::getItemById($id);;
+        $item = Diploma::getItemById($id);;
 
-        return Inertia::render('Education/Show',[
+        return Inertia::render('Diploma/Show',[
             "item" => $item,
             "notification" => false
         ]);
@@ -175,31 +153,18 @@ class EducationController extends Controller
     public function destroy(Request $request)
     {
         if ($request->has('id')) {
-            Education::find($request->id)->delete();
+            Diploma::find($request->id)->delete();
         }
 
-        return Inertia::render('Education/List',[
+        return Inertia::render('Diploma/List',[
             "item" => false,
             "educations" => $this->prepareArray($request),
             "filters" => $request->only(["search"]),
             "notification" => [
                 "type" =>'success',
-                "message" => 'Education level has been deleted successfully.'
+                "message" => 'Diploma level has been deleted successfully.'
             ]
         ]);
     }
-
-
-/*     function getUserTime($item) {
-
-        $item["created_by"] = User::select('name','lastname','email')->where('id', $item["created_by"])->first();
-        $item["created_diff"] = Carbon::parse($item["created_at"])->diffForHumans();
-
-        $item["updated_by"] = User::select('name','lastname','email')->where('id', $item["updated_by"])->first();
-        $item["updated_diff"] = Carbon::parse($item["updated_at"])->diffForHumans();
-
-        return $item;
-    } */
-
 }
 

@@ -1,15 +1,12 @@
 <script>
 
-    import {params,gui} from '@/config/config.js'
-    import {pageprops,formprops} from '@/config/config_roles.js'
+    import { params,gui } from '@/config/config.js'
+    import { pageprops,formprops } from '@/config/config_roles.js'
     import { slevels } from '@/config/config_slevels.js'
 
     import Layout from '@/Pages/Shared/Layout.svelte'
-    import Header from '@/Pages/Shared/Header/Header.svelte'
     import Icon from '@/Pages/Shared/Icon.svelte'
-
     import Notification from '@/Pages/Shared/Notification/Notification.svelte'
-    import ItemInfo from '@/Pages/Shared/Notification/ItemInfo.svelte'
 
     export let item
     export let skills
@@ -95,7 +92,7 @@
             </div>
 
             <div class="column is-1 is-pulled-right">
-                <a href="/select-skills/{item.id}">
+                <a href="/role-skills/{item.id}">
                 <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
                 </a>
             </div>
@@ -141,7 +138,19 @@
 
         <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Language Requirement</h6>
 
+        <div class="columns">
 
+            <div class="column">
+                <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Foreign Language Requirements</h6>
+            </div>
+
+            <div class="column is-1 is-pulled-right">
+                <a href="/role-language/{item.id}">
+                <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                </a>
+            </div>
+
+        </div>
 
     </section>
       

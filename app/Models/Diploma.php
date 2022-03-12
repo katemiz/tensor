@@ -8,11 +8,41 @@ use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
 
-class Profession extends Model
+class Diploma extends Model
 {
     use HasFactory;
 
+    protected $parentColumn = 'parent_id';
+
     protected $guarded = ['id'];
+
+
+    public function parent()
+    {
+        return $this->belongsTo(Diploma::class,$this->parentColumn);
+    }
+
+    public function children()
+    {
+        return $this->hasMany(Diploma::class, $this->parentColumn);
+    }
+
+    public function allChildren()
+    {
+        return $this->children()->with('allChildren');
+    }
+
+
+
+    public static function getItemById($id) {
+        return Diploma::processItem(Diploma::find($id));
+    }
+
+
+    public static function getLatestItem() {
+        return Diploma::processItem(Diploma::latest()->first());
+    }
+
 
     public static function processItem($item) {
 
@@ -25,12 +55,10 @@ class Profession extends Model
         return $item;
     }
 
-    public static function getItemById($id) {
-        return Profession::processItem(Profession::find($id));
-    }
 
 
-    public static function getLatestItem() {
-        return Profession::processItem(Profession::latest()->first());
-    }
+
 }
+
+
+

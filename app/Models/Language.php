@@ -8,42 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
 
-class Education extends Model
+class Language extends Model
 {
     use HasFactory;
 
-    protected $parentColumn = 'parent_id';
-
-    protected $fillable = [
-        'title',
-        'remarks',
-        'remarks_text'
-    ];
-
-    public function parent()
-    {
-        return $this->belongsTo(Education::class,$this->parentColumn);
-    }
-
-    public function children()
-    {
-        return $this->hasMany(Education::class, $this->parentColumn);
-    }
-
-    public function allChildren()
-    {
-        return $this->children()->with('allChildren');
-    }
-
-
+    protected $guarded = ['id'];
 
     public static function getItemById($id) {
-        return Education::processItem(Education::find($id));
+        return Language::processItem(Language::find($id));
     }
 
 
     public static function getLatestItem() {
-        return Education::processItem(Education::latest()->first());
+        return Language::processItem(Language::latest()->first());
     }
 
 
@@ -60,8 +37,10 @@ class Education extends Model
 
 
 
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
 
 }
-
-
-

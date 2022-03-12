@@ -5,6 +5,7 @@ use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ProfessionController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SimpleItemController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -49,10 +50,11 @@ Route::middleware(['auth'])->group(function () {
     Route::put('roles',[RoleController::class,'update']);
     Route::delete('roles',[RoleController::class,'destroy']);
 
-    Route::get('select-skills/{id}',[RoleController::class,'select']);
-    Route::post('role-skill',[RoleController::class,'roleskill']);
+    Route::get('role-skills/{id}',[RoleController::class,'getskills']);
+    Route::post('role-skill',[RoleController::class,'setskills']);
 
-
+    Route::get('role-language/{id}',[RoleController::class,'getlang']);
+    Route::post('role-language',[RoleController::class,'setlang']);
 
 
     // SKILLS TREE (AND SLEVELS)
@@ -89,6 +91,18 @@ Route::middleware(['auth'])->group(function () {
     Route::post('profession',[ProfessionController::class,'create']);
     Route::put('profession',[ProfessionController::class,'update']);
     Route::delete('profession',[ProfessionController::class,'destroy']);
+
+
+
+    // SIMPLE ITEM (EDU/DIPLOMA, PROFESSION, LANGUAGE)
+
+    Route::get('simpleitem/{type}',[SimpleItemController::class,'list']);
+    Route::get('simpleitem-form/{type}',[SimpleItemController::class,'form']);
+    Route::get('simpleitem-form/{type}/{id}',[SimpleItemController::class,'form']);
+    Route::get('simpleitem/{type}/{id}',[SimpleItemController::class,'show']);
+    Route::post('simpleitem-upsert/{type}',[SimpleItemController::class,'create']);
+    Route::put('simpleitem-upsert/{type}',[SimpleItemController::class,'update']);
+    Route::delete('simpleitem/{type}',[SimpleItemController::class,'destroy']);
 
 
 

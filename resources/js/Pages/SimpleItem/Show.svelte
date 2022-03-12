@@ -1,7 +1,7 @@
 <script>
 
     import { params,gui } from '@/config/config.js'
-    import { pageprops } from '@/config/config_education.js'
+    import { sabitler } from '@/config/config_simpleitem.js'
 
     import { Link } from '@inertiajs/inertia-svelte'
     import { Inertia } from '@inertiajs/inertia'
@@ -14,13 +14,16 @@
 
     import Swal from "sweetalert2"
 
+    export let pagetype
     export let item
     export let notification
 
+
+    let pageprops = sabitler[pagetype]
+
     function confirmDelete(id) {
 
-        Swal
-        .fire({
+        Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
             icon: 'warning',
@@ -31,7 +34,7 @@
         })
         .then((result) => {
 
-            Inertia.delete('/education', {
+            Inertia.delete('/simpleitem/'+pagetype, {
                 method:'delete',
                 preserveState:false,
                 data:{
@@ -45,7 +48,7 @@
 
 
 <svelte:head>
-  <title>{params.app.name} - Education Levels Properties</title>
+  <title>{params.app.name} - {pageprops.headers.general}</title>
 </svelte:head>
 
 
@@ -54,14 +57,14 @@
 
     <div class="section container">
 
-        <Header header="{{ title:pageprops.header.show }}" />
+        <Header header="{{ title:pageprops.headers.show }}" />
 
         {#if notification}
             <Notification {notification} />
         {/if}
 
         <div class="column has-text-right">
-            <Link href="/education" class="navbar-item">
+            <Link href="/simpleitem/{pagetype}" class="navbar-item">
               <Icon name="list" size="{gui.icons.size}" color="{gui.icons.color}"/> Back to List
             </Link> 
         </div>
@@ -82,7 +85,7 @@
 
             <footer class="card-footer">
 
-                <a href="/education/form/{item.id}" class="card-footer-item">
+                <a href="/simpleitem-form/{pagetype}/{item.id}" class="card-footer-item">
                     <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>&nbsp;Edit
                 </a>
                 <a href="{"#"}" class="card-footer-item" on:click="{confirmDelete(item.id)}">

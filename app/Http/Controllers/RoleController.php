@@ -176,7 +176,7 @@ class RoleController extends Controller
     }
 
 
-    public function select(Request $request)
+    public function getskills(Request $request)
     {
         return Inertia::render('Roles/SelectSkills',[
             "id" => $request->id,
@@ -186,31 +186,16 @@ class RoleController extends Controller
     }
 
 
-    public function roleskill(Request $request)
+    public function setskills(Request $request)
     {
-
-
-
-
-
         $role = Role::find($request->id);
-
-        //dd($request->id);
-        //dd($request->skills);
 
         $role->skills()->detach();
 
-
-
         foreach ($request->skills as $record) {
 
-            //dd($record);
-
             $role->skills()->attach($record["skill"],['level' => $record["level"]]);
-
         }
-
-        //$item = Role::getItemById($id);
 
         return Inertia::render('Roles/Show',[
             "item" => $role,
@@ -220,12 +205,35 @@ class RoleController extends Controller
                 "type" =>'success',
                 "message" => 'Required skills have been updated successfully.'
             ]
-
         ]);
     }
 
 
+    public function  getlang(Request $request)
+    {
+        return Inertia::render('Roles/Language',[
+            "id" => $request->id,
+            "skilltree" =>  Skill::getTreeData(),
+            "roleSkills" => Role::getItemById($request->id)->skills()->get()
+        ]); 
+    }
 
+    public function  setlang(Request $request)
+    {
+        $role = Role::find($request->id);
+
+
+
+        return Inertia::render('Roles/Show',[
+            "item" => $role,
+            "notification" => false,
+            "skills" => Role::getItemById($request->id)->skills()->get(),
+            "notification" =>  [
+                "type" =>'success',
+                "message" => 'Foreign language requirement has been set successfully.'
+            ]
+        ]);
+    }
 
 
 }
