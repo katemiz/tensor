@@ -13,23 +13,20 @@ class Role extends Model
 
     protected $guarded = ['id'];
 
-
-
-
-
-
     public function skills()
     {
         return $this->belongsToMany(Skill::class)->withPivot('level', 'created_by')->withTimestamps();
     }
-
 
     public function languages()
     {
         return $this->belongsToMany(Language::class)->withPivot('level', 'created_by')->withTimestamps();
     }
 
-    
+    public function diplomas()
+    {
+        return $this->belongsToMany(Diploma::class)->withPivot('status', 'created_by')->withTimestamps();
+    }
 
     public static function processItem($row) {
 
@@ -44,11 +41,9 @@ class Role extends Model
         return $row;
     }
 
-
     public static function getItemById($id) {
         return Role::processItem(Role::find($id));
     }
-
 
     public static function getLatestItem() {
         return Role::processItem(Role::latest()->first());

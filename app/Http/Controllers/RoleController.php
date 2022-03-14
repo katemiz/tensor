@@ -10,11 +10,11 @@ use App\Models\Role;
 use App\Models\Category;
 use App\Models\Skill;
 use App\Models\Language;
+use App\Models\Diploma;
 
 
 class RoleController extends Controller
 {
-
     public function index () {
         return Inertia::render('Roles/Roles');
     }
@@ -96,21 +96,18 @@ class RoleController extends Controller
     }
 
 
-
     public function show($id)
     {
-        $item = Role::getItemById($id);
+        $role = Role::getItemById($id);
 
         return Inertia::render('Roles/Show',[
-            "item" => $item,
+            "item" => $role,
             "notification" => false,
-            "skills" => $item->skills()->get(),
-            "languages" => $item->languages()->get()
+            "skills" => $role->skills()->get(),
+            "languages" => $role->languages()->get(),
+            "diplomas" =>  $role->diplomas()->get(),
         ]);
     }
-
-
-
 
 
     public function create(Request $request)
@@ -197,14 +194,14 @@ class RoleController extends Controller
         $role->skills()->detach();
 
         foreach ($request->skills as $record) {
-
             $role->skills()->attach($record["skill"],['level' => $record["level"]]);
         }
 
         return Inertia::render('Roles/Show',[
             "item" => $role,
             "notification" => false,
-            "skills" => Role::getItemById($request->id)->skills()->get(),
+            "skills" => $role->skills()->get(),
+            "languages" =>  $role->languages()->get(),
             "notification" =>  [
                 "type" =>'success',
                 "message" => 'Required skills have been updated successfully.'
@@ -212,47 +209,34 @@ class RoleController extends Controller
         ]);
     }
 
+    // LANGUAGE
 
     public function  getlang(Request $request)
     {
+        $role = Role::find($request->id);
 
-        //dd(Role::find($request->id)->languages());
         return Inertia::render('Roles/Language',[
             "id" => $request->id,
-            "role" =>  Role::find($request->id),
+            "role" =>  $role,
             "alllangs" => Language::orderBy("title")->get(),
-            "languages" =>  Role::find($request->id)->languages()->get()
+            "rolelangs" =>  $role->languages()->get()
         ]); 
     }
 
     public function  setlang(Request $request)
     {
-
-        // dd($request->id);
-        //dd($request);
-
-
         $role = Role::find($request->id);
-
-
         $role->languages()->detach();
 
-
         foreach ($request->langs as $record) {
-
-            //dd($record["level"]);
-
             $role->languages()->attach($record["id"],['level' => $record["level"]]);
         }
-
-
-
 
         return Inertia::render('Roles/Show',[
             "item" => $role,
             "notification" => false,
-            "skills" => Role::getItemById($request->id)->skills()->get(),
-            "languages" =>  Role::getItemById($request->id)->languages()->get(),
+            "skills" => $role->skills()->get(),
+            "languages" =>  $role->languages()->get(),
             "notification" =>  [
                 "type" =>'success',
                 "message" => 'Foreign language requirement has been set successfully.'
@@ -260,7 +244,43 @@ class RoleController extends Controller
         ]);
     }
 
+    // DIPLOMA
 
+    public function  getdiploma(Request $request)
+    {
+        $role = Role::find($request->id);
+
+        return Inertia::render('Roles/Diploma',[
+            "id" => $request->id,
+            "role" =>  $role,
+            "alldiplomas" => Diploma::orderBy("title")->get(),
+            "rolediplomas" =>  $role->diplomas()->get()
+        ]); 
+    }
+
+    public function  setdiploma(Request $request)
+    {
+        $role = Role::find($request->id);
+        $role->diplomas()->detach();
+
+        foreach ($request->diplomas as $record) {
+            $role->diplomas()->attach($record["id"],['status' => $record["status"]]);
+        }
+
+        return Inertia::render('Roles/Show',[
+            "item" => $role,
+            "notification" => false,
+            "skills" => $role->skills()->get(),
+            "languages" =>  $role->languages()->get(),
+            "diplomas" =>  $role->diplomas()->get(),
+            "notification" =>  [
+                "type" =>'success',
+                "message" => 'Diploma requirement has been set successfully.'
+            ]
+        ]);
+    }
+
+    
 }
 
 

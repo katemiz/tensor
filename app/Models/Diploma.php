@@ -16,7 +16,6 @@ class Diploma extends Model
 
     protected $guarded = ['id'];
 
-
     public function parent()
     {
         return $this->belongsTo(Diploma::class,$this->parentColumn);
@@ -32,8 +31,6 @@ class Diploma extends Model
         return $this->children()->with('allChildren');
     }
 
-
-
     public static function getItemById($id) {
         return Diploma::processItem(Diploma::find($id));
     }
@@ -43,6 +40,10 @@ class Diploma extends Model
         return Diploma::processItem(Diploma::latest()->first());
     }
 
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class)->withTimestamps();
+    }
 
     public static function processItem($item) {
 
@@ -54,10 +55,6 @@ class Diploma extends Model
 
         return $item;
     }
-
-
-
-
 }
 
 

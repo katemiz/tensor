@@ -101,3 +101,9 @@ export const formprops = {
   }
 
 }
+
+
+export const diplomaOptions = [
+  {id:1,title:"Required"},
+  {id:2,title:"Nice to have"}
+]
