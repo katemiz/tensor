@@ -23,6 +23,12 @@ class Role extends Model
         return $this->belongsToMany(Skill::class)->withPivot('level', 'created_by')->withTimestamps();
     }
 
+
+    public function languages()
+    {
+        return $this->belongsToMany(Language::class)->withPivot('level', 'created_by')->withTimestamps();
+    }
+
     
 
     public static function processItem($row) {

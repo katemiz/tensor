@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRoleLanguageTable extends Migration
+class CreateDiplomasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateRoleLanguageTable extends Migration
      */
     public function up()
     {
-        Schema::create('role_language', function (Blueprint $table) {
+        Schema::create('diplomas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('role_id')->constrained();
-            $table->foreignId('language_id')->constrained();
-            $table->integer('level')->nullable();
+            $table->text('title');
+            $table->text('remarks')->nullable();
+            $table->text('remarks_text')->nullable();
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateRoleLanguageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role_language');
+        Schema::dropIfExists('diplomas');
     }
 }

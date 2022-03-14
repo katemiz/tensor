@@ -3,6 +3,10 @@
     import { params,gui } from '@/config/config.js'
     import { pageprops,formprops } from '@/config/config_roles.js'
     import { slevels } from '@/config/config_slevels.js'
+    import { langlevels } from '@/config/config_langlevels.js'
+
+
+    
 
     import Layout from '@/Pages/Shared/Layout.svelte'
     import Icon from '@/Pages/Shared/Icon.svelte'
@@ -10,6 +14,7 @@
 
     export let item
     export let skills
+    export let languages
     export let notification
 
     console.log(item)
@@ -136,7 +141,6 @@
 
         {/if}
 
-        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Language Requirement</h6>
 
         <div class="columns">
 
@@ -151,6 +155,56 @@
             </div>
 
         </div>
+
+
+        {#if languages.length > 0}
+        <table class="table is-narrow is-fullwidth">
+
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>Language Knowledge</th>
+                <th class="has-text-right">Language Level</th>
+            </tr>
+            </thead>
+
+            {#each languages as lang,key}
+            <tr>
+                <td>{key+1}</td>
+                <td>{lang.title}</td>
+
+                {#if lang.pivot.level }
+                <td class="has-text-right">{lang.pivot.level} - { langlevels.filter(el => el.level == lang.pivot.level)[0].title}</td>
+                {:else}
+                <td class="has-text-right">Not Set</td>
+                {/if}
+            </tr>
+
+            {/each}
+
+        </table>
+        {:else}
+
+            <div class="notification is-warning is-light">
+            No language requirement for this role yet.
+            </div>
+
+        {/if}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </section>
       

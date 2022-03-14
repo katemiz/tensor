@@ -52,6 +52,10 @@
                 <a class="navbar-link" href="/Admin">Admin</a>
 
                 <div class="navbar-dropdown">
+
+                    <a class="navbar-item" href="/projects">Projects</a>
+                    <hr class="navbar-divider">
+
                     <a class="navbar-item" href="/bcategory">Business Categories</a>
                     <a class="navbar-item" href="/">Training Categories</a>
                     <a class="navbar-item" href="/simpleitem/profession">Professions</a>
@@ -89,6 +93,9 @@
                 
                         <div class="navbar-dropdown">
                             <p class="navbar-item">{user.name} {user.lastname}</p>
+                            <Link href="/projects" class="navbar-item" method="post" preserveScroll>
+                                Projects
+                            </Link>
                             <Link href="/logout" class="navbar-item" method="post" preserveScroll>
                                 Logout
                             </Link>

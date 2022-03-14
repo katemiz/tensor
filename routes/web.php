@@ -76,24 +76,6 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('bcategory',[CategoryController::class,'destroy']);
 
 
-    // EDUCATION
-    Route::get('education',[EducationController::class,'index']);
-    Route::get('education/form/{id}',[EducationController::class,'form']);
-    Route::get('education/{id}',[EducationController::class,'show']);
-    Route::post('education',[EducationController::class,'create']);
-    Route::put('education',[EducationController::class,'update']);
-    Route::delete('education',[EducationController::class,'destroy']);
-
-    // PROFESSIONS
-    Route::get('profession',[ProfessionController::class,'list']);
-    Route::get('profession/{id}',[ProfessionController::class,'show']);
-    Route::get('profession/form/{id}',[ProfessionController::class,'form']);
-    Route::post('profession',[ProfessionController::class,'create']);
-    Route::put('profession',[ProfessionController::class,'update']);
-    Route::delete('profession',[ProfessionController::class,'destroy']);
-
-
-
     // SIMPLE ITEM (EDU/DIPLOMA, PROFESSION, LANGUAGE)
 
     Route::get('simpleitem/{type}',[SimpleItemController::class,'list']);

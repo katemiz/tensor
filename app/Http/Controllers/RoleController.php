@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Config;
 use App\Models\Role;
 use App\Models\Category;
 use App\Models\Skill;
+use App\Models\Language;
 
 
 class RoleController extends Controller
@@ -103,7 +104,8 @@ class RoleController extends Controller
         return Inertia::render('Roles/Show',[
             "item" => $item,
             "notification" => false,
-            "skills" => $item->skills()->get()
+            "skills" => $item->skills()->get(),
+            "languages" => $item->languages()->get()
         ]);
     }
 
@@ -134,6 +136,8 @@ class RoleController extends Controller
 
         return Inertia::render('Roles/Show',[
             "item" => $item,
+            "skills" => [],
+            "languages" => [],
             "notification" =>  [
                 "type" =>'success',
                 "message" => 'New role has been created successfully.'
@@ -211,16 +215,36 @@ class RoleController extends Controller
 
     public function  getlang(Request $request)
     {
+
+        //dd(Role::find($request->id)->languages());
         return Inertia::render('Roles/Language',[
             "id" => $request->id,
-            "skilltree" =>  Skill::getTreeData(),
-            "roleSkills" => Role::getItemById($request->id)->skills()->get()
+            "role" =>  Role::find($request->id),
+            "alllangs" => Language::orderBy("title")->get(),
+            "languages" =>  Role::find($request->id)->languages()->get()
         ]); 
     }
 
     public function  setlang(Request $request)
     {
+
+        // dd($request->id);
+        //dd($request);
+
+
         $role = Role::find($request->id);
+
+
+        $role->languages()->detach();
+
+
+        foreach ($request->langs as $record) {
+
+            //dd($record["level"]);
+
+            $role->languages()->attach($record["id"],['level' => $record["level"]]);
+        }
+
 
 
 
@@ -228,6 +252,7 @@ class RoleController extends Controller
             "item" => $role,
             "notification" => false,
             "skills" => Role::getItemById($request->id)->skills()->get(),
+            "languages" =>  Role::getItemById($request->id)->languages()->get(),
             "notification" =>  [
                 "type" =>'success',
                 "message" => 'Foreign language requirement has been set successfully.'

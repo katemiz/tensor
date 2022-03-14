@@ -56,7 +56,8 @@ export const formprops = {
 
   headers: {
     new: 'New Role Properties',
-    update:'Update Properties'
+    update:'Update Properties',
+    addlang:"Foreign Languages"
   },
 
   category:{
