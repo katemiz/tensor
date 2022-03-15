@@ -27,7 +27,7 @@
                     <h2 class="subtitle has-text-info is-size-5">Level {slevel.level}</h2>
                     <figure class="image ">
                         <img src="/images/{slevel.image}" alt="{slevel.title}">
-                      </figure>
+                    </figure>
                 </article>
             </div>
 

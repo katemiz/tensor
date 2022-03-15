@@ -37,6 +37,18 @@
             </div>
 
             <div class="column is-1 is-pulled-right">
+
+                <span class="icon">
+                    <i class="fas fa-home"></i>
+                </span>
+
+                <a href="/role-docx/{item.id}">
+
+                    <figure class="image ">
+                        <img src="/icons/pdf.svg" alt="doc in pdf">
+                    </figure>
+                </a>
+
                 <a href="/roles/form/{item.id}">
                 <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
                 </a>
@@ -47,20 +59,12 @@
         <Notification {notification} />
 
         {#if item.desc_en.length > 0}
-
-        <!-- <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">{formprops.editor_en.label}</h6> -->
-
-        {@html item.desc_en}
-
+            {@html item.desc_en}
         {/if}
 
         
         {#if item.desc_tr.length > 0}
-
-        <!-- <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">{formprops.editor_tr.label}</h6> -->
-
-        {@html item.desc_tr}
-
+            {@html item.desc_tr}
         {/if}
 
     
@@ -171,19 +175,32 @@
 
 
 
+        <!-- EXPERIENCE          -->
+        <div class="columns">
+
+            <div class="column">
+                <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Experience</h6>
+            </div>
+
+            <div class="column is-1 is-pulled-right">
+                <a href="/role-experience/{item.id}">
+                <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                </a>
+            </div>
+
+        </div>
 
 
+        {#if item.experience.length > 0}
 
+            {@html item.experience}
 
+        {:else}
 
-
-
-
-        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Experience Requirements</h6>
-
-
-
-
+        <div class="notification is-warning is-light">
+            No experience has been added for this role yet.
+            </div>
+        {/if}
 
 
         <!-- SKILLS          -->

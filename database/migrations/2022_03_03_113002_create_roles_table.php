@@ -21,8 +21,10 @@ class CreateRolesTable extends Migration
             $table->text('title_tr');
             $table->text('desc_en')->nullable();
             $table->text('desc_tr')->nullable();
+            $table->text('experience')->nullable();
             $table->text('desc_en_text')->nullable();
             $table->text('desc_tr_text')->nullable();
+            $table->text('experience_text')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

@@ -62,6 +62,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('role-profession/{id}',[RoleController::class,'getprofession']);
     Route::post('role-profession',[RoleController::class,'setprofession']);
 
+    Route::get('role-experience/{id}',[RoleController::class,'getexperience']);
+    Route::post('role-experience',[RoleController::class,'setexperience']);
+
+    Route::post('role-docx/{id}',[RoleController::class,'docx']);
+
+
+
     // SKILLS TREE (AND SLEVELS)
     Route::get('slevels',[SkillController::class,'slevels']);
     Route::get('skills',[SkillController::class,'index']);

@@ -90,6 +90,12 @@ export const formprops = {
     placeholder:'Rol tanımlamasını giriniz ...'     
   },
 
+  editor_experience:{
+    id:"edEx",
+    label:"Experience and Areas of Work",
+    placeholder:'Describe experience required ...'     
+  },
+
   submit :{
     new :{
       label:"Create Role"

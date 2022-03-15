@@ -331,12 +331,57 @@ class RoleController extends Controller
 
 
 
+    // EXPERIENCE
+    public function  getexperience(Request $request)
+    {
+        return Inertia::render('Roles/Experience',[
+            "role" =>  Role::find($request->id)
+        ]); 
+    }
+
+
+    public function  setexperience(Request $request)
+    {
+        // validate
+        $attributes = $request->validate([
+            'id'=>'required',
+        ]);
+
+        // Update record
+        Role::find($attributes['id'])
+        ->update([
+            'experience' => ucfirst($request['experience']['html']),
+            'experience_text' => ucfirst($request['experience']['text']),
+        ]);
+
+        $role = Role::find($request->id);
+
+        return Inertia::render('Roles/Show',[
+            "item" => $role,
+            "notification" => false,
+            "skills" => $role->skills()->get(),
+            "languages" =>  $role->languages()->get(),
+            "diplomas" =>  $role->diplomas()->get(),
+            "professions" =>  $role->professions()->get(),
+            "notification" =>  [
+                "type" =>'success',
+                "message" => 'Experience has been added successfully.'
+            ]
+        ]);
+    }
 
 
 
 
 
+    // DOCX
 
+    public function docx(Request $request) {
+
+        $role = Role::find($request->id);
+
+
+    }
 
 
 
