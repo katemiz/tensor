@@ -28,6 +28,8 @@
         });
 
         professions = temp
+
+        console.log("professions,selected  ve temp ",professions,selected,temp)
     }
 
 
@@ -50,6 +52,9 @@
         temp.push({id:id,provision:null})
 
         professions = temp
+
+        console.log("ADD professions,selected  ve temp ",professions,selected,temp)
+
     }
 
 
@@ -135,7 +140,7 @@
                             <div class="control">
                 
                                 <div class="select is-fullwidth">
-                                    <select bind:value={profession.id}>
+                                    <select bind:value={profession.provision}>
                                         <option value="none">Select ...</option>
                 
                                         {#each professionCriteria as durum}

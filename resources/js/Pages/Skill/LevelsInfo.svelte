@@ -39,8 +39,6 @@
                         <article class="tile is-child notification">
                             <h1 class="title has-text-weight-light mb-0 is-size-5 has-text-info-dark">Knowledge</h1>
                             <p>{slevel.knowledge}</p>
-
-
                         </article>
                     </div>
 

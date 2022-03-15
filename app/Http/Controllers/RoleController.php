@@ -208,6 +208,8 @@ class RoleController extends Controller
             "notification" => false,
             "skills" => $role->skills()->get(),
             "languages" =>  $role->languages()->get(),
+            "diplomas" =>  $role->diplomas()->get(),
+            "professions" =>  $role->professions()->get(),
             "notification" =>  [
                 "type" =>'success',
                 "message" => 'Required skills have been updated successfully.'
@@ -279,6 +281,7 @@ class RoleController extends Controller
             "skills" => $role->skills()->get(),
             "languages" =>  $role->languages()->get(),
             "diplomas" =>  $role->diplomas()->get(),
+            "professions" =>  $role->professions()->get(),
             "notification" =>  [
                 "type" =>'success',
                 "message" => 'Diploma requirement has been set successfully.'
