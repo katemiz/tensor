@@ -25,6 +25,12 @@ class Profession extends Model
         return $item;
     }
 
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
+
     public static function getItemById($id) {
         return Profession::processItem(Profession::find($id));
     }

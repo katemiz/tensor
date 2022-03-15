@@ -9182,7 +9182,7 @@ function create_each_block_1(ctx) {
 
   icon1 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_5__["default"]({
     props: {
-      name: "live_help",
+      name: "info",
       size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
       color: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.color
     }
@@ -9216,7 +9216,7 @@ function create_each_block_1(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon1.$$.fragment);
       t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       span1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
-      span1.textContent = "Language Levels Info";
+      span1.textContent = "Language Levels";
       t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "href", a_href_value = "#");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "class", "icon");
@@ -11260,6 +11260,1088 @@ var List = /*#__PURE__*/function (_SvelteComponent) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Roles/Profession.svelte":
+/*!****************************************************!*\
+  !*** ./resources/js/Pages/Roles/Profession.svelte ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _config_config_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/config/config.js */ "./resources/js/config/config.js");
+/* harmony import */ var _config_config_roles_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/config/config_roles.js */ "./resources/js/config/config_roles.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _Pages_Shared_Layout_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Pages/Shared/Layout.svelte */ "./resources/js/Pages/Shared/Layout.svelte");
+/* harmony import */ var _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Pages/Shared/Icon.svelte */ "./resources/js/Pages/Shared/Icon.svelte");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_6__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* resources/js/Pages/Roles/Profession.svelte generated by Svelte v3.46.3 */
+
+
+
+
+
+
+
+
+function get_each_context(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[13] = list[i];
+  return child_ctx;
+}
+
+function get_each_context_1(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[13] = list[i];
+  child_ctx[16] = list;
+  child_ctx[17] = i;
+  return child_ctx;
+}
+
+function get_each_context_2(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[18] = list[i];
+  return child_ctx;
+} // (157:8) {:else}
+
+
+function create_else_block_1(ctx) {
+  var div;
+  return {
+    c: function c() {
+      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div.textContent = "No profession requirment exists for this role.";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "notification is-warning is-light");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
+    },
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
+    }
+  };
+} // (116:8) {#if professions.length > 0}
+
+
+function create_if_block_1(ctx) {
+  var table;
+  var current;
+  var each_value_1 =
+  /*professions*/
+  ctx[3];
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value_1.length; i += 1) {
+    each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+  }
+
+  var out = function out(i) {
+    return (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(each_blocks[i], 1, 1, function () {
+      each_blocks[i] = null;
+    });
+  };
+
+  return {
+    c: function c() {
+      table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
+
+      for (var _i = 0; _i < each_blocks.length; _i += 1) {
+        each_blocks[_i].c();
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "class", "table is-bordered is-fullwidth");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, table, anchor);
+
+      for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
+        each_blocks[_i2].m(table, null);
+      }
+
+      current = true;
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*professions, professionCriteria, allprofessions, removeProfession, gui*/
+      44) {
+        each_value_1 =
+        /*professions*/
+        ctx[3];
+
+        var _i3;
+
+        for (_i3 = 0; _i3 < each_value_1.length; _i3 += 1) {
+          var child_ctx = get_each_context_1(ctx, each_value_1, _i3);
+
+          if (each_blocks[_i3]) {
+            each_blocks[_i3].p(child_ctx, dirty);
+
+            (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(each_blocks[_i3], 1);
+          } else {
+            each_blocks[_i3] = create_each_block_1(child_ctx);
+
+            each_blocks[_i3].c();
+
+            (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(each_blocks[_i3], 1);
+
+            each_blocks[_i3].m(table, null);
+          }
+        }
+
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.group_outros)();
+
+        for (_i3 = each_value_1.length; _i3 < each_blocks.length; _i3 += 1) {
+          out(_i3);
+        }
+
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.check_outros)();
+      }
+    },
+    i: function i(local) {
+      if (current) return;
+
+      for (var _i4 = 0; _i4 < each_value_1.length; _i4 += 1) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(each_blocks[_i4]);
+      }
+
+      current = true;
+    },
+    o: function o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+
+      for (var _i5 = 0; _i5 < each_blocks.length; _i5 += 1) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(each_blocks[_i5]);
+      }
+
+      current = false;
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(table);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+    }
+  };
+} // (141:40) {#each professionCriteria as durum}
+
+
+function create_each_block_2(ctx) {
+  var option;
+  var t_value =
+  /*durum*/
+  ctx[18].title + "";
+  var t;
+  var option_value_value;
+  return {
+    c: function c() {
+      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
+      option.__value = option_value_value =
+      /*durum*/
+      ctx[18].id;
+      option.value = option.__value;
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t);
+    },
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
+    }
+  };
+} // (120:12) {#each professions as profession}
+
+
+function create_each_block_1(ctx) {
+  var tr;
+  var td0;
+  var a;
+  var icon;
+  var a_href_value;
+  var t0;
+  var td1;
+  var t1_value =
+  /*allprofessions*/
+  ctx[2].filter(func)[0].title + "";
+  var t1;
+  var t2;
+  var td2;
+  var div2;
+  var div1;
+  var div0;
+  var select;
+  var option;
+  var t4;
+  var current;
+  var mounted;
+  var dispose;
+  icon = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_5__["default"]({
+    props: {
+      name: "remove_from_list",
+      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
+      color: "danger"
+    }
+  });
+
+  function func() {
+    var _ctx;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return (
+      /*func*/
+      (_ctx = ctx)[8].apply(_ctx, [
+      /*profession*/
+      ctx[13]].concat(args))
+    );
+  }
+
+  var each_value_2 = _config_config_roles_js__WEBPACK_IMPORTED_MODULE_2__.professionCriteria;
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value_2.length; i += 1) {
+    each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+  }
+
+  function select_change_handler() {
+    /*select_change_handler*/
+    ctx[9].call(select,
+    /*each_value_1*/
+    ctx[16],
+    /*profession_index_1*/
+    ctx[17]);
+  }
+
+  return {
+    c: function c() {
+      tr = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tr");
+      td0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      a = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon.$$.fragment);
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      td1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t1_value);
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      td2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option.textContent = "Select ...";
+
+      for (var _i6 = 0; _i6 < each_blocks.length; _i6 += 1) {
+        each_blocks[_i6].c();
+      }
+
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "href", a_href_value = "#");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "class", "icon");
+      option.__value = "none";
+      option.value = option.__value;
+      if (
+      /*profession*/
+      ctx[13].id === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(select_change_handler);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "select is-fullwidth");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "field");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td2, "class", "has-text-right");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, tr, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td0, a);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon, a, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td1, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td2, div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, select);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option);
+
+      for (var _i7 = 0; _i7 < each_blocks.length; _i7 += 1) {
+        each_blocks[_i7].m(select, null);
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
+      /*profession*/
+      ctx[13].id);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t4);
+      current = true;
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(a, "click", function () {
+          if ((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.is_function)(
+          /*removeProfession*/
+          ctx[5](
+          /*profession*/
+          ctx[13].id)))
+            /*removeProfession*/
+            ctx[5](
+            /*profession*/
+            ctx[13].id).apply(this, arguments);
+        }), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change", select_change_handler)];
+        mounted = true;
+      }
+    },
+    p: function p(new_ctx, dirty) {
+      ctx = new_ctx;
+      if ((!current || dirty &
+      /*allprofessions, professions*/
+      12) && t1_value !== (t1_value =
+      /*allprofessions*/
+      ctx[2].filter(func)[0].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
+
+      if (dirty &
+      /*professionCriteria*/
+      0) {
+        each_value_2 = _config_config_roles_js__WEBPACK_IMPORTED_MODULE_2__.professionCriteria;
+
+        var _i8;
+
+        for (_i8 = 0; _i8 < each_value_2.length; _i8 += 1) {
+          var child_ctx = get_each_context_2(ctx, each_value_2, _i8);
+
+          if (each_blocks[_i8]) {
+            each_blocks[_i8].p(child_ctx, dirty);
+          } else {
+            each_blocks[_i8] = create_each_block_2(child_ctx);
+
+            each_blocks[_i8].c();
+
+            each_blocks[_i8].m(select, null);
+          }
+        }
+
+        for (; _i8 < each_blocks.length; _i8 += 1) {
+          each_blocks[_i8].d(1);
+        }
+
+        each_blocks.length = each_value_2.length;
+      }
+
+      if (dirty &
+      /*professions, professionCriteria*/
+      8) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
+        /*profession*/
+        ctx[13].id);
+      }
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon.$$.fragment, local);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon.$$.fragment, local);
+      current = false;
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      mounted = false;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
+    }
+  };
+} // (184:8) {:else}
+
+
+function create_else_block(ctx) {
+  var div;
+  return {
+    c: function c() {
+      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div.textContent = "No profession definitions found.\n            Please inform administrator to add provisions to select.";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "notification is-warning is-light");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
+    },
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
+    }
+  };
+} // (164:8) {#if allprofessions.length > 0}
+
+
+function create_if_block(ctx) {
+  var table;
+  var caption;
+  var t1;
+  var current;
+  var each_value =
+  /*allprofessions*/
+  ctx[2];
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+
+  var out = function out(i) {
+    return (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(each_blocks[i], 1, 1, function () {
+      each_blocks[i] = null;
+    });
+  };
+
+  return {
+    c: function c() {
+      table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
+      caption = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("caption");
+      caption.textContent = "Available professions to select";
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+
+      for (var _i9 = 0; _i9 < each_blocks.length; _i9 += 1) {
+        each_blocks[_i9].c();
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "class", "table is-fullwidth mt-6");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, table, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, caption);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t1);
+
+      for (var _i10 = 0; _i10 < each_blocks.length; _i10 += 1) {
+        each_blocks[_i10].m(table, null);
+      }
+
+      current = true;
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*addProfession, allprofessions, gui*/
+      20) {
+        each_value =
+        /*allprofessions*/
+        ctx[2];
+
+        var _i11;
+
+        for (_i11 = 0; _i11 < each_value.length; _i11 += 1) {
+          var child_ctx = get_each_context(ctx, each_value, _i11);
+
+          if (each_blocks[_i11]) {
+            each_blocks[_i11].p(child_ctx, dirty);
+
+            (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(each_blocks[_i11], 1);
+          } else {
+            each_blocks[_i11] = create_each_block(child_ctx);
+
+            each_blocks[_i11].c();
+
+            (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(each_blocks[_i11], 1);
+
+            each_blocks[_i11].m(table, null);
+          }
+        }
+
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.group_outros)();
+
+        for (_i11 = each_value.length; _i11 < each_blocks.length; _i11 += 1) {
+          out(_i11);
+        }
+
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.check_outros)();
+      }
+    },
+    i: function i(local) {
+      if (current) return;
+
+      for (var _i12 = 0; _i12 < each_value.length; _i12 += 1) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(each_blocks[_i12]);
+      }
+
+      current = true;
+    },
+    o: function o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+
+      for (var _i13 = 0; _i13 < each_blocks.length; _i13 += 1) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(each_blocks[_i13]);
+      }
+
+      current = false;
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(table);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+    }
+  };
+} // (169:12) {#each allprofessions as profession}
+
+
+function create_each_block(ctx) {
+  var tr;
+  var td0;
+  var t0_value =
+  /*profession*/
+  ctx[13].title + "";
+  var t0;
+  var t1;
+  var td1;
+  var button;
+  var span0;
+  var icon;
+  var t2;
+  var span1;
+  var t4;
+  var current;
+  var mounted;
+  var dispose;
+  icon = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_5__["default"]({
+    props: {
+      name: "add",
+      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
+      color: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.color
+    }
+  });
+  return {
+    c: function c() {
+      tr = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tr");
+      td0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      td1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      span0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon.$$.fragment);
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span1.textContent = "Add";
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "icon is-small");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "button is-small");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td1, "class", "has-text-right");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, tr, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td0, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td1, button);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, span0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon, span0, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, span1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t4);
+      current = true;
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button, "click", function () {
+          if ((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.is_function)(
+          /*addProfession*/
+          ctx[4](
+          /*profession*/
+          ctx[13].id)))
+            /*addProfession*/
+            ctx[4](
+            /*profession*/
+            ctx[13].id).apply(this, arguments);
+        });
+        mounted = true;
+      }
+    },
+    p: function p(new_ctx, dirty) {
+      ctx = new_ctx;
+      if ((!current || dirty &
+      /*allprofessions*/
+      4) && t0_value !== (t0_value =
+      /*profession*/
+      ctx[13].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon.$$.fragment, local);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon.$$.fragment, local);
+      current = false;
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon);
+      mounted = false;
+      dispose();
+    }
+  };
+} // (83:0) <Layout>
+
+
+function create_default_slot(ctx) {
+  var div4;
+  var div3;
+  var div0;
+  var h1;
+  var t0_value =
+  /*role*/
+  ctx[1].title_en + "";
+  var t0;
+  var t1;
+  var h2;
+  var t3;
+  var div2;
+  var div1;
+  var button;
+  var span0;
+  var icon0;
+  var t4;
+  var span1;
+  var t6;
+  var a;
+  var span2;
+  var icon1;
+  var t7;
+  var span3;
+  var a_href_value;
+  var t9;
+  var current_block_type_index;
+  var if_block0;
+  var t10;
+  var current_block_type_index_1;
+  var if_block1;
+  var current;
+  var mounted;
+  var dispose;
+  icon0 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_5__["default"]({
+    props: {
+      name: "save",
+      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
+      color: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.color
+    }
+  });
+  icon1 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_5__["default"]({
+    props: {
+      name: "cancel",
+      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
+      color: "danger"
+    }
+  });
+  var if_block_creators = [create_if_block_1, create_else_block_1];
+  var if_blocks = [];
+
+  function select_block_type(ctx, dirty) {
+    if (
+    /*professions*/
+    ctx[3].length > 0) return 0;
+    return 1;
+  }
+
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  var if_block_creators_1 = [create_if_block, create_else_block];
+  var if_blocks_1 = [];
+
+  function select_block_type_1(ctx, dirty) {
+    if (
+    /*allprofessions*/
+    ctx[2].length > 0) return 0;
+    return 1;
+  }
+
+  current_block_type_index_1 = select_block_type_1(ctx, -1);
+  if_block1 = if_blocks_1[current_block_type_index_1] = if_block_creators_1[current_block_type_index_1](ctx);
+  return {
+    c: function c() {
+      div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      h1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h2");
+      h2.textContent = "Professions";
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      span0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon0.$$.fragment);
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span1.textContent = "Save";
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      a = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon1.$$.fragment);
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span3.textContent = "Cancel";
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      if_block0.c();
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      if_block1.c();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h1, "class", "title has-text-weight-light");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h2, "class", "subtitle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "column");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "icon is-small");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "button is-small is-link is-light");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span2, "class", "icon is-small");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "href", a_href_value = "/roles/" +
+      /*id*/
+      ctx[0]);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "class", "button is-small");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "buttons is-pulled-right");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "column is-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "columns");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "section container");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div4, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h1, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, button);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, span0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon0, span0, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, span1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, a);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, span2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon1, span2, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, span3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t9);
+      if_blocks[current_block_type_index].m(div4, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t10);
+      if_blocks_1[current_block_type_index_1].m(div4, null);
+      current = true;
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button, "click",
+        /*saveProfession*/
+        ctx[6]);
+        mounted = true;
+      }
+    },
+    p: function p(ctx, dirty) {
+      if ((!current || dirty &
+      /*role*/
+      2) && t0_value !== (t0_value =
+      /*role*/
+      ctx[1].title_en + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+
+      if (!current || dirty &
+      /*id*/
+      1 && a_href_value !== (a_href_value = "/roles/" +
+      /*id*/
+      ctx[0])) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "href", a_href_value);
+      }
+
+      var previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx, dirty);
+
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx, dirty);
+      } else {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.group_outros)();
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(if_blocks[previous_block_index], 1, 1, function () {
+          if_blocks[previous_block_index] = null;
+        });
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.check_outros)();
+        if_block0 = if_blocks[current_block_type_index];
+
+        if (!if_block0) {
+          if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+          if_block0.c();
+        } else {
+          if_block0.p(ctx, dirty);
+        }
+
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(if_block0, 1);
+        if_block0.m(div4, t10);
+      }
+
+      var previous_block_index_1 = current_block_type_index_1;
+      current_block_type_index_1 = select_block_type_1(ctx, dirty);
+
+      if (current_block_type_index_1 === previous_block_index_1) {
+        if_blocks_1[current_block_type_index_1].p(ctx, dirty);
+      } else {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.group_outros)();
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(if_blocks_1[previous_block_index_1], 1, 1, function () {
+          if_blocks_1[previous_block_index_1] = null;
+        });
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.check_outros)();
+        if_block1 = if_blocks_1[current_block_type_index_1];
+
+        if (!if_block1) {
+          if_block1 = if_blocks_1[current_block_type_index_1] = if_block_creators_1[current_block_type_index_1](ctx);
+          if_block1.c();
+        } else {
+          if_block1.p(ctx, dirty);
+        }
+
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(if_block1, 1);
+        if_block1.m(div4, null);
+      }
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon0.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon1.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(if_block0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(if_block1);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon0.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon1.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(if_block0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(if_block1);
+      current = false;
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon1);
+      if_blocks[current_block_type_index].d();
+      if_blocks_1[current_block_type_index_1].d();
+      mounted = false;
+      dispose();
+    }
+  };
+}
+
+function create_fragment(ctx) {
+  var title_value;
+  var link;
+  var t;
+  var layout;
+  var current;
+  document.title = title_value = "" + (_config_config_js__WEBPACK_IMPORTED_MODULE_1__.params.app.name + " - Professions");
+  layout = new _Pages_Shared_Layout_svelte__WEBPACK_IMPORTED_MODULE_4__["default"]({
+    props: {
+      $$slots: {
+        "default": [create_default_slot]
+      },
+      $$scope: {
+        ctx: ctx
+      }
+    }
+  });
+  return {
+    c: function c() {
+      link = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("link");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(layout.$$.fragment);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(link, "href", "/css/quill.snow.css");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(link, "rel", "stylesheet");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(document.head, link);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(layout, target, anchor);
+      current = true;
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      if ((!current || dirty &
+      /*params*/
+      0) && title_value !== (title_value = "" + (_config_config_js__WEBPACK_IMPORTED_MODULE_1__.params.app.name + " - Professions"))) {
+        document.title = title_value;
+      }
+
+      var layout_changes = {};
+
+      if (dirty &
+      /*$$scope, allprofessions, professions, id, role*/
+      2097167) {
+        layout_changes.$$scope = {
+          dirty: dirty,
+          ctx: ctx
+        };
+      }
+
+      layout.$set(layout_changes);
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(layout.$$.fragment, local);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(layout.$$.fragment, local);
+      current = false;
+    },
+    d: function d(detaching) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(link);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(layout, detaching);
+    }
+  };
+}
+
+function instance($$self, $$props, $$invalidate) {
+  var id = $$props.id;
+  var role = $$props.role;
+  var roleprofessions = $$props.roleprofessions;
+  var allprofessions = $$props.allprofessions;
+  var professions;
+  var selected = [];
+  var temp = [];
+  processAvailable();
+
+  function processAvailable() {
+    roleprofessions.forEach(function (element) {
+      selected.push(element.id);
+      temp.push({
+        id: element.id,
+        provision: element.pivot.provision
+      });
+    });
+    $$invalidate(3, professions = temp);
+  }
+
+  function addProfession(id) {
+    if (selected.includes(id)) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_6___default().fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'Selected profession is already included',
+        showConfirmButton: false,
+        timer: 1000
+      });
+      return true;
+    }
+
+    selected.push(id);
+    temp.push({
+      id: id,
+      provision: null
+    });
+    $$invalidate(3, professions = temp);
+  }
+
+  function removeProfession(id) {
+    temp = temp.filter(function (e) {
+      return e.id !== id;
+    });
+    selected.splice(selected.indexOf(id), 1);
+    delete selected[id];
+    $$invalidate(3, professions = professions.filter(function (e) {
+      return e.id !== id;
+    }));
+  }
+
+  function saveProfession() {
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.post('/role-profession', {
+      id: id,
+      professions: professions
+    }, {
+      preserveState: false
+    });
+  }
+
+  var func = function func(profession, el) {
+    return el.id == profession.id;
+  };
+
+  function select_change_handler(each_value_1, profession_index_1) {
+    each_value_1[profession_index_1].id = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_value)(this);
+    $$invalidate(3, professions);
+  }
+
+  $$self.$$set = function ($$props) {
+    if ('id' in $$props) $$invalidate(0, id = $$props.id);
+    if ('role' in $$props) $$invalidate(1, role = $$props.role);
+    if ('roleprofessions' in $$props) $$invalidate(7, roleprofessions = $$props.roleprofessions);
+    if ('allprofessions' in $$props) $$invalidate(2, allprofessions = $$props.allprofessions);
+  };
+
+  return [id, role, allprofessions, professions, addProfession, removeProfession, saveProfession, roleprofessions, func, select_change_handler];
+}
+
+var Profession = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Profession, _SvelteComponent);
+
+  var _super = _createSuper(Profession);
+
+  function Profession(options) {
+    var _this;
+
+    _classCallCheck(this, Profession);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      id: 0,
+      role: 1,
+      roleprofessions: 7,
+      allprofessions: 2
+    });
+    return _this;
+  }
+
+  return _createClass(Profession);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profession);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Roles/Roles.svelte":
 /*!***********************************************!*\
   !*** ./resources/js/Pages/Roles/Roles.svelte ***!
@@ -11499,10 +12581,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pages_Shared_Tree_Tree_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Pages/Shared/Tree/Tree.svelte */ "./resources/js/Pages/Shared/Tree/Tree.svelte");
 /* harmony import */ var _Pages_Shared_Layout_svelte__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Pages/Shared/Layout.svelte */ "./resources/js/Pages/Shared/Layout.svelte");
 /* harmony import */ var _Pages_Shared_Header_Header_svelte__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Pages/Shared/Header/Header.svelte */ "./resources/js/Pages/Shared/Header/Header.svelte");
-/* harmony import */ var _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Pages/Shared/Icon.svelte */ "./resources/js/Pages/Shared/Icon.svelte");
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _Pages_Skill_LevelsInfo_svelte__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Pages/Skill/LevelsInfo.svelte */ "./resources/js/Pages/Skill/LevelsInfo.svelte");
+/* harmony import */ var _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/Pages/Shared/Icon.svelte */ "./resources/js/Pages/Shared/Icon.svelte");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_10__);
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -11549,19 +12632,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[13] = list[i];
-  child_ctx[14] = list;
-  child_ctx[15] = i;
+  child_ctx[16] = list[i];
+  child_ctx[17] = list;
+  child_ctx[18] = i;
   return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[16] = list[i];
+  child_ctx[19] = list[i];
   return child_ctx;
-} // (192:6) {:else}
+} // (245:6) {:else}
 
 
 function create_else_block(ctx) {
@@ -11582,18 +12666,18 @@ function create_else_block(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (144:6) {#if requirements.length > 0}
+} // (186:6) {#if requirements.length > 0}
 
 
 function create_if_block(ctx) {
   var table;
   var thead;
-  var t5;
+  var t7;
   var tbody;
   var current;
   var each_value =
   /*requirements*/
-  ctx[2];
+  ctx[4];
   var each_blocks = [];
 
   for (var i = 0; i < each_value.length; i += 1) {
@@ -11610,8 +12694,8 @@ function create_if_block(ctx) {
     c: function c() {
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
-      thead.innerHTML = "<tr><th>\xA0</th> \n            <th>Required Skill</th> \n            <th>Required Skill Level</th></tr>";
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      thead.innerHTML = "<tr><th>\xA0</th> \n            <th>Skill</th> \n            <th>Skill Level</th> \n            <th>Guide</th></tr>";
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       tbody = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tbody");
 
       for (var _i = 0; _i < each_blocks.length; _i += 1) {
@@ -11623,7 +12707,7 @@ function create_if_block(ctx) {
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, table, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, thead);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, tbody);
 
       for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
@@ -11634,11 +12718,11 @@ function create_if_block(ctx) {
     },
     p: function p(ctx, dirty) {
       if (dirty &
-      /*roleLevels, requirements, slevels, removeSkill, gui*/
-      44) {
+      /*showInfo, gui, roleLevels, requirements, slevels, removeSkill*/
+      688) {
         each_value =
         /*requirements*/
-        ctx[2];
+        ctx[4];
 
         var _i3;
 
@@ -11692,62 +12776,53 @@ function create_if_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
     }
   };
-} // (176:28) {#each slevels as level}
+} // (219:28) {#each slevels as level}
 
 
 function create_each_block_1(ctx) {
   var option;
-  var t0_value =
+  var t_value =
   /*level*/
-  ctx[16].level + "";
-  var t0;
-  var t1;
-  var t2_value =
-  /*level*/
-  ctx[16].title + "";
-  var t2;
+  ctx[19].title + "";
+  var t;
   var option_value_value;
   return {
     c: function c() {
       option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" - ");
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t2_value);
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
       option.__value = option_value_value =
       /*level*/
-      ctx[16].level;
+      ctx[19].level;
       option.value = option.__value;
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t);
     },
     p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
     }
   };
-} // (158:10) {#each requirements as requirement}
+} // (201:10) {#each requirements as requirement}
 
 
 function create_each_block(ctx) {
   var tr;
   var td0;
   var a;
-  var icon;
+  var icon0;
   var a_href_value;
   var t0;
   var td1;
   var t1_value =
   /*requirement*/
-  ctx[13].id + "";
+  ctx[16].id + "";
   var t1;
   var t2;
   var t3_value =
   /*requirement*/
-  ctx[13].title_en + "";
+  ctx[16].title_en + "";
   var t3;
   var t4;
   var td2;
@@ -11757,10 +12832,17 @@ function create_each_block(ctx) {
   var select;
   var option;
   var t6;
+  var td3;
+  var span2;
+  var span0;
+  var icon1;
+  var t7;
+  var span1;
+  var t9;
   var current;
   var mounted;
   var dispose;
-  icon = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_7__["default"]({
+  icon0 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_8__["default"]({
     props: {
       name: "remove_from_list",
       size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
@@ -11776,17 +12858,24 @@ function create_each_block(ctx) {
 
   function select_change_handler() {
     /*select_change_handler*/
-    ctx[9].call(select,
+    ctx[12].call(select,
     /*requirement*/
-    ctx[13]);
+    ctx[16]);
   }
 
+  icon1 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_8__["default"]({
+    props: {
+      name: "info",
+      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
+      color: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.color
+    }
+  });
   return {
     c: function c() {
       tr = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tr");
       td0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
       a = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon.$$.fragment);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon0.$$.fragment);
       t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       td1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
       t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t1_value);
@@ -11806,24 +12895,35 @@ function create_each_block(ctx) {
       }
 
       t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      td3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon1.$$.fragment);
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span1.textContent = "Skill Levels";
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "href", a_href_value = "#");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "class", "icon");
       option.__value = "0";
       option.value = option.__value;
       if (
       /*roleLevels*/
-      ctx[3][
+      ctx[5][
       /*requirement*/
-      ctx[13].id] === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(select_change_handler);
+      ctx[16].id] === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(select_change_handler);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "select is-fullwidth");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "control");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "field");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "icon");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "has-text-link");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span2, "class", "icon-text");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, tr, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td0, a);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon, a, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon0, a, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td1, t1);
@@ -11843,24 +12943,33 @@ function create_each_block(ctx) {
 
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
       /*roleLevels*/
-      ctx[3][
+      ctx[5][
       /*requirement*/
-      ctx[13].id]);
+      ctx[16].id]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td3, span2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span2, span0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon1, span0, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span2, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span2, span1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t9);
       current = true;
 
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(a, "click", function () {
           if ((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.is_function)(
           /*removeSkill*/
-          ctx[5](
+          ctx[7](
           /*requirement*/
-          ctx[13].id)))
+          ctx[16].id)))
             /*removeSkill*/
-            ctx[5](
+            ctx[7](
             /*requirement*/
-            ctx[13].id).apply(this, arguments);
-        }), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change", select_change_handler)];
+            ctx[16].id).apply(this, arguments);
+        }), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change", select_change_handler), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(span2, "click",
+        /*showInfo*/
+        ctx[9])];
         mounted = true;
       }
     },
@@ -11868,14 +12977,14 @@ function create_each_block(ctx) {
       ctx = new_ctx;
       if ((!current || dirty &
       /*requirements*/
-      4) && t1_value !== (t1_value =
+      16) && t1_value !== (t1_value =
       /*requirement*/
-      ctx[13].id + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
+      ctx[16].id + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
       if ((!current || dirty &
       /*requirements*/
-      4) && t3_value !== (t3_value =
+      16) && t3_value !== (t3_value =
       /*requirement*/
-      ctx[13].title_en + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t3, t3_value);
+      ctx[16].title_en + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t3, t3_value);
 
       if (dirty &
       /*slevels*/
@@ -11907,61 +13016,85 @@ function create_each_block(ctx) {
 
       if (dirty &
       /*roleLevels, requirements, slevels*/
-      12) {
+      48) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
         /*roleLevels*/
-        ctx[3][
+        ctx[5][
         /*requirement*/
-        ctx[13].id]);
+        ctx[16].id]);
       }
     },
     i: function i(local) {
       if (current) return;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon0.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon1.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon0.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon1.$$.fragment, local);
       current = false;
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon1);
       mounted = false;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (133:0) <Layout>
+} // (121:0) <Layout>
 
 
 function create_default_slot(ctx) {
   var section;
-  var header;
-  var t0;
+  var div3;
   var div0;
-  var button;
-  var t2;
-  var a;
+  var h1;
+  var t0_value =
+  /*role*/
+  ctx[1].title_en + "";
+  var t0;
+  var t1;
+  var h2;
   var t3;
-  var a_href_value;
+  var div2;
+  var div1;
+  var button;
+  var span0;
+  var icon0;
   var t4;
+  var span1;
+  var t6;
+  var a;
+  var span2;
+  var icon1;
+  var t7;
+  var span3;
+  var a_href_value;
+  var t9;
   var current_block_type_index;
   var if_block;
-  var t5;
-  var div1;
-  var t7;
+  var t10;
+  var div4;
+  var t12;
   var tree;
   var current;
   var mounted;
   var dispose;
-  header = new _Pages_Shared_Header_Header_svelte__WEBPACK_IMPORTED_MODULE_6__["default"]({
+  icon0 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_8__["default"]({
     props: {
-      header: {
-        title: 'Required Skills',
-        subtitle: 'Skill Level Requirements',
-        isdefault: true
-      }
+      name: "save",
+      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
+      color: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.color
+    }
+  });
+  icon1 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_8__["default"]({
+    props: {
+      name: "cancel",
+      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
+      color: "danger"
     }
   });
   var if_block_creators = [create_if_block, create_else_block];
@@ -11970,7 +13103,7 @@ function create_default_slot(ctx) {
   function select_block_type(ctx, dirty) {
     if (
     /*requirements*/
-    ctx[2].length > 0) return 0;
+    ctx[4].length > 0) return 0;
     return 1;
   }
 
@@ -11980,69 +13113,110 @@ function create_default_slot(ctx) {
     props: {
       treeprops:
       /*treeprops*/
-      ctx[7],
+      ctx[10],
       treedata:
       /*skilltree*/
-      ctx[1],
+      ctx[2],
       iconprops: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons,
       nodeClick:
       /*nodeClick*/
-      ctx[4],
+      ctx[6],
       addClick: addClick
     }
   });
   return {
     c: function c() {
       section = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(header.$$.fragment);
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
-      button.textContent = "Save";
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      a = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Cancel");
-      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      if_block.c();
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h2");
+      h2.textContent = "Professions";
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div1.textContent = "Please select skills from the lower tree to add skill requirements.";
+      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      span0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon0.$$.fragment);
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span1.textContent = "Save";
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      a = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon1.$$.fragment);
       t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span3.textContent = "Cancel";
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      if_block.c();
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div4.textContent = "Please select skills from the lower tree to add skill requirements.";
+      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(tree.$$.fragment);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "button is-info");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h1, "class", "title has-text-weight-light");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h2, "class", "subtitle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "column");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "icon is-small");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "button is-small is-link is-light");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span2, "class", "icon is-small");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "href", a_href_value = "/roles/" +
       /*id*/
       ctx[0]);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "class", "button is-danger");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "buttons is-pulled-right");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "notification is-info is-light");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "class", "button is-small");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "buttons is-pulled-right");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "column is-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "columns");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "notification is-info is-light");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section, "class", "section container");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, section, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(header, section, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, div0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, button);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, a);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, t3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, div3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h1, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, button);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, span0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon0, span0, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, span1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, a);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, span2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon1, span2, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, span3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t9);
       if_blocks[current_block_type_index].m(section, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, div4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t12);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(tree, section, null);
       current = true;
 
       if (!mounted) {
         dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button, "click",
-        /*save*/
-        ctx[6]);
+        /*saveSkills*/
+        ctx[8]);
         mounted = true;
       }
     },
     p: function p(ctx, dirty) {
+      if ((!current || dirty &
+      /*role*/
+      2) && t0_value !== (t0_value =
+      /*role*/
+      ctx[1].title_en + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+
       if (!current || dirty &
       /*id*/
       1 && a_href_value !== (a_href_value = "/roles/" +
@@ -12072,33 +13246,36 @@ function create_default_slot(ctx) {
         }
 
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(if_block, 1);
-        if_block.m(section, t5);
+        if_block.m(section, t10);
       }
 
       var tree_changes = {};
       if (dirty &
       /*skilltree*/
-      2) tree_changes.treedata =
+      4) tree_changes.treedata =
       /*skilltree*/
-      ctx[1];
+      ctx[2];
       tree.$set(tree_changes);
     },
     i: function i(local) {
       if (current) return;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(header.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon0.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(if_block);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(tree.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(header.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon0.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(if_block);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(tree.$$.fragment, local);
       current = false;
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(header);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon1);
       if_blocks[current_block_type_index].d();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(tree);
       mounted = false;
@@ -12109,9 +13286,23 @@ function create_default_slot(ctx) {
 
 function create_fragment(ctx) {
   var title_value;
-  var t;
+  var t0;
   var layout;
+  var t1;
+  var div2;
+  var div0;
+  var t2;
+  var div1;
+  var header;
+  var p;
+  var t4;
+  var button;
+  var t5;
+  var section;
+  var levelsinfo;
   var current;
+  var mounted;
+  var dispose;
   document.title = title_value = "" + (_config_config_js__WEBPACK_IMPORTED_MODULE_1__.params.app.name + " - Required Skills and Skill Levels");
   layout = new _Pages_Shared_Layout_svelte__WEBPACK_IMPORTED_MODULE_5__["default"]({
     props: {
@@ -12123,15 +13314,61 @@ function create_fragment(ctx) {
       }
     }
   });
+  levelsinfo = new _Pages_Skill_LevelsInfo_svelte__WEBPACK_IMPORTED_MODULE_7__["default"]({});
   return {
     c: function c() {
-      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(layout.$$.fragment);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      header = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("header");
+      p = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      p.textContent = "Skill Level Selection Guideline";
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      section = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(levelsinfo.$$.fragment);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "modal-background");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p, "class", "modal-card-title");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "delete");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "aria-label", "close");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(header, "class", "modal-card-head");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section, "class", "modal-card-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "modal-card");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "modal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.toggle_class)(div2, "is-active",
+      /*showModal*/
+      ctx[3]);
     },
     m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t0, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(layout, target, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t1, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div2, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, header);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(header, p);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(header, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(header, button);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, section);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(levelsinfo, section, null);
       current = true;
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(div0, "click",
+        /*showInfo*/
+        ctx[9]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button, "click",
+        /*showInfo*/
+        ctx[9])];
+        mounted = true;
+      }
     },
     p: function p(ctx, _ref) {
       var _ref2 = _slicedToArray(_ref, 1),
@@ -12146,8 +13383,8 @@ function create_fragment(ctx) {
       var layout_changes = {};
 
       if (dirty &
-      /*$$scope, skilltree, requirements, roleLevels, id*/
-      524303) {
+      /*$$scope, skilltree, requirements, roleLevels, id, role*/
+      4194359) {
         layout_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -12155,19 +13392,34 @@ function create_fragment(ctx) {
       }
 
       layout.$set(layout_changes);
+
+      if (dirty &
+      /*showModal*/
+      8) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.toggle_class)(div2, "is-active",
+        /*showModal*/
+        ctx[3]);
+      }
     },
     i: function i(local) {
       if (current) return;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(layout.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(levelsinfo.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(layout.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(levelsinfo.$$.fragment, local);
       current = false;
     },
     d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(layout, detaching);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t1);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(levelsinfo);
+      mounted = false;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
 }
@@ -12178,8 +13430,10 @@ function addClick() {
 
 function instance($$self, $$props, $$invalidate) {
   var id = $$props.id;
+  var role = $$props.role;
   var skilltree = $$props.skilltree;
   var roleSkills = $$props.roleSkills;
+  var showModal = false;
   var currentSkillIds = [];
   roleSkills.forEach(function (el) {
     currentSkillIds.push(parseInt(el.id));
@@ -12187,15 +13441,12 @@ function instance($$self, $$props, $$invalidate) {
   var rawdata = (0,_Pages_Shared_Functions_tree_js__WEBPACK_IMPORTED_MODULE_3__.flat)(skilltree);
   var requirements = [];
   var roleLevels = [];
-  console.log("roleSkills ", roleSkills);
   roleSkills.forEach(function (element) {
-    console.log("element ", element);
-    $$invalidate(2, requirements[requirements.length] = rawdata.filter(function (el) {
+    $$invalidate(4, requirements[requirements.length] = rawdata.filter(function (el) {
       return el.id == element.id;
     })[0], requirements);
-    $$invalidate(3, roleLevels[element.id] = element.pivot.level, roleLevels);
+    $$invalidate(5, roleLevels[element.id] = element.pivot.level, roleLevels);
   });
-  console.log("roleLevels ", roleLevels);
   var selectedSkill;
 
   function nodeClick(event) {
@@ -12205,7 +13456,7 @@ function instance($$self, $$props, $$invalidate) {
     })[0];
 
     if (currentSkillIds.includes(parseInt(event.target.dataset.id))) {
-      sweetalert2__WEBPACK_IMPORTED_MODULE_9___default().fire({
+      sweetalert2__WEBPACK_IMPORTED_MODULE_10___default().fire({
         position: 'center',
         icon: 'warning',
         title: 'Clicked skill is alredy included',
@@ -12213,7 +13464,7 @@ function instance($$self, $$props, $$invalidate) {
         timer: 1000
       });
     } else {
-      $$invalidate(2, requirements[requirements.length] = selectedSkill, requirements);
+      $$invalidate(4, requirements[requirements.length] = selectedSkill, requirements);
       currentSkillIds.push(parseInt(event.target.dataset.id));
     }
   }
@@ -12223,12 +13474,12 @@ function instance($$self, $$props, $$invalidate) {
       return e !== deger;
     });
     delete currentSkillIds[deger];
-    $$invalidate(2, requirements = requirements.filter(function (e) {
+    $$invalidate(4, requirements = requirements.filter(function (e) {
       return e.id !== deger;
     }));
   }
 
-  function save() {
+  function saveSkills() {
     var skills = [];
     roleLevels.forEach(function (value, key) {
       if (value !== undefined && value !== null) {
@@ -12241,17 +13492,17 @@ function instance($$self, $$props, $$invalidate) {
           level: value
         });
       }
-
-      console.log("****** ", key, value);
     });
-    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_8__.Inertia.post('/role-skill', {
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_9__.Inertia.post('/role-skill', {
       id: id,
       skills: skills
     }, {
       preserveState: false
-    }); //console.log("save roleSkills ",roleSkills)
+    });
+  }
 
-    console.log("save roleLevels ", roleLevels);
+  function showInfo() {
+    $$invalidate(3, showModal = !showModal);
   }
 
   var treeprops = {
@@ -12268,16 +13519,17 @@ function instance($$self, $$props, $$invalidate) {
 
   function select_change_handler(requirement) {
     roleLevels[requirement.id] = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_value)(this);
-    $$invalidate(3, roleLevels);
+    $$invalidate(5, roleLevels);
   }
 
   $$self.$$set = function ($$props) {
     if ('id' in $$props) $$invalidate(0, id = $$props.id);
-    if ('skilltree' in $$props) $$invalidate(1, skilltree = $$props.skilltree);
-    if ('roleSkills' in $$props) $$invalidate(8, roleSkills = $$props.roleSkills);
+    if ('role' in $$props) $$invalidate(1, role = $$props.role);
+    if ('skilltree' in $$props) $$invalidate(2, skilltree = $$props.skilltree);
+    if ('roleSkills' in $$props) $$invalidate(11, roleSkills = $$props.roleSkills);
   };
 
-  return [id, skilltree, requirements, roleLevels, nodeClick, removeSkill, save, treeprops, roleSkills, select_change_handler];
+  return [id, role, skilltree, showModal, requirements, roleLevels, nodeClick, removeSkill, saveSkills, showInfo, treeprops, roleSkills, select_change_handler];
 }
 
 var SelectSkills = /*#__PURE__*/function (_SvelteComponent) {
@@ -12293,8 +13545,9 @@ var SelectSkills = /*#__PURE__*/function (_SvelteComponent) {
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       id: 0,
-      skilltree: 1,
-      roleSkills: 8
+      role: 1,
+      skilltree: 2,
+      roleSkills: 11
     });
     return _this;
   }
@@ -12371,29 +13624,34 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[8] = list[i];
-  child_ctx[10] = i;
+  child_ctx[10] = list[i];
+  child_ctx[12] = i;
   return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[11] = list[i];
-  child_ctx[10] = i;
+  child_ctx[13] = list[i];
+  child_ctx[12] = i;
   return child_ctx;
 }
 
 function get_each_context_2(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[13] = list[i];
-  child_ctx[10] = i;
+  child_ctx[15] = list[i];
+  child_ctx[12] = i;
   return child_ctx;
-} // (48:8) {#if item.desc_en.length > 0}
+}
+
+function get_each_context_3(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[17] = list[i];
+  child_ctx[12] = i;
+  return child_ctx;
+} // (49:8) {#if item.desc_en.length > 0}
 
 
-function create_if_block_7(ctx) {
-  var h6;
-  var t1;
+function create_if_block_9(ctx) {
   var html_tag;
   var raw_value =
   /*item*/
@@ -12401,17 +13659,11 @@ function create_if_block_7(ctx) {
   var html_anchor;
   return {
     c: function c() {
-      h6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h6");
-      h6.textContent = "".concat(_config_config_roles_js__WEBPACK_IMPORTED_MODULE_2__.formprops.editor_en.label);
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       html_tag = new svelte_internal__WEBPACK_IMPORTED_MODULE_0__.HtmlTag();
       html_anchor = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.empty)();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h6, "class", "subtitle is-size-6 my-3 has-text-danger-dark");
       html_tag.a = html_anchor;
     },
     m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, h6, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t1, anchor);
       html_tag.m(raw_value, target, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, html_anchor, anchor);
     },
@@ -12423,18 +13675,14 @@ function create_if_block_7(ctx) {
       ctx[0].desc_en + "")) html_tag.p(raw_value);
     },
     d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(h6);
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t1);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(html_anchor);
       if (detaching) html_tag.d();
     }
   };
-} // (57:8) {#if item.desc_tr.length > 0}
+} // (58:8) {#if item.desc_tr.length > 0}
 
 
-function create_if_block_6(ctx) {
-  var h6;
-  var t1;
+function create_if_block_8(ctx) {
   var html_tag;
   var raw_value =
   /*item*/
@@ -12442,17 +13690,11 @@ function create_if_block_6(ctx) {
   var html_anchor;
   return {
     c: function c() {
-      h6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h6");
-      h6.textContent = "".concat(_config_config_roles_js__WEBPACK_IMPORTED_MODULE_2__.formprops.editor_tr.label);
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       html_tag = new svelte_internal__WEBPACK_IMPORTED_MODULE_0__.HtmlTag();
       html_anchor = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.empty)();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h6, "class", "subtitle is-size-6 my-3 has-text-danger-dark");
       html_tag.a = html_anchor;
     },
     m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, h6, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t1, anchor);
       html_tag.m(raw_value, target, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, html_anchor, anchor);
     },
@@ -12464,16 +13706,14 @@ function create_if_block_6(ctx) {
       ctx[0].desc_tr + "")) html_tag.p(raw_value);
     },
     d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(h6);
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t1);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(html_anchor);
       if (detaching) html_tag.d();
     }
   };
-} // (106:8) {:else}
+} // (107:8) {:else}
 
 
-function create_else_block_5(ctx) {
+function create_else_block_7(ctx) {
   var div;
   return {
     c: function c() {
@@ -12489,20 +13729,20 @@ function create_else_block_5(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (81:8) {#if diplomas.length > 0}
+} // (82:8) {#if diplomas.length > 0}
 
 
-function create_if_block_4(ctx) {
+function create_if_block_6(ctx) {
   var table;
   var thead;
   var t5;
-  var each_value_2 =
+  var each_value_3 =
   /*diplomas*/
   ctx[3];
   var each_blocks = [];
 
-  for (var i = 0; i < each_value_2.length; i += 1) {
-    each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+  for (var i = 0; i < each_value_3.length; i += 1) {
+    each_blocks[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
   }
 
   return {
@@ -12531,19 +13771,19 @@ function create_if_block_4(ctx) {
       if (dirty &
       /*diplomaOptions, parseInt, diplomas*/
       8) {
-        each_value_2 =
+        each_value_3 =
         /*diplomas*/
         ctx[3];
 
         var _i3;
 
-        for (_i3 = 0; _i3 < each_value_2.length; _i3 += 1) {
-          var child_ctx = get_each_context_2(ctx, each_value_2, _i3);
+        for (_i3 = 0; _i3 < each_value_3.length; _i3 += 1) {
+          var child_ctx = get_each_context_3(ctx, each_value_3, _i3);
 
           if (each_blocks[_i3]) {
             each_blocks[_i3].p(child_ctx, dirty);
           } else {
-            each_blocks[_i3] = create_each_block_2(child_ctx);
+            each_blocks[_i3] = create_each_block_3(child_ctx);
 
             each_blocks[_i3].c();
 
@@ -12555,7 +13795,7 @@ function create_if_block_4(ctx) {
           each_blocks[_i3].d(1);
         }
 
-        each_blocks.length = each_value_2.length;
+        each_blocks.length = each_value_3.length;
       }
     },
     d: function d(detaching) {
@@ -12563,10 +13803,10 @@ function create_if_block_4(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
     }
   };
-} // (99:16) {:else}
+} // (100:16) {:else}
 
 
-function create_else_block_4(ctx) {
+function create_else_block_6(ctx) {
   var td;
   return {
     c: function c() {
@@ -12582,10 +13822,10 @@ function create_else_block_4(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (97:16) {#if parseInt(diploma.pivot.status) > 0 }
+} // (98:16) {#if parseInt(diploma.pivot.status) > 0 }
 
 
-function create_if_block_5(ctx) {
+function create_if_block_7(ctx) {
   var td;
   var t_value = _config_config_roles_js__WEBPACK_IMPORTED_MODULE_2__.diplomaOptions.filter(func)[0].title + "";
   var t;
@@ -12599,9 +13839,9 @@ function create_if_block_5(ctx) {
 
     return (
       /*func*/
-      (_ctx = ctx)[5].apply(_ctx, [
+      (_ctx = ctx)[6].apply(_ctx, [
       /*diploma*/
-      ctx[13]].concat(args))
+      ctx[17]].concat(args))
     );
   }
 
@@ -12625,21 +13865,21 @@ function create_if_block_5(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (92:12) {#each diplomas as diploma,key}
+} // (93:12) {#each diplomas as diploma,key}
 
 
-function create_each_block_2(ctx) {
+function create_each_block_3(ctx) {
   var tr;
   var td0;
   var t0_value =
   /*key*/
-  ctx[10] + 1 + "";
+  ctx[12] + 1 + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
   /*diploma*/
-  ctx[13].title + "";
+  ctx[17].title + "";
   var t2;
   var t3;
   var show_if;
@@ -12651,9 +13891,9 @@ function create_each_block_2(ctx) {
     8) show_if = null;
     if (show_if == null) show_if = !!(parseInt(
     /*diploma*/
-    ctx[13].pivot.status) > 0);
-    if (show_if) return create_if_block_5;
-    return create_else_block_4;
+    ctx[17].pivot.status) > 0);
+    if (show_if) return create_if_block_7;
+    return create_else_block_6;
   }
 
   var current_block_type = select_block_type_1(ctx, -1);
@@ -12686,7 +13926,7 @@ function create_each_block_2(ctx) {
       /*diplomas*/
       8 && t2_value !== (t2_value =
       /*diploma*/
-      ctx[13].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      ctx[17].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
 
       if (current_block_type === (current_block_type = select_block_type_1(ctx, dirty)) && if_block) {
         if_block.p(ctx, dirty);
@@ -12705,15 +13945,15 @@ function create_each_block_2(ctx) {
       if_block.d();
     }
   };
-} // (177:8) {:else}
+} // (158:8) {:else}
 
 
-function create_else_block_3(ctx) {
+function create_else_block_5(ctx) {
   var div;
   return {
     c: function c() {
       div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div.textContent = "No skills for this role yet.";
+      div.textContent = "No profession requirement for this role yet.";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "notification is-warning is-light");
     },
     m: function m(target, anchor) {
@@ -12724,27 +13964,27 @@ function create_else_block_3(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (151:8) {#if skills.length > 0}
+} // (133:8) {#if professions.length > 0}
 
 
-function create_if_block_2(ctx) {
+function create_if_block_4(ctx) {
   var table;
   var thead;
   var t5;
-  var each_value_1 =
-  /*skills*/
-  ctx[1];
+  var each_value_2 =
+  /*professions*/
+  ctx[4];
   var each_blocks = [];
 
-  for (var i = 0; i < each_value_1.length; i += 1) {
-    each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+  for (var i = 0; i < each_value_2.length; i += 1) {
+    each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
   }
 
   return {
     c: function c() {
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
-      thead.innerHTML = "<tr><th>No</th> \n                <th>Skill</th> \n                <th class=\"has-text-right\">Skill Level</th></tr>";
+      thead.innerHTML = "<tr><th>No</th> \n                <th>Profession</th> \n                <th class=\"has-text-right\">Provision</th></tr>";
       t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
 
       for (var _i4 = 0; _i4 < each_blocks.length; _i4 += 1) {
@@ -12764,21 +14004,21 @@ function create_if_block_2(ctx) {
     },
     p: function p(ctx, dirty) {
       if (dirty &
-      /*slevels, skills*/
-      2) {
-        each_value_1 =
-        /*skills*/
-        ctx[1];
+      /*professionCriteria, parseInt, professions*/
+      16) {
+        each_value_2 =
+        /*professions*/
+        ctx[4];
 
         var _i6;
 
-        for (_i6 = 0; _i6 < each_value_1.length; _i6 += 1) {
-          var child_ctx = get_each_context_1(ctx, each_value_1, _i6);
+        for (_i6 = 0; _i6 < each_value_2.length; _i6 += 1) {
+          var child_ctx = get_each_context_2(ctx, each_value_2, _i6);
 
           if (each_blocks[_i6]) {
             each_blocks[_i6].p(child_ctx, dirty);
           } else {
-            each_blocks[_i6] = create_each_block_1(child_ctx);
+            each_blocks[_i6] = create_each_block_2(child_ctx);
 
             each_blocks[_i6].c();
 
@@ -12790,7 +14030,7 @@ function create_if_block_2(ctx) {
           each_blocks[_i6].d(1);
         }
 
-        each_blocks.length = each_value_1.length;
+        each_blocks.length = each_value_2.length;
       }
     },
     d: function d(detaching) {
@@ -12798,10 +14038,10 @@ function create_if_block_2(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
     }
   };
-} // (169:16) {:else}
+} // (151:16) {:else}
 
 
-function create_else_block_2(ctx) {
+function create_else_block_4(ctx) {
   var td;
   return {
     c: function c() {
@@ -12817,18 +14057,13 @@ function create_else_block_2(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (167:16) {#if skill.pivot.level >0 }
+} // (149:16) {#if parseInt(profession.pivot.provision) > 0 }
 
 
-function create_if_block_3(ctx) {
+function create_if_block_5(ctx) {
   var td;
-  var t0_value =
-  /*skill*/
-  ctx[11].pivot.level + "";
-  var t0;
-  var t1;
-  var t2_value = _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_3__.slevels.filter(func_1)[0].title + "";
-  var t2;
+  var t_value = _config_config_roles_js__WEBPACK_IMPORTED_MODULE_2__.professionCriteria.filter(func_1)[0].title + "";
+  var t;
 
   function func_1() {
     var _ctx2;
@@ -12839,65 +14074,61 @@ function create_if_block_3(ctx) {
 
     return (
       /*func_1*/
-      (_ctx2 = ctx)[6].apply(_ctx2, [
-      /*skill*/
-      ctx[11]].concat(args))
+      (_ctx2 = ctx)[7].apply(_ctx2, [
+      /*profession*/
+      ctx[15]].concat(args))
     );
   }
 
   return {
     c: function c() {
       td = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" - ");
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t2_value);
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td, "class", "has-text-right");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, td, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td, t1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td, t);
     },
     p: function p(new_ctx, dirty) {
       ctx = new_ctx;
       if (dirty &
-      /*skills*/
-      2 && t0_value !== (t0_value =
-      /*skill*/
-      ctx[11].pivot.level + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
-      if (dirty &
-      /*skills*/
-      2 && t2_value !== (t2_value = _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_3__.slevels.filter(func_1)[0].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      /*professions*/
+      16 && t_value !== (t_value = _config_config_roles_js__WEBPACK_IMPORTED_MODULE_2__.professionCriteria.filter(func_1)[0].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (162:12) {#each skills as skill,key}
+} // (144:12) {#each professions as profession,key}
 
 
-function create_each_block_1(ctx) {
+function create_each_block_2(ctx) {
   var tr;
   var td0;
   var t0_value =
   /*key*/
-  ctx[10] + 1 + "";
+  ctx[12] + 1 + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
-  /*skill*/
-  ctx[11].title_en + "";
+  /*profession*/
+  ctx[15].title + "";
   var t2;
   var t3;
+  var show_if;
   var t4;
 
   function select_block_type_3(ctx, dirty) {
-    if (
-    /*skill*/
-    ctx[11].pivot.level > 0) return create_if_block_3;
-    return create_else_block_2;
+    if (dirty &
+    /*professions*/
+    16) show_if = null;
+    if (show_if == null) show_if = !!(parseInt(
+    /*profession*/
+    ctx[15].pivot.provision) > 0);
+    if (show_if) return create_if_block_5;
+    return create_else_block_4;
   }
 
   var current_block_type = select_block_type_3(ctx, -1);
@@ -12927,10 +14158,10 @@ function create_each_block_1(ctx) {
     },
     p: function p(ctx, dirty) {
       if (dirty &
-      /*skills*/
-      2 && t2_value !== (t2_value =
-      /*skill*/
-      ctx[11].title_en + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      /*professions*/
+      16 && t2_value !== (t2_value =
+      /*profession*/
+      ctx[15].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
 
       if (current_block_type === (current_block_type = select_block_type_3(ctx, dirty)) && if_block) {
         if_block.p(ctx, dirty);
@@ -12949,15 +14180,15 @@ function create_each_block_1(ctx) {
       if_block.d();
     }
   };
-} // (227:8) {:else}
+} // (234:8) {:else}
 
 
-function create_else_block_1(ctx) {
+function create_else_block_3(ctx) {
   var div;
   return {
     c: function c() {
       div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div.textContent = "No language requirement for this role yet.";
+      div.textContent = "No skills for this role yet.";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "notification is-warning is-light");
     },
     m: function m(target, anchor) {
@@ -12968,27 +14199,27 @@ function create_else_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (201:8) {#if languages.length > 0}
+} // (208:8) {#if skills.length > 0}
 
 
-function create_if_block(ctx) {
+function create_if_block_2(ctx) {
   var table;
   var thead;
   var t5;
-  var each_value =
-  /*languages*/
-  ctx[2];
+  var each_value_1 =
+  /*skills*/
+  ctx[1];
   var each_blocks = [];
 
-  for (var i = 0; i < each_value.length; i += 1) {
-    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  for (var i = 0; i < each_value_1.length; i += 1) {
+    each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
   }
 
   return {
     c: function c() {
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
-      thead.innerHTML = "<tr><th>No</th> \n                <th>Language</th> \n                <th class=\"has-text-right\">Level</th></tr>";
+      thead.innerHTML = "<tr><th>No</th> \n                <th>Skill</th> \n                <th class=\"has-text-right\">Skill Level</th></tr>";
       t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
 
       for (var _i7 = 0; _i7 < each_blocks.length; _i7 += 1) {
@@ -13008,21 +14239,21 @@ function create_if_block(ctx) {
     },
     p: function p(ctx, dirty) {
       if (dirty &
-      /*langlevels, languages*/
-      4) {
-        each_value =
-        /*languages*/
-        ctx[2];
+      /*slevels, skills*/
+      2) {
+        each_value_1 =
+        /*skills*/
+        ctx[1];
 
         var _i9;
 
-        for (_i9 = 0; _i9 < each_value.length; _i9 += 1) {
-          var child_ctx = get_each_context(ctx, each_value, _i9);
+        for (_i9 = 0; _i9 < each_value_1.length; _i9 += 1) {
+          var child_ctx = get_each_context_1(ctx, each_value_1, _i9);
 
           if (each_blocks[_i9]) {
             each_blocks[_i9].p(child_ctx, dirty);
           } else {
-            each_blocks[_i9] = create_each_block(child_ctx);
+            each_blocks[_i9] = create_each_block_1(child_ctx);
 
             each_blocks[_i9].c();
 
@@ -13034,7 +14265,7 @@ function create_if_block(ctx) {
           each_blocks[_i9].d(1);
         }
 
-        each_blocks.length = each_value.length;
+        each_blocks.length = each_value_1.length;
       }
     },
     d: function d(detaching) {
@@ -13042,10 +14273,10 @@ function create_if_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
     }
   };
-} // (219:16) {:else}
+} // (226:16) {:else}
 
 
-function create_else_block(ctx) {
+function create_else_block_2(ctx) {
   var td;
   return {
     c: function c() {
@@ -13061,17 +14292,17 @@ function create_else_block(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (217:16) {#if lang.pivot.level }
+} // (224:16) {#if skill.pivot.level >0 }
 
 
-function create_if_block_1(ctx) {
+function create_if_block_3(ctx) {
   var td;
   var t0_value =
-  /*lang*/
-  ctx[8].pivot.level + "";
+  /*skill*/
+  ctx[13].pivot.level + "";
   var t0;
   var t1;
-  var t2_value = _config_config_langlevels_js__WEBPACK_IMPORTED_MODULE_4__.langlevels.filter(func_2)[0].title + "";
+  var t2_value = _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_3__.slevels.filter(func_2)[0].title + "";
   var t2;
 
   function func_2() {
@@ -13083,9 +14314,9 @@ function create_if_block_1(ctx) {
 
     return (
       /*func_2*/
-      (_ctx3 = ctx)[7].apply(_ctx3, [
-      /*lang*/
-      ctx[8]].concat(args))
+      (_ctx3 = ctx)[8].apply(_ctx3, [
+      /*skill*/
+      ctx[13]].concat(args))
     );
   }
 
@@ -13106,42 +14337,42 @@ function create_if_block_1(ctx) {
     p: function p(new_ctx, dirty) {
       ctx = new_ctx;
       if (dirty &
-      /*languages*/
-      4 && t0_value !== (t0_value =
-      /*lang*/
-      ctx[8].pivot.level + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      /*skills*/
+      2 && t0_value !== (t0_value =
+      /*skill*/
+      ctx[13].pivot.level + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
-      /*languages*/
-      4 && t2_value !== (t2_value = _config_config_langlevels_js__WEBPACK_IMPORTED_MODULE_4__.langlevels.filter(func_2)[0].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      /*skills*/
+      2 && t2_value !== (t2_value = _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_3__.slevels.filter(func_2)[0].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (212:12) {#each languages as lang,key}
+} // (219:12) {#each skills as skill,key}
 
 
-function create_each_block(ctx) {
+function create_each_block_1(ctx) {
   var tr;
   var td0;
   var t0_value =
   /*key*/
-  ctx[10] + 1 + "";
+  ctx[12] + 1 + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
-  /*lang*/
-  ctx[8].title + "";
+  /*skill*/
+  ctx[13].title_en + "";
   var t2;
   var t3;
   var t4;
 
   function select_block_type_5(ctx, dirty) {
     if (
-    /*lang*/
-    ctx[8].pivot.level) return create_if_block_1;
-    return create_else_block;
+    /*skill*/
+    ctx[13].pivot.level > 0) return create_if_block_3;
+    return create_else_block_2;
   }
 
   var current_block_type = select_block_type_5(ctx, -1);
@@ -13171,10 +14402,10 @@ function create_each_block(ctx) {
     },
     p: function p(ctx, dirty) {
       if (dirty &
-      /*languages*/
-      4 && t2_value !== (t2_value =
-      /*lang*/
-      ctx[8].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      /*skills*/
+      2 && t2_value !== (t2_value =
+      /*skill*/
+      ctx[13].title_en + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
 
       if (current_block_type === (current_block_type = select_block_type_5(ctx, dirty)) && if_block) {
         if_block.p(ctx, dirty);
@@ -13193,7 +14424,251 @@ function create_each_block(ctx) {
       if_block.d();
     }
   };
-} // (27:0) <Layout>
+} // (284:8) {:else}
+
+
+function create_else_block_1(ctx) {
+  var div;
+  return {
+    c: function c() {
+      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div.textContent = "No language requirement for this role yet.";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "notification is-warning is-light");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
+    },
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
+    }
+  };
+} // (258:8) {#if languages.length > 0}
+
+
+function create_if_block(ctx) {
+  var table;
+  var thead;
+  var t5;
+  var each_value =
+  /*languages*/
+  ctx[2];
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+
+  return {
+    c: function c() {
+      table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
+      thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
+      thead.innerHTML = "<tr><th>No</th> \n                <th>Language</th> \n                <th class=\"has-text-right\">Level</th></tr>";
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+
+      for (var _i10 = 0; _i10 < each_blocks.length; _i10 += 1) {
+        each_blocks[_i10].c();
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "class", "table is-narrow is-fullwidth");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, table, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, thead);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t5);
+
+      for (var _i11 = 0; _i11 < each_blocks.length; _i11 += 1) {
+        each_blocks[_i11].m(table, null);
+      }
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*langlevels, languages*/
+      4) {
+        each_value =
+        /*languages*/
+        ctx[2];
+
+        var _i12;
+
+        for (_i12 = 0; _i12 < each_value.length; _i12 += 1) {
+          var child_ctx = get_each_context(ctx, each_value, _i12);
+
+          if (each_blocks[_i12]) {
+            each_blocks[_i12].p(child_ctx, dirty);
+          } else {
+            each_blocks[_i12] = create_each_block(child_ctx);
+
+            each_blocks[_i12].c();
+
+            each_blocks[_i12].m(table, null);
+          }
+        }
+
+        for (; _i12 < each_blocks.length; _i12 += 1) {
+          each_blocks[_i12].d(1);
+        }
+
+        each_blocks.length = each_value.length;
+      }
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(table);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+    }
+  };
+} // (276:16) {:else}
+
+
+function create_else_block(ctx) {
+  var td;
+  return {
+    c: function c() {
+      td = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      td.textContent = "Not Set";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td, "class", "has-text-right");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, td, anchor);
+    },
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
+    }
+  };
+} // (274:16) {#if lang.pivot.level }
+
+
+function create_if_block_1(ctx) {
+  var td;
+  var t0_value =
+  /*lang*/
+  ctx[10].pivot.level + "";
+  var t0;
+  var t1;
+  var t2_value = _config_config_langlevels_js__WEBPACK_IMPORTED_MODULE_4__.langlevels.filter(func_3)[0].title + "";
+  var t2;
+
+  function func_3() {
+    var _ctx4;
+
+    for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+      args[_key4] = arguments[_key4];
+    }
+
+    return (
+      /*func_3*/
+      (_ctx4 = ctx)[9].apply(_ctx4, [
+      /*lang*/
+      ctx[10]].concat(args))
+    );
+  }
+
+  return {
+    c: function c() {
+      td = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" - ");
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t2_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td, "class", "has-text-right");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, td, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td, t2);
+    },
+    p: function p(new_ctx, dirty) {
+      ctx = new_ctx;
+      if (dirty &
+      /*languages*/
+      4 && t0_value !== (t0_value =
+      /*lang*/
+      ctx[10].pivot.level + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      if (dirty &
+      /*languages*/
+      4 && t2_value !== (t2_value = _config_config_langlevels_js__WEBPACK_IMPORTED_MODULE_4__.langlevels.filter(func_3)[0].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
+    }
+  };
+} // (269:12) {#each languages as lang,key}
+
+
+function create_each_block(ctx) {
+  var tr;
+  var td0;
+  var t0_value =
+  /*key*/
+  ctx[12] + 1 + "";
+  var t0;
+  var t1;
+  var td1;
+  var t2_value =
+  /*lang*/
+  ctx[10].title + "";
+  var t2;
+  var t3;
+  var t4;
+
+  function select_block_type_7(ctx, dirty) {
+    if (
+    /*lang*/
+    ctx[10].pivot.level) return create_if_block_1;
+    return create_else_block;
+  }
+
+  var current_block_type = select_block_type_7(ctx, -1);
+  var if_block = current_block_type(ctx);
+  return {
+    c: function c() {
+      tr = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tr");
+      td0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      td1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t2_value);
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      if_block.c();
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, tr, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td0, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td1, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t3);
+      if_block.m(tr, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t4);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*languages*/
+      4 && t2_value !== (t2_value =
+      /*lang*/
+      ctx[10].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+
+      if (current_block_type === (current_block_type = select_block_type_7(ctx, dirty)) && if_block) {
+        if_block.p(ctx, dirty);
+      } else {
+        if_block.d(1);
+        if_block = current_block_type(ctx);
+
+        if (if_block) {
+          if_block.c();
+          if_block.m(tr, t4);
+        }
+      }
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
+      if_block.d();
+    }
+  };
+} // (28:0) <Layout>
 
 
 function create_default_slot(ctx) {
@@ -13226,27 +14701,34 @@ function create_default_slot(ctx) {
   var a1_href_value;
   var t10;
   var t11;
-  var h61;
-  var t13;
-  var h62;
-  var t15;
   var div8;
   var div6;
-  var t17;
+  var t13;
   var div7;
   var a2;
   var icon2;
   var a2_href_value;
-  var t18;
-  var t19;
+  var t14;
+  var t15;
+  var h62;
+  var t17;
   var div11;
   var div9;
-  var t21;
+  var t19;
   var div10;
   var a3;
   var icon3;
   var a3_href_value;
-  var t22;
+  var t20;
+  var t21;
+  var div14;
+  var div12;
+  var t23;
+  var div13;
+  var a4;
+  var icon4;
+  var a4_href_value;
+  var t24;
   var current;
   icon0 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_6__["default"]({
     props: {
@@ -13259,15 +14741,15 @@ function create_default_slot(ctx) {
     props: {
       notification:
       /*notification*/
-      ctx[4]
+      ctx[5]
     }
   });
   var if_block0 =
   /*item*/
-  ctx[0].desc_en.length > 0 && create_if_block_7(ctx);
+  ctx[0].desc_en.length > 0 && create_if_block_9(ctx);
   var if_block1 =
   /*item*/
-  ctx[0].desc_tr.length > 0 && create_if_block_6(ctx);
+  ctx[0].desc_tr.length > 0 && create_if_block_8(ctx);
   icon1 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_6__["default"]({
     props: {
       name: "edit",
@@ -13279,8 +14761,8 @@ function create_default_slot(ctx) {
   function select_block_type(ctx, dirty) {
     if (
     /*diplomas*/
-    ctx[3].length > 0) return create_if_block_4;
-    return create_else_block_5;
+    ctx[3].length > 0) return create_if_block_6;
+    return create_else_block_7;
   }
 
   var current_block_type = select_block_type(ctx, -1);
@@ -13295,9 +14777,9 @@ function create_default_slot(ctx) {
 
   function select_block_type_2(ctx, dirty) {
     if (
-    /*skills*/
-    ctx[1].length > 0) return create_if_block_2;
-    return create_else_block_3;
+    /*professions*/
+    ctx[4].length > 0) return create_if_block_4;
+    return create_else_block_5;
   }
 
   var current_block_type_1 = select_block_type_2(ctx, -1);
@@ -13312,13 +14794,30 @@ function create_default_slot(ctx) {
 
   function select_block_type_4(ctx, dirty) {
     if (
+    /*skills*/
+    ctx[1].length > 0) return create_if_block_2;
+    return create_else_block_3;
+  }
+
+  var current_block_type_2 = select_block_type_4(ctx, -1);
+  var if_block4 = current_block_type_2(ctx);
+  icon4 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_6__["default"]({
+    props: {
+      name: "edit",
+      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
+      color: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.color
+    }
+  });
+
+  function select_block_type_6(ctx, dirty) {
+    if (
     /*languages*/
     ctx[2].length > 0) return create_if_block;
     return create_else_block_1;
   }
 
-  var current_block_type_2 = select_block_type_4(ctx, -1);
-  var if_block4 = current_block_type_2(ctx);
+  var current_block_type_3 = select_block_type_6(ctx, -1);
+  var if_block5 = current_block_type_3(ctx);
   return {
     c: function c() {
       section = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
@@ -13350,31 +14849,38 @@ function create_default_slot(ctx) {
       t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if_block2.c();
       t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      h61 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h6");
-      h61.textContent = "Profession Requirement";
-      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      h62 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h6");
-      h62.textContent = "Experience Requirements";
-      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div6.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Required Skills and Skill Levels</h6>";
-      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div6.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Professions</h6>";
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       a2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon2.$$.fragment);
-      t18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if_block3.c();
-      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h62 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h6");
+      h62.textContent = "Experience Requirements";
+      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div9.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Language Knowledge</h6>";
-      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div9.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Required Skills and Skill Levels</h6>";
+      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       a3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon3.$$.fragment);
-      t22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if_block4.c();
+      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div12.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Language Knowledge</h6>";
+      t23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      a4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon4.$$.fragment);
+      t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      if_block5.c();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h1, "class", "title has-text-weight-semibold");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h2, "class", "subtitle has-text-info");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "column");
@@ -13389,20 +14895,25 @@ function create_default_slot(ctx) {
       ctx[0].id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "column is-1 is-pulled-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "columns");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h61, "class", "subtitle is-size-6 my-3 has-text-danger-dark");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h62, "class", "subtitle is-size-6 my-3 has-text-danger-dark");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "column");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value = "/role-skills/" +
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value = "/role-profession/" +
       /*item*/
       ctx[0].id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "column is-1 is-pulled-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "columns");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h62, "class", "subtitle is-size-6 my-3 has-text-danger-dark");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "column");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "href", a3_href_value = "/role-language/" +
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "href", a3_href_value = "/role-skills/" +
       /*item*/
       ctx[0].id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div10, "class", "column is-1 is-pulled-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div11, "class", "columns");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div12, "class", "column");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", a4_href_value = "/role-language/" +
+      /*item*/
+      ctx[0].id);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "column is-1 is-pulled-right");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div14, "class", "columns");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section, "class", "section container");
     },
     m: function m(target, anchor) {
@@ -13433,27 +14944,34 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t10);
       if_block2.m(section, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t11);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, h61);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t13);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, h62);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t15);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, div8);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t13);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, a2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon2, a2, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t18);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t14);
       if_block3.m(section, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, h62);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t17);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, div11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, div9);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, t21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, t19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, div10);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, a3);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon3, a3, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t20);
       if_block4.m(section, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, div14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, div12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, t23);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, div13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, a4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon4, a4, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t24);
+      if_block5.m(section, null);
       current = true;
     },
     p: function p(ctx, dirty) {
@@ -13474,9 +14992,9 @@ function create_default_slot(ctx) {
       var notification_1_changes = {};
       if (dirty &
       /*notification*/
-      16) notification_1_changes.notification =
+      32) notification_1_changes.notification =
       /*notification*/
-      ctx[4];
+      ctx[5];
       notification_1.$set(notification_1_changes);
 
       if (
@@ -13485,7 +15003,7 @@ function create_default_slot(ctx) {
         if (if_block0) {
           if_block0.p(ctx, dirty);
         } else {
-          if_block0 = create_if_block_7(ctx);
+          if_block0 = create_if_block_9(ctx);
           if_block0.c();
           if_block0.m(section, t6);
         }
@@ -13500,7 +15018,7 @@ function create_default_slot(ctx) {
         if (if_block1) {
           if_block1.p(ctx, dirty);
         } else {
-          if_block1 = create_if_block_6(ctx);
+          if_block1 = create_if_block_8(ctx);
           if_block1.c();
           if_block1.m(section, t7);
         }
@@ -13531,7 +15049,7 @@ function create_default_slot(ctx) {
 
       if (!current || dirty &
       /*item*/
-      1 && a2_href_value !== (a2_href_value = "/role-skills/" +
+      1 && a2_href_value !== (a2_href_value = "/role-profession/" +
       /*item*/
       ctx[0].id)) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value);
@@ -13545,13 +15063,13 @@ function create_default_slot(ctx) {
 
         if (if_block3) {
           if_block3.c();
-          if_block3.m(section, t19);
+          if_block3.m(section, t15);
         }
       }
 
       if (!current || dirty &
       /*item*/
-      1 && a3_href_value !== (a3_href_value = "/role-language/" +
+      1 && a3_href_value !== (a3_href_value = "/role-skills/" +
       /*item*/
       ctx[0].id)) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "href", a3_href_value);
@@ -13565,7 +15083,27 @@ function create_default_slot(ctx) {
 
         if (if_block4) {
           if_block4.c();
-          if_block4.m(section, null);
+          if_block4.m(section, t21);
+        }
+      }
+
+      if (!current || dirty &
+      /*item*/
+      1 && a4_href_value !== (a4_href_value = "/role-language/" +
+      /*item*/
+      ctx[0].id)) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", a4_href_value);
+      }
+
+      if (current_block_type_3 === (current_block_type_3 = select_block_type_6(ctx, dirty)) && if_block5) {
+        if_block5.p(ctx, dirty);
+      } else {
+        if_block5.d(1);
+        if_block5 = current_block_type_3(ctx);
+
+        if (if_block5) {
+          if_block5.c();
+          if_block5.m(section, null);
         }
       }
     },
@@ -13576,6 +15114,7 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon2.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon3.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon4.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
@@ -13584,6 +15123,7 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon2.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon3.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon4.$$.fragment, local);
       current = false;
     },
     d: function d(detaching) {
@@ -13598,6 +15138,8 @@ function create_default_slot(ctx) {
       if_block3.d();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon3);
       if_block4.d();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon4);
+      if_block5.d();
     }
   };
 }
@@ -13641,8 +15183,8 @@ function create_fragment(ctx) {
       var layout_changes = {};
 
       if (dirty &
-      /*$$scope, languages, item, skills, diplomas, notification*/
-      32799) {
+      /*$$scope, languages, item, skills, professions, diplomas, notification*/
+      524351) {
         layout_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -13672,19 +15214,24 @@ function instance($$self, $$props, $$invalidate) {
   var skills = $$props.skills;
   var languages = $$props.languages;
   var diplomas = $$props.diplomas;
+  var professions = $$props.professions;
   var notification = $$props.notification;
   console.log(item);
-  console.log(diplomas);
+  console.log(professions);
 
   var func = function func(diploma, el) {
     return el.id === parseInt(diploma.pivot.status);
   };
 
-  var func_1 = function func_1(skill, el) {
+  var func_1 = function func_1(profession, el) {
+    return el.id === parseInt(profession.pivot.provision);
+  };
+
+  var func_2 = function func_2(skill, el) {
     return el.level === skill.pivot.level;
   };
 
-  var func_2 = function func_2(lang, el) {
+  var func_3 = function func_3(lang, el) {
     return el.level == lang.pivot.level;
   };
 
@@ -13693,10 +15240,11 @@ function instance($$self, $$props, $$invalidate) {
     if ('skills' in $$props) $$invalidate(1, skills = $$props.skills);
     if ('languages' in $$props) $$invalidate(2, languages = $$props.languages);
     if ('diplomas' in $$props) $$invalidate(3, diplomas = $$props.diplomas);
-    if ('notification' in $$props) $$invalidate(4, notification = $$props.notification);
+    if ('professions' in $$props) $$invalidate(4, professions = $$props.professions);
+    if ('notification' in $$props) $$invalidate(5, notification = $$props.notification);
   };
 
-  return [item, skills, languages, diplomas, notification, func, func_1, func_2];
+  return [item, skills, languages, diplomas, professions, notification, func, func_1, func_2, func_3];
 }
 
 var Show = /*#__PURE__*/function (_SvelteComponent) {
@@ -13715,7 +15263,8 @@ var Show = /*#__PURE__*/function (_SvelteComponent) {
       skills: 1,
       languages: 2,
       diplomas: 3,
-      notification: 4
+      professions: 4,
+      notification: 5
     });
     return _this;
   }
@@ -23580,6 +25129,361 @@ var Index = /*#__PURE__*/function (_SvelteComponent) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Skill/LevelsInfo.svelte":
+/*!****************************************************!*\
+  !*** ./resources/js/Pages/Skill/LevelsInfo.svelte ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/config/config_slevels.js */ "./resources/js/config/config_slevels.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* resources/js/Pages/Skill/LevelsInfo.svelte generated by Svelte v3.46.3 */
+
+
+
+function get_each_context(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[0] = list[i];
+  return child_ctx;
+} // (21:8) {#each slevels as slevel}
+
+
+function create_each_block(ctx) {
+  var div6;
+  var div0;
+  var article0;
+  var h10;
+  var t0_value =
+  /*slevel*/
+  ctx[0].title + "";
+  var t0;
+  var t1;
+  var h2;
+  var t2;
+  var t3_value =
+  /*slevel*/
+  ctx[0].level + "";
+  var t3;
+  var t4;
+  var figure;
+  var img;
+  var img_src_value;
+  var img_alt_value;
+  var t5;
+  var div5;
+  var div4;
+  var div1;
+  var article1;
+  var h11;
+  var t7;
+  var p0;
+  var t8_value =
+  /*slevel*/
+  ctx[0].knowledge + "";
+  var t8;
+  var t9;
+  var div2;
+  var article2;
+  var h12;
+  var t11;
+  var p1;
+  var t12_value =
+  /*slevel*/
+  ctx[0].experience + "";
+  var t12;
+  var t13;
+  var div3;
+  var article3;
+  var h13;
+  var t15;
+  var p2;
+  var t16_value =
+  /*slevel*/
+  ctx[0].autonomy + "";
+  var t16;
+  var t17;
+  return {
+    c: function c() {
+      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      article0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("article");
+      h10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h2");
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Level ");
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t3_value);
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      figure = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("figure");
+      img = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      article1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("article");
+      h11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
+      h11.textContent = "Knowledge";
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t8_value);
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      article2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("article");
+      h12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
+      h12.textContent = "Experience";
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t12_value);
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      article3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("article");
+      h13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
+      h13.textContent = "Autonomy";
+      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t16_value);
+      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h10, "class", "title has-text-weight-semibold is-size-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h2, "class", "subtitle has-text-info is-size-5");
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = "/images/" +
+      /*slevel*/
+      ctx[0].image)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "alt", img_alt_value =
+      /*slevel*/
+      ctx[0].title);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(figure, "class", "image ");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(article0, "class", "tile is-child notification has-background-info-light");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "tile is-4 m-1");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h11, "class", "title has-text-weight-light mb-0 is-size-5 has-text-info-dark");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(article1, "class", "tile is-child notification");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "tile");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h12, "class", "title has-text-weight-light mb-0 is-size-5 has-text-info-dark");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(article2, "class", "tile is-child notification");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "tile my-1");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h13, "class", "title has-text-weight-light mb-0 is-size-5 has-text-info-dark");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(article3, "class", "tile is-child notification");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "tile");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "tile is-vertical");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "tile m-1");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "tile");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div6, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, article0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article0, h10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h10, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article0, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article0, h2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h2, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h2, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article0, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article0, figure);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(figure, img);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, div5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, article1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article1, h11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article1, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article1, p0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p0, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, article2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article2, h12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article2, t11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article2, p1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p1, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, article3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article3, h13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article3, t15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article3, p2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p2, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t17);
+    },
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div6);
+    }
+  };
+}
+
+function create_fragment(ctx) {
+  var h1;
+  var t1;
+  var h2;
+  var t3;
+  var p0;
+  var t5;
+  var p1;
+  var t8;
+  var div1;
+  var div0;
+  var each_value = _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_1__.slevels;
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+
+  return {
+    c: function c() {
+      h1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
+      h1.textContent = "Skill Levels";
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h2");
+      h2.textContent = "Proficiency Level Definitions";
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      p0.textContent = "Proficiency Levels shown below can be used to identify skill/knowledge requirements for professions/titles/roles identified.";
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      p1.innerHTML = "The number of levels may depend upon the complexity of the process or an existing company approach. \n    <a href=\"https://www.sae.org/iaqg/projects/pcap001.pdf\">[See Ref]</a>";
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+
+      for (var _i = 0; _i < each_blocks.length; _i += 1) {
+        each_blocks[_i].c();
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h1, "class", "title has-text-weight-semibold");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h2, "class", "subtitle has-text-info");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p0, "class", "mb-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p1, "class", "mb-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "tile is-vertical");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "tile is-ancestor my-4");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, h1, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t1, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, h2, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t3, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, p0, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t5, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, p1, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t8, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div1, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
+
+      for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
+        each_blocks[_i2].m(div0, null);
+      }
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      if (dirty &
+      /*slevels*/
+      0) {
+        each_value = _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_1__.slevels;
+
+        var _i3;
+
+        for (_i3 = 0; _i3 < each_value.length; _i3 += 1) {
+          var child_ctx = get_each_context(ctx, each_value, _i3);
+
+          if (each_blocks[_i3]) {
+            each_blocks[_i3].p(child_ctx, dirty);
+          } else {
+            each_blocks[_i3] = create_each_block(child_ctx);
+
+            each_blocks[_i3].c();
+
+            each_blocks[_i3].m(div0, null);
+          }
+        }
+
+        for (; _i3 < each_blocks.length; _i3 += 1) {
+          each_blocks[_i3].d(1);
+        }
+
+        each_blocks.length = each_value.length;
+      }
+    },
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(h1);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t1);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(h2);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t3);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(p0);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t5);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(p1);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t8);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+    }
+  };
+}
+
+var LevelsInfo = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(LevelsInfo, _SvelteComponent);
+
+  var _super = _createSuper(LevelsInfo);
+
+  function LevelsInfo(options) {
+    var _this;
+
+    _classCallCheck(this, LevelsInfo);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(LevelsInfo);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LevelsInfo);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Skill/Show.svelte":
 /*!**********************************************!*\
   !*** ./resources/js/Pages/Skill/Show.svelte ***!
@@ -24137,9 +26041,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
 /* harmony import */ var _config_config_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/config/config.js */ "./resources/js/config/config.js");
-/* harmony import */ var _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/config/config_slevels.js */ "./resources/js/config/config_slevels.js");
-/* harmony import */ var _Pages_Shared_Layout_svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Pages/Shared/Layout.svelte */ "./resources/js/Pages/Shared/Layout.svelte");
-/* harmony import */ var _Pages_Shared_Header_Header_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Pages/Shared/Header/Header.svelte */ "./resources/js/Pages/Shared/Header/Header.svelte");
+/* harmony import */ var _Pages_Shared_Layout_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Pages/Shared/Layout.svelte */ "./resources/js/Pages/Shared/Layout.svelte");
+/* harmony import */ var _Pages_Skill_LevelsInfo_svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Pages/Skill/LevelsInfo.svelte */ "./resources/js/Pages/Skill/LevelsInfo.svelte");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -24180,296 +26083,34 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-function get_each_context(ctx, list, i) {
-  var child_ctx = ctx.slice();
-  child_ctx[0] = list[i];
-  return child_ctx;
-} // (35:16) {#each slevels as slevel}
-
-
-function create_each_block(ctx) {
-  var div6;
-  var div0;
-  var article0;
-  var header;
-  var t0;
-  var div5;
-  var div4;
-  var div1;
-  var article1;
-  var h10;
-  var t2;
-  var p0;
-  var t3_value =
-  /*slevel*/
-  ctx[0].knowledge + "";
-  var t3;
-  var t4;
-  var div2;
-  var article2;
-  var h11;
-  var t6;
-  var p1;
-  var t7_value =
-  /*slevel*/
-  ctx[0].experience + "";
-  var t7;
-  var t8;
-  var div3;
-  var article3;
-  var h12;
-  var t10;
-  var p2;
-  var t11_value =
-  /*slevel*/
-  ctx[0].autonomy + "";
-  var t11;
-  var t12;
-  var current;
-  header = new _Pages_Shared_Header_Header_svelte__WEBPACK_IMPORTED_MODULE_4__["default"]({
-    props: {
-      header: {
-        title:
-        /*slevel*/
-        ctx[0].title,
-        subtitle: 'Level ' +
-        /*slevel*/
-        ctx[0].level,
-        isdefault: true
-      }
-    }
-  });
-  return {
-    c: function c() {
-      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      article0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("article");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(header.$$.fragment);
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      article1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("article");
-      h10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
-      h10.textContent = "Knowledge";
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      p0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
-      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t3_value);
-      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      article2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("article");
-      h11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
-      h11.textContent = "Experience";
-      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      p1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
-      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t7_value);
-      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      article3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("article");
-      h12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
-      h12.textContent = "Autonomy";
-      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      p2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
-      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t11_value);
-      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(article0, "class", "tile is-child notification has-background-info-light");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "tile is-3 m-1");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h10, "class", "title has-text-weight-light mb-0 is-size-5 has-text-info-dark");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(article1, "class", "tile is-child notification");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "tile");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h11, "class", "title has-text-weight-light mb-0 is-size-5 has-text-info-dark");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(article2, "class", "tile is-child notification");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "tile my-1");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h12, "class", "title has-text-weight-light mb-0 is-size-5 has-text-info-dark");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(article3, "class", "tile is-child notification");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "tile");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "tile is-vertical");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "tile m-1");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "tile");
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div6, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, div0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, article0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(header, article0, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, div5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, article1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article1, h10);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article1, t2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article1, p0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p0, t3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, article2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article2, h11);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article2, t6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article2, p1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p1, t7);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t8);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, article3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article3, h12);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article3, t10);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(article3, p2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p2, t11);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t12);
-      current = true;
-    },
-    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
-    i: function i(local) {
-      if (current) return;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(header.$$.fragment, local);
-      current = true;
-    },
-    o: function o(local) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(header.$$.fragment, local);
-      current = false;
-    },
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(header);
-    }
-  };
-} // (15:2) <Layout>
-
-
 function create_default_slot(ctx) {
   var section;
-  var header;
-  var t0;
-  var p0;
-  var t2;
-  var p1;
-  var t5;
-  var div1;
-  var div0;
+  var levelsinfo;
   var current;
-  header = new _Pages_Shared_Header_Header_svelte__WEBPACK_IMPORTED_MODULE_4__["default"]({
-    props: {
-      header: {
-        title: 'Skill Levels',
-        subtitle: 'Proficiency Level Definitions',
-        isdefault: true
-      }
-    }
-  });
-  var each_value = _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_2__.slevels;
-  var each_blocks = [];
-
-  for (var i = 0; i < each_value.length; i += 1) {
-    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
-  }
-
-  var out = function out(i) {
-    return (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(each_blocks[i], 1, 1, function () {
-      each_blocks[i] = null;
-    });
-  };
-
+  levelsinfo = new _Pages_Skill_LevelsInfo_svelte__WEBPACK_IMPORTED_MODULE_3__["default"]({});
   return {
     c: function c() {
       section = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(header.$$.fragment);
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      p0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
-      p0.textContent = "Proficiency Levels shown below can be used to identify skill/knowledge requirements for professions/titles/roles identified.";
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      p1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
-      p1.innerHTML = "The number of levels may depend upon the complexity of the process or an existing company approach. \n            <a href=\"https://www.sae.org/iaqg/projects/pcap001.pdf\">[See Ref]</a>";
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-
-      for (var _i = 0; _i < each_blocks.length; _i += 1) {
-        each_blocks[_i].c();
-      }
-
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p0, "class", "mb-3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p1, "class", "mb-3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "tile is-vertical");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "tile is-ancestor my-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(levelsinfo.$$.fragment);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section, "class", "section container");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, section, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(header, section, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, p0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, p1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
-
-      for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
-        each_blocks[_i2].m(div0, null);
-      }
-
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(levelsinfo, section, null);
       current = true;
-    },
-    p: function p(ctx, dirty) {
-      if (dirty &
-      /*slevels*/
-      0) {
-        each_value = _config_config_slevels_js__WEBPACK_IMPORTED_MODULE_2__.slevels;
-
-        var _i3;
-
-        for (_i3 = 0; _i3 < each_value.length; _i3 += 1) {
-          var child_ctx = get_each_context(ctx, each_value, _i3);
-
-          if (each_blocks[_i3]) {
-            each_blocks[_i3].p(child_ctx, dirty);
-
-            (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(each_blocks[_i3], 1);
-          } else {
-            each_blocks[_i3] = create_each_block(child_ctx);
-
-            each_blocks[_i3].c();
-
-            (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(each_blocks[_i3], 1);
-
-            each_blocks[_i3].m(div0, null);
-          }
-        }
-
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.group_outros)();
-
-        for (_i3 = each_value.length; _i3 < each_blocks.length; _i3 += 1) {
-          out(_i3);
-        }
-
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.check_outros)();
-      }
     },
     i: function i(local) {
       if (current) return;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(header.$$.fragment, local);
-
-      for (var _i4 = 0; _i4 < each_value.length; _i4 += 1) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(each_blocks[_i4]);
-      }
-
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(levelsinfo.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(header.$$.fragment, local);
-      each_blocks = each_blocks.filter(Boolean);
-
-      for (var _i5 = 0; _i5 < each_blocks.length; _i5 += 1) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(each_blocks[_i5]);
-      }
-
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(levelsinfo.$$.fragment, local);
       current = false;
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(header);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(levelsinfo);
     }
   };
 }
@@ -24480,7 +26121,7 @@ function create_fragment(ctx) {
   var layout;
   var current;
   document.title = title_value = "" + (_config_config_js__WEBPACK_IMPORTED_MODULE_1__.params.app.name + " - (Skill) Proficiency Level Definitions");
-  layout = new _Pages_Shared_Layout_svelte__WEBPACK_IMPORTED_MODULE_3__["default"]({
+  layout = new _Pages_Shared_Layout_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
     props: {
       $$slots: {
         "default": [create_default_slot]
@@ -24514,7 +26155,7 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*$$scope*/
-      8) {
+      1) {
         layout_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -25309,7 +26950,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SVGS": () => (/* binding */ SVGS)
 /* harmony export */ });
-var SVGS = {
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var SVGS = _defineProperty({
   home: '<path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>',
   user: '<path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/>',
   register: '<g><rect fill="none" height="24" width="24"/></g><g><path d="M20,9V6h-2v3h-3v2h3v3h2v-3h3V9H20z M9,12c2.21,0,4-1.79,4-4c0-2.21-1.79-4-4-4S5,5.79,5,8C5,10.21,6.79,12,9,12z M9,6 c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2S7,9.1,7,8C7,6.9,7.9,6,9,6z M15.39,14.56C13.71,13.7,11.53,13,9,13c-2.53,0-4.71,0.7-6.39,1.56 C1.61,15.07,1,16.1,1,17.22V20h16v-2.78C17,16.1,16.39,15.07,15.39,14.56z M15,18H3v-0.78c0-0.38,0.2-0.72,0.52-0.88 C4.71,15.73,6.63,15,9,15c2.37,0,4.29,0.73,5.48,1.34C14.8,16.5,15,16.84,15,17.22V18z"/></g>',
@@ -25352,7 +26995,7 @@ var SVGS = {
   toggle_off: '<path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>',
   save: '<path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm2 16H5V5h11.17L19 7.83V19zm-7-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zM6 6h9v4H6z"/>',
   live_help: '<path d="M19 2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h4l3 3 3-3h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 16h-4.83l-.59.59L12 20.17l-1.59-1.59-.58-.58H5V4h14v14zm-8-3h2v2h-2zm1-8c1.1 0 2 .9 2 2 0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4S8 6.79 8 9h2c0-1.1.9-2 2-2z"/>'
-};
+}, "info", '<path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>');
 
 /***/ }),
 
@@ -25734,7 +27377,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "pageprops": () => (/* binding */ pageprops),
 /* harmony export */   "categoryprops": () => (/* binding */ categoryprops),
 /* harmony export */   "formprops": () => (/* binding */ formprops),
-/* harmony export */   "diplomaOptions": () => (/* binding */ diplomaOptions)
+/* harmony export */   "diplomaOptions": () => (/* binding */ diplomaOptions),
+/* harmony export */   "professionCriteria": () => (/* binding */ professionCriteria)
 /* harmony export */ });
 var pageprops = {
   page: {
@@ -25817,6 +27461,16 @@ var diplomaOptions = [{
 }, {
   id: 2,
   title: "Nice to have"
+}];
+var professionCriteria = [{
+  id: 1,
+  title: "Preferred"
+}, {
+  id: 2,
+  title: "Second options"
+}, {
+  id: 3,
+  title: "subject to other criteria"
 }];
 
 /***/ }),
@@ -26052,38 +27706,37 @@ var slevels = [{
   title: "Basic",
   knowledge: "Adaquate Education",
   experience: 'No appropiate experience in this subject',
-  autonomy: 'Ability to perform basic routines under permanent supervision'
+  autonomy: 'Ability to perform basic routines under permanent supervision',
+  image: 'Beginner.svg'
 }, {
   level: 2,
   title: "Capable",
   knowledge: "Limited knowledge of the subject, its main processes, methods and tools",
   experience: 'Sufficient experience to deal with recurrent activity',
-  autonomy: 'Is capable to perform standard tasks under punctual supervision'
+  autonomy: 'Is capable to perform standard tasks under punctual supervision',
+  image: 'Capable.svg'
 }, {
   level: 3,
   title: "Proficient",
   knowledge: "Good level of knowledge in all aspects of the subject, all its processes and methods. Capable of explaining the application of processes.",
   experience: 'Has enough experience on the subject to also deal with unforeseen issues.',
-  autonomy: 'Is able to perform tasks autonomously within a predefined framework.'
+  autonomy: 'Is able to perform tasks autonomously within a predefined framework.',
+  image: 'Proficient.svg'
 }, {
   level: 4,
   title: "Specialist",
   knowledge: "High level of knowledge in all aspects of the subject, all its processes and methods and tools to assess and validate improvements. Ability to coach others on contents and methods in the context of their work\n place.",
   experience: 'Wide proven experience of the subject. Is recognized specialist within the field of expertise.',
-  autonomy: 'Capable of performing tasks in complex situations and leading changes or reengineering.'
+  autonomy: 'Capable of performing tasks in complex situations and leading changes or reengineering.',
+  image: 'Specialist.svg'
 }, {
   level: 5,
   title: "Expert",
   knowledge: "Extensive knowledge of the subject, both internal to their company and external. Contributes to set externally recognised standards. Ability to define contents and methods for using knowledge effectively in i\nnfluencing and developing international processes. Ability to influence the process with ones knowledge.",
   experience: 'Demonstrates world-class expertise, in recognised international organisations.',
-  autonomy: 'Capable of performing tasks in complex situations and leading changes industry-wide.'
+  autonomy: 'Capable of performing tasks in complex situations and leading changes industry-wide.',
+  image: 'Expert.svg'
 }];
-/* 
-const EDUCATION_NEED = [
-    ["level":1,"title":"Required","description":"This is a requirement"},
-    ["level":2,"title":"Preferred","description":"Nice to have but not a requirement"}
-};
- */
 
 /***/ }),
 
@@ -26127,6 +27780,7 @@ var map = {
 	"./Roles/Form.svelte": "./resources/js/Pages/Roles/Form.svelte",
 	"./Roles/Language.svelte": "./resources/js/Pages/Roles/Language.svelte",
 	"./Roles/List.svelte": "./resources/js/Pages/Roles/List.svelte",
+	"./Roles/Profession.svelte": "./resources/js/Pages/Roles/Profession.svelte",
 	"./Roles/Roles.svelte": "./resources/js/Pages/Roles/Roles.svelte",
 	"./Roles/SelectSkills.svelte": "./resources/js/Pages/Roles/SelectSkills.svelte",
 	"./Roles/Show.svelte": "./resources/js/Pages/Roles/Show.svelte",
@@ -26153,6 +27807,7 @@ var map = {
 	"./SimpleItem/Show.svelte": "./resources/js/Pages/SimpleItem/Show.svelte",
 	"./Skill/Form.svelte": "./resources/js/Pages/Skill/Form.svelte",
 	"./Skill/Index.svelte": "./resources/js/Pages/Skill/Index.svelte",
+	"./Skill/LevelsInfo.svelte": "./resources/js/Pages/Skill/LevelsInfo.svelte",
 	"./Skill/Show.svelte": "./resources/js/Pages/Skill/Show.svelte",
 	"./Skill/SkillLevels.svelte": "./resources/js/Pages/Skill/SkillLevels.svelte",
 	"./Skill/Skills.svelte": "./resources/js/Pages/Skill/Skills.svelte"

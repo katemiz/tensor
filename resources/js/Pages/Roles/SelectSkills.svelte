@@ -1,127 +1,115 @@
 <script>
-    import { params,gui } from '@/config/config.js'
-    import { slevels } from '@/config/config_slevels.js'
+  import { params,gui } from '@/config/config.js'
+  import { slevels } from '@/config/config_slevels.js'
 
-    import { flat } from "@/Pages/Shared/Functions/tree.js";
+  import { flat } from "@/Pages/Shared/Functions/tree.js";
 
-    import Tree from '@/Pages/Shared/Tree/Tree.svelte'
-    import Layout from '@/Pages/Shared/Layout.svelte'
-    import Header from '@/Pages/Shared/Header/Header.svelte'
-    import Icon from '@/Pages/Shared/Icon.svelte'
+  import Tree from '@/Pages/Shared/Tree/Tree.svelte'
+  import Layout from '@/Pages/Shared/Layout.svelte'
+  import Header from '@/Pages/Shared/Header/Header.svelte'
+  import LevelsInfo from '@/Pages/Skill/LevelsInfo.svelte'
 
-    import { Inertia } from '@inertiajs/inertia'
+  import Icon from '@/Pages/Shared/Icon.svelte'
 
-    import Swal from "sweetalert2"
+  import { Inertia } from '@inertiajs/inertia'
 
-    export let id
-    export let skilltree
-    export let roleSkills
+  import Swal from "sweetalert2"
 
-    let currentSkillIds = []
+  export let id
+  export let role
+  export let skilltree
+  export let roleSkills
 
-    roleSkills.forEach( el => {
-      currentSkillIds.push(parseInt(el.id))
+  let showModal = false
+  let currentSkillIds = []
+
+  roleSkills.forEach( el => {
+    currentSkillIds.push(parseInt(el.id))
+  })
+
+  let rawdata = flat(skilltree)
+
+  let requirements = []
+  let roleLevels = []
+
+  roleSkills.forEach(element => {
+    requirements[requirements.length] = rawdata.filter( el => el.id == element.id)[0]
+    roleLevels[element.id] = element.pivot.level
+  });
+
+  let selectedSkill
+
+  function nodeClick(event) {
+
+    // event.target.dataset.id is id of node clicked on tree
+    selectedSkill = rawdata.filter( el => el.id == event.target.dataset.id)[0]
+
+    if ( currentSkillIds.includes(parseInt(event.target.dataset.id)) ) {
+
+      Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'Clicked skill is alredy included',
+        showConfirmButton: false,
+        timer: 1000
+      })
+    } else {
+      requirements[requirements.length] = selectedSkill;
+      currentSkillIds.push(parseInt(event.target.dataset.id))
+    }
+  }
+
+  function addClick() {
+    alert("addClick clicked")
+  }
+
+
+  function removeSkill(deger) {
+
+    currentSkillIds = currentSkillIds.filter(function(e) { return e !== deger })
+    delete currentSkillIds[deger]
+    requirements = requirements.filter(function(e) { return e.id !== deger })
+  }
+
+
+  function saveSkills () {
+
+    let skills = []
+
+    roleLevels.forEach( (value,key) => {
+
+      if (value !== undefined && value !== null) {
+
+        if (value === 'NotSelected') {
+          value = null
+        }
+        skills.push({skill:key,level:value})
+      }
     })
 
-    let rawdata = flat(skilltree)
-
-    let requirements = []
-    let roleLevels = []
-
-    console.log("roleSkills ",roleSkills)
-
-    roleSkills.forEach(element => {
-
-      console.log("element ",element)
-
-      requirements[requirements.length] = rawdata.filter( el => el.id == element.id)[0]
-      roleLevels[element.id] = element.pivot.level
-    });
+    Inertia.post('/role-skill', {id:id,skills: skills},{
+      preserveState:false
+    })
+  }
 
 
-    console.log("roleLevels ",roleLevels)
+  function showInfo() {
+    showModal = !showModal
+  }
 
-    let selectedSkill
+  const treeprops = {
 
-    function nodeClick(event) {
+    titleColumn:"title_en",
+    expanded:false,
+    title:"Skill",
+    boxTitle:"My Tree",
+    home:"My First Node title",
+    filter_placeholder:"Search in tree ...",
 
-      // event.target.dataset.id is id of node clicked on tree
-      selectedSkill = rawdata.filter( el => el.id == event.target.dataset.id)[0]
-
-      if ( currentSkillIds.includes(parseInt(event.target.dataset.id)) ) {
-
-          Swal.fire({
-            position: 'center',
-            icon: 'warning',
-            title: 'Clicked skill is alredy included',
-            showConfirmButton: false,
-            timer: 1000
-          })
-      } else {
-        requirements[requirements.length] = selectedSkill;
-        currentSkillIds.push(parseInt(event.target.dataset.id))
-      }
+    commands:{
+      add:false
     }
-
-    function addClick() {
-      alert("addClick clicked")
-    }
-
-
-    function removeSkill(deger) {
-
-      currentSkillIds = currentSkillIds.filter(function(e) { return e !== deger })
-
-      delete currentSkillIds[deger]
-
-      requirements = requirements.filter(function(e) { return e.id !== deger })
-    }
-
-    function save () {
-
-      let skills = []
-
-      roleLevels.forEach( (value,key) => {
-
-        if (value !== undefined && value !== null) {
-
-          if (value === 'NotSelected') {
-            value = null
-          }
-          skills.push({skill:key,level:value})
-        }
-        console.log("****** ", key,value)
-      })
-
-      Inertia.post('/role-skill', {id:id,skills: skills},{
-        preserveState:false
-      })
-
-      //console.log("save roleSkills ",roleSkills)
-      console.log("save roleLevels ",roleLevels)
-
-
-
-
-
-    }
-
-
-    const treeprops = {
-
-      titleColumn:"title_en",
-      expanded:false,
-      title:"Skill",
-      boxTitle:"My Tree",
-      home:"My First Node title",
-      filter_placeholder:"Search in tree ...",
-
-      commands:{
-        add:false
-      }
-    }
-
-
+  }
 
 </script>
         
@@ -132,14 +120,68 @@
     
 <Layout>
 
+
+
   <section class="section container">
 
-      <Header header="{{ title:'Required Skills',subtitle:'Skill Level Requirements',isdefault:true }}" />
+
+
+    <div class="columns">
+
+      <div class="column">
+          <h1 class="title has-text-weight-light">{role.title_en}</h1>
+          <h2 class="subtitle">Professions</h2>
+      </div>
+
+      <div class="column is-4">
+
+          <div class="buttons is-pulled-right">
+              <button class="button is-small is-link is-light" on:click="{saveSkills}">
+                  <span class="icon is-small">
+                      <Icon name="save" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                  </span>
+                  <span>Save</span>
+              </button>
+
+              <a href="/roles/{id}" class="button is-small">
+                  <span class="icon is-small">
+                      <Icon name="cancel" size="{gui.icons.size}" color="danger"/>
+                  </span>
+                  <span>Cancel</span>
+              </a>
+          </div>
+
+      </div>   
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+      <Header header="{{ title:{role.title_en},subtitle:'Skills and Skill Levels',isdefault:true }}" />
 
       <div class="buttons is-pulled-right">
         <button class="button is-info" on:click="{save}">Save</button>
         <a href="/roles/{id}" class="button is-danger">Cancel</a>
-      </div>
+      </div> -->
 
       {#if requirements.length > 0}
 
@@ -148,8 +190,9 @@
         <thead>
           <tr>
             <th>&nbsp;</th>
-            <th>Required Skill</th>
-            <th>Required Skill Level</th>
+            <th>Skill</th>
+            <th>Skill Level</th>
+            <th>Guide</th>
           </tr>
         </thead>
 
@@ -174,7 +217,7 @@
                             <option value="0">Select ...</option>
     
                             {#each slevels as level}
-                                <option value="{level.level}">{level.level} - {level.title}</option>
+                                <option value="{level.level}">{level.title}</option>
                             {/each}
                         </select>
                     </div>
@@ -183,6 +226,16 @@
               </div>
               
             </td>
+
+            <td>
+              <span class="icon-text" on:click="{showInfo}">
+                  <span class="icon">
+                      <Icon name="info" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                  </span>
+                  <span class="has-text-link">Skill Levels</span>
+              </span> 
+            </td>
+
           </tr>
           {/each}
 
@@ -207,4 +260,30 @@
   
   </section>
 
+
+
+
+
 </Layout>
+
+
+
+
+
+
+
+
+
+<div class="modal" class:is-active="{showModal}">
+  <div class="modal-background" on:click="{showInfo}"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Skill Level Selection Guideline</p>
+      <button class="delete" aria-label="close" on:click="{showInfo}"></button>
+    </header>
+    <section class="modal-card-body">
+      <LevelsInfo />
+    </section>
+
+  </div>
+</div>

@@ -1,6 +1,6 @@
 <script>
     import { params,gui } from '@/config/config.js'
-    import { pageprops,formprops,diplomaOptions } from '@/config/config_roles.js'
+    import { pageprops,formprops,diplomaOptions,professionCriteria } from '@/config/config_roles.js'
     import { slevels } from '@/config/config_slevels.js'
     import { langlevels } from '@/config/config_langlevels.js'
     
@@ -12,11 +12,12 @@
     export let skills
     export let languages
     export let diplomas
+    export let professions
 
     export let notification
 
     console.log(item)
-    console.log(diplomas)
+    console.log(professions)
 
 </script>
 
@@ -47,7 +48,7 @@
 
         {#if item.desc_en.length > 0}
 
-        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">{formprops.editor_en.label}</h6>
+        <!-- <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">{formprops.editor_en.label}</h6> -->
 
         {@html item.desc_en}
 
@@ -56,7 +57,7 @@
         
         {#if item.desc_tr.length > 0}
 
-        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">{formprops.editor_tr.label}</h6>
+        <!-- <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">{formprops.editor_tr.label}</h6> -->
 
         {@html item.desc_tr}
 
@@ -115,8 +116,64 @@
 
 
         <!-- PROFESSION       -->
+        <div class="columns">
 
-        <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Profession Requirement</h6>
+            <div class="column">
+                <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Professions</h6>
+            </div>
+
+            <div class="column is-1 is-pulled-right">
+                <a href="/role-profession/{item.id}">
+                <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                </a>
+            </div>
+
+        </div>
+
+        {#if professions.length > 0}
+        <table class="table is-narrow is-fullwidth">
+
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>Profession</th>
+                <th class="has-text-right">Provision</th>
+            </tr>
+            </thead>
+
+            {#each professions as profession,key}
+            <tr>
+                <td>{key+1}</td>
+                <td>{profession.title}</td>
+
+                {#if parseInt(profession.pivot.provision) > 0 }
+                    <td class="has-text-right">{professionCriteria.filter(el => el.id === parseInt(profession.pivot.provision))[0].title}</td>
+                {:else}
+                    <td class="has-text-right">Not Set</td>
+                {/if}
+            </tr>
+            {/each}
+
+        </table>
+        {:else}
+
+            <div class="notification is-warning is-light">
+            No profession requirement for this role yet.
+            </div>
+
+        {/if}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

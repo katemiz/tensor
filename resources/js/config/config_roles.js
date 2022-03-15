@@ -107,3 +107,10 @@ export const diplomaOptions = [
   {id:1,title:"Required"},
   {id:2,title:"Nice to have"}
 ]
+
+
+export const professionCriteria = [
+  {id:1,title:"Preferred"},
+  {id:2,title:"Second options"},
+  {id:3,title:"subject to other criteria"}
+]

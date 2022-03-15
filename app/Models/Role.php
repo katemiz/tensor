@@ -28,6 +28,11 @@ class Role extends Model
         return $this->belongsToMany(Diploma::class)->withPivot('status', 'created_by')->withTimestamps();
     }
 
+    public function professions()
+    {
+        return $this->belongsToMany(Profession::class)->withPivot('provision', 'created_by')->withTimestamps();
+    }
+
     public static function processItem($row) {
 
         $row["category"] = Category::getItemById($row["category"]);

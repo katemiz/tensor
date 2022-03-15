@@ -11,6 +11,8 @@ use App\Models\Category;
 use App\Models\Skill;
 use App\Models\Language;
 use App\Models\Diploma;
+use App\Models\Profession;
+
 
 
 class RoleController extends Controller
@@ -106,6 +108,7 @@ class RoleController extends Controller
             "skills" => $role->skills()->get(),
             "languages" => $role->languages()->get(),
             "diplomas" =>  $role->diplomas()->get(),
+            "professions" =>  $role->professions()->get(),
         ]);
     }
 
@@ -179,8 +182,11 @@ class RoleController extends Controller
 
     public function getskills(Request $request)
     {
+        $role = Role::find($request->id);
+
         return Inertia::render('Roles/SelectSkills',[
             "id" => $request->id,
+            "role" =>  $role,
             "skilltree" =>  Skill::getTreeData(),
             "roleSkills" => Role::getItemById($request->id)->skills()->get()
         ]); 
@@ -279,6 +285,58 @@ class RoleController extends Controller
             ]
         ]);
     }
+
+
+
+    // PROFESSION
+    public function  getprofession(Request $request)
+    {
+        $role = Role::find($request->id);
+
+        return Inertia::render('Roles/Profession',[
+            "id" => $request->id,
+            "role" =>  $role,
+            "allprofessions" => Profession::orderBy("title")->get(),
+            "roleprofessions" =>  $role->professions()->get()
+        ]); 
+    }
+
+
+    public function  setprofession(Request $request)
+    {
+        $role = Role::find($request->id);
+        $role->professions()->detach();
+
+        foreach ($request->professions as $record) {
+            $role->professions()->attach($record["id"],['provision' => $record["provision"]]);
+        }
+
+        return Inertia::render('Roles/Show',[
+            "item" => $role,
+            "notification" => false,
+            "skills" => $role->skills()->get(),
+            "languages" =>  $role->languages()->get(),
+            "diplomas" =>  $role->diplomas()->get(),
+            "professions" =>  $role->professions()->get(),
+            "notification" =>  [
+                "type" =>'success',
+                "message" => 'Profession has been added successfully.'
+            ]
+        ]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 }
