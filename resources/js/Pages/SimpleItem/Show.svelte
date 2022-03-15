@@ -57,46 +57,91 @@
 
     <div class="section container">
 
-        <Header header="{{ title:pageprops.headers.show }}" />
+        <h1 class="title has-text-weight-light">{pageprops.headers.show}</h1>
+        <h2 class="subtitle">View Properties</h2>
 
         {#if notification}
             <Notification {notification} />
         {/if}
 
-        <div class="column has-text-right">
-            <Link href="/simpleitem/{pagetype}" class="navbar-item">
-              <Icon name="list" size="{gui.icons.size}" color="{gui.icons.color}"/> Back to List
-            </Link> 
-        </div>
 
+<!--         <div class="columns">
 
-        <div class="card">
-        
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-content">
-                        <p class="title is-4">{item.title}</p>
-                    </div>
-                </div>
-            
-                <div class="content">{@html item.remarks}</div>
+            <div class="column is-half">
+                <Link href="/simpleitem/{pagetype}" class="navbar-item">
+                    <Icon name="list" size="{gui.icons.size}" color="{gui.icons.color}"/> List All
+                </Link> 
             </div>
 
+            <div class="column">
+                <div class="is-pulled-right">
+                <Link href="/simpleitem-form/{pagetype}" class="navbar-item">
+                    <Icon name="add" size="{gui.icons.size}" color="{gui.icons.color}"/> {pageprops.addcommand.label}
+                </Link>
+                </div>
+            </div>
 
-            <footer class="card-footer">
+        </div>
+ -->
 
-                <a href="/simpleitem-form/{pagetype}/{item.id}" class="card-footer-item">
-                    <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>&nbsp;Edit
-                </a>
-                <a href="{"#"}" class="card-footer-item" on:click="{confirmDelete(item.id)}">
-                    <Icon name="delete" size="{gui.icons.size}" color="danger"/>&nbsp;Delete
-                </a>
+        <div class="columns mt-6">
 
-            </footer>
-            
+            <div class="column is-3">
+
+                <aside class="menu">
+                    <p class="menu-label">MENU</p>
+                    <ul class="menu-list">
+                      <li>
+                        <Link href="/simpleitem/{pagetype}" class="navbar-item">
+                            <!-- <Icon name="list" size="{gui.icons.size}" color="{gui.icons.color}"/> --> List All
+                        </Link> 
+                      </li>
+                      <li>
+                        <Link href="/simpleitem-form/{pagetype}" class="navbar-item">
+                            <!-- <Icon name="add" size="{gui.icons.size}" color="{gui.icons.color}"/> --> {pageprops.addcommand.label}
+                        </Link>
+                      </li>
+                    </ul>
+                </aside>
+
+            </div>
+
+            <div class="column">
+                
+                <div class="card">
+        
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">{item.title}</p>
+                            </div>
+                        </div>
+                    
+                        <div class="content">{@html item.remarks}</div>
+                    </div>
+        
+        
+                    <footer class="card-footer">
+        
+                        <a href="/simpleitem-form/{pagetype}/{item.id}" class="card-footer-item">
+                            <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>&nbsp;Edit
+                        </a>
+                        <a href="{"#"}" class="card-footer-item" on:click="{confirmDelete(item.id)}">
+                            <Icon name="delete" size="{gui.icons.size}" color="danger"/>&nbsp;Delete
+                        </a>
+        
+                    </footer>
+                    
+                </div>
+
+                <ItemInfo {item} />
+
+            </div>
+
         </div>
 
-        <ItemInfo {item} />
+
+
 
     </div>
 

@@ -29,7 +29,7 @@
 
     <section class="section container">
 
-        <div class="columns">
+        <!-- <div class="columns">
 
             <div class="column">
                 <h1 class="title has-text-weight-semibold">{item.title_en}</h1>
@@ -37,26 +37,34 @@
             </div>
 
             <div class="column is-1 is-pulled-right">
-
-                <span class="icon">
-                    <i class="fas fa-home"></i>
-                </span>
-
-                <a href="/role-docx/{item.id}">
-
-                    <figure class="image ">
-                        <img src="/icons/pdf.svg" alt="doc in pdf">
-                    </figure>
+                <a href="/roles/form/{item.id}">
+                <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
                 </a>
+            </div>
 
+        </div> -->
+
+
+        <h1 class="title has-text-weight-semibold">{item.title_en}</h1>
+        <h2 class="subtitle has-text-info">Summary</h2>
+
+        <Notification {notification} />
+
+
+        <!-- DESCRIPTION       -->
+        <div class="columns">
+
+            <div class="column">
+                <h6 class="subtitle is-size-6 my-4 has-text-grey-light">Description</h6>
+            </div>
+
+            <div class="column is-1 is-pulled-right">
                 <a href="/roles/form/{item.id}">
                 <Icon name="edit" size="{gui.icons.size}" color="{gui.icons.color}"/>
                 </a>
             </div>
 
         </div>
-
-        <Notification {notification} />
 
         {#if item.desc_en.length > 0}
             {@html item.desc_en}
@@ -72,7 +80,7 @@
         <div class="columns">
 
             <div class="column">
-                <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Diploma/Education Level</h6>
+                <h6 class="subtitle is-size-6 my-4 has-text-grey-light">Diploma/Education Level</h6>
             </div>
 
             <div class="column is-1 is-pulled-right">
@@ -123,7 +131,7 @@
         <div class="columns">
 
             <div class="column">
-                <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Professions</h6>
+                <h6 class="subtitle is-size-6 my-4 has-text-grey-light">Professions</h6>
             </div>
 
             <div class="column is-1 is-pulled-right">
@@ -168,18 +176,11 @@
         {/if}
 
 
-
-
-
-
-
-
-
         <!-- EXPERIENCE          -->
         <div class="columns">
 
             <div class="column">
-                <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Experience</h6>
+                <h6 class="subtitle is-size-6  my-4 has-text-grey-light">Experience</h6>
             </div>
 
             <div class="column is-1 is-pulled-right">
@@ -204,11 +205,10 @@
 
 
         <!-- SKILLS          -->
-
         <div class="columns">
 
             <div class="column">
-                <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Required Skills and Skill Levels</h6>
+                <h6 class="subtitle is-size-6 my-4 has-text-grey-light">Required Skills and Skill Levels</h6>
             </div>
 
             <div class="column is-1 is-pulled-right">
@@ -219,8 +219,6 @@
 
         </div>
 
-
-        
 
         {#if skills.length > 0}
         <table class="table is-narrow is-fullwidth">
@@ -257,10 +255,12 @@
         {/if}
 
 
+        <!-- LANGUAGE          -->
+
         <div class="columns">
 
             <div class="column">
-                <h6 class="subtitle is-size-6 my-3 has-text-danger-dark">Language Knowledge</h6>
+                <h6 class="subtitle is-size-6 my-4 has-text-grey-light">Language Knowledge</h6>
             </div>
 
             <div class="column is-1 is-pulled-right">
@@ -305,19 +305,6 @@
             </div>
 
         {/if}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

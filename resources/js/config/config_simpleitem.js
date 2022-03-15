@@ -41,14 +41,14 @@ export const sabitler = {
 
     diploma:{
         headers: {
-            general:"Education/Diploma",
-            list:"List of Education/Diploma Levels",
+            general:"Diploma/Education",
+            list:"List of Diploma/Education Levels",
             new:"New Education/Diploma",
-            show:"Education/Diploma Properties",
-            update:"Update Education/Diploma Properties"
+            show:"Diploma/Education Level",
+            update:"Update Diploma/Education Properties"
         },
         addcommand: {
-            label:"Add Education/Diploma"
+            label:"Add Diploma/Education"
         },
         filterbox:{
             placeholder:"Search in education/diploma ..."

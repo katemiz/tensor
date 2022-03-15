@@ -58,19 +58,12 @@
         if (item) {
 
             values.id = item.id
-
-            console.log("update",values)
-
             Inertia.put('/simpleitem-upsert/'+pagetype, values,{
                 onStart: () => {processing = true},
                 onFinish: () => {processing = false},
             })
 
         } else {
-
-            console.log("insert",values)
-
-
             Inertia.post('/simpleitem-upsert/'+pagetype, values,{
                 onStart: () => {processing = true},
                 onFinish: () => {processing = false},
@@ -94,7 +87,7 @@
     <Header header="{{ title:header }}" />
 
     <div class="column has-text-right">
-        <Link href="/profession" class="navbar-item">
+        <Link href="/simpleitem/{pagetype}" class="navbar-item">
           <Icon name="list" size="{gui.icons.size}" color="{gui.icons.color}"/> Back to List
         </Link> 
     </div>

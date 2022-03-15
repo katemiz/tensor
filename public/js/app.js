@@ -14004,7 +14004,7 @@ function get_each_context_3(ctx, list, i) {
   child_ctx[17] = list[i];
   child_ctx[12] = i;
   return child_ctx;
-} // (61:8) {#if item.desc_en.length > 0}
+} // (69:8) {#if item.desc_en.length > 0}
 
 
 function create_if_block_10(ctx) {
@@ -14035,7 +14035,7 @@ function create_if_block_10(ctx) {
       if (detaching) html_tag.d();
     }
   };
-} // (66:8) {#if item.desc_tr.length > 0}
+} // (74:8) {#if item.desc_tr.length > 0}
 
 
 function create_if_block_9(ctx) {
@@ -14066,7 +14066,7 @@ function create_if_block_9(ctx) {
       if (detaching) html_tag.d();
     }
   };
-} // (111:8) {:else}
+} // (119:8) {:else}
 
 
 function create_else_block_8(ctx) {
@@ -14085,7 +14085,7 @@ function create_else_block_8(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (86:8) {#if diplomas.length > 0}
+} // (94:8) {#if diplomas.length > 0}
 
 
 function create_if_block_7(ctx) {
@@ -14159,7 +14159,7 @@ function create_if_block_7(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
     }
   };
-} // (104:16) {:else}
+} // (112:16) {:else}
 
 
 function create_else_block_7(ctx) {
@@ -14178,7 +14178,7 @@ function create_else_block_7(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (102:16) {#if parseInt(diploma.pivot.status) > 0 }
+} // (110:16) {#if parseInt(diploma.pivot.status) > 0 }
 
 
 function create_if_block_8(ctx) {
@@ -14221,7 +14221,7 @@ function create_if_block_8(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (97:12) {#each diplomas as diploma,key}
+} // (105:12) {#each diplomas as diploma,key}
 
 
 function create_each_block_3(ctx) {
@@ -14301,7 +14301,7 @@ function create_each_block_3(ctx) {
       if_block.d();
     }
   };
-} // (162:8) {:else}
+} // (170:8) {:else}
 
 
 function create_else_block_6(ctx) {
@@ -14320,7 +14320,7 @@ function create_else_block_6(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (137:8) {#if professions.length > 0}
+} // (145:8) {#if professions.length > 0}
 
 
 function create_if_block_5(ctx) {
@@ -14394,7 +14394,7 @@ function create_if_block_5(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
     }
   };
-} // (155:16) {:else}
+} // (163:16) {:else}
 
 
 function create_else_block_5(ctx) {
@@ -14413,7 +14413,7 @@ function create_else_block_5(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (153:16) {#if parseInt(profession.pivot.provision) > 0 }
+} // (161:16) {#if parseInt(profession.pivot.provision) > 0 }
 
 
 function create_if_block_6(ctx) {
@@ -14456,7 +14456,7 @@ function create_if_block_6(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (148:12) {#each professions as profession,key}
+} // (156:12) {#each professions as profession,key}
 
 
 function create_each_block_2(ctx) {
@@ -14536,7 +14536,7 @@ function create_each_block_2(ctx) {
       if_block.d();
     }
   };
-} // (198:8) {:else}
+} // (199:8) {:else}
 
 
 function create_else_block_4(ctx) {
@@ -14555,7 +14555,7 @@ function create_else_block_4(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (194:8) {#if item.experience.length > 0}
+} // (195:8) {#if item.experience.length > 0}
 
 
 function create_if_block_4(ctx) {
@@ -14586,7 +14586,7 @@ function create_if_block_4(ctx) {
       if (detaching) html_tag.d();
     }
   };
-} // (251:8) {:else}
+} // (249:8) {:else}
 
 
 function create_else_block_3(ctx) {
@@ -14605,7 +14605,7 @@ function create_else_block_3(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (225:8) {#if skills.length > 0}
+} // (223:8) {#if skills.length > 0}
 
 
 function create_if_block_2(ctx) {
@@ -14679,7 +14679,7 @@ function create_if_block_2(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
     }
   };
-} // (243:16) {:else}
+} // (241:16) {:else}
 
 
 function create_else_block_2(ctx) {
@@ -14698,7 +14698,7 @@ function create_else_block_2(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (241:16) {#if skill.pivot.level >0 }
+} // (239:16) {#if skill.pivot.level >0 }
 
 
 function create_if_block_3(ctx) {
@@ -14755,7 +14755,7 @@ function create_if_block_3(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(td);
     }
   };
-} // (236:12) {#each skills as skill,key}
+} // (234:12) {#each skills as skill,key}
 
 
 function create_each_block_1(ctx) {
@@ -15079,8 +15079,6 @@ function create_each_block(ctx) {
 
 function create_default_slot(ctx) {
   var section;
-  var div2;
-  var div0;
   var h1;
   var t0_value =
   /*item*/
@@ -15089,18 +15087,15 @@ function create_default_slot(ctx) {
   var t1;
   var h2;
   var t3;
-  var div1;
-  var span;
-  var t4;
-  var a0;
-  var figure;
-  var a0_href_value;
-  var t5;
-  var a1;
-  var icon0;
-  var a1_href_value;
-  var t6;
   var notification_1;
+  var t4;
+  var div2;
+  var div0;
+  var t6;
+  var div1;
+  var a0;
+  var icon0;
+  var a0_href_value;
   var t7;
   var t8;
   var t9;
@@ -15108,59 +15103,59 @@ function create_default_slot(ctx) {
   var div3;
   var t11;
   var div4;
-  var a2;
+  var a1;
   var icon1;
-  var a2_href_value;
+  var a1_href_value;
   var t12;
   var t13;
   var div8;
   var div6;
   var t15;
   var div7;
-  var a3;
+  var a2;
   var icon2;
-  var a3_href_value;
+  var a2_href_value;
   var t16;
   var t17;
   var div11;
   var div9;
   var t19;
   var div10;
-  var a4;
+  var a3;
   var icon3;
-  var a4_href_value;
+  var a3_href_value;
   var t20;
   var t21;
   var div14;
   var div12;
   var t23;
   var div13;
-  var a5;
+  var a4;
   var icon4;
-  var a5_href_value;
+  var a4_href_value;
   var t24;
   var t25;
   var div17;
   var div15;
   var t27;
   var div16;
-  var a6;
+  var a5;
   var icon5;
-  var a6_href_value;
+  var a5_href_value;
   var t28;
   var current;
-  icon0 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_6__["default"]({
-    props: {
-      name: "edit",
-      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
-      color: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.color
-    }
-  });
   notification_1 = new _Pages_Shared_Notification_Notification_svelte__WEBPACK_IMPORTED_MODULE_7__["default"]({
     props: {
       notification:
       /*notification*/
       ctx[5]
+    }
+  });
+  icon0 = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_6__["default"]({
+    props: {
+      name: "edit",
+      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
+      color: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.color
     }
   });
   var if_block0 =
@@ -15257,26 +15252,21 @@ function create_default_slot(ctx) {
   return {
     c: function c() {
       section = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
-      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       h1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
       t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
       t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       h2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h2");
       h2.textContent = "Summary";
       t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      span = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
-      span.innerHTML = "<i class=\"fas fa-home\"></i>";
-      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      a0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      figure = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("figure");
-      figure.innerHTML = "<img src=\"/icons/pdf.svg\" alt=\"doc in pdf\"/>";
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon0.$$.fragment);
-      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(notification_1.$$.fragment);
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0.innerHTML = "<h6 class=\"subtitle is-size-6 my-4 has-text-grey-light\">Description</h6>";
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      a0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon0.$$.fragment);
       t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if (if_block0) if_block0.c();
       t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
@@ -15284,92 +15274,87 @@ function create_default_slot(ctx) {
       t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div3.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Diploma/Education Level</h6>";
+      div3.innerHTML = "<h6 class=\"subtitle is-size-6 my-4 has-text-grey-light\">Diploma/Education Level</h6>";
       t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      a2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon1.$$.fragment);
       t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if_block2.c();
       t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div6.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Professions</h6>";
+      div6.innerHTML = "<h6 class=\"subtitle is-size-6 my-4 has-text-grey-light\">Professions</h6>";
       t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      a3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon2.$$.fragment);
       t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if_block3.c();
       t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div9.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Experience</h6>";
+      div9.innerHTML = "<h6 class=\"subtitle is-size-6 my-4 has-text-grey-light\">Experience</h6>";
       t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      a4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon3.$$.fragment);
       t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if_block4.c();
       t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div12.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Required Skills and Skill Levels</h6>";
+      div12.innerHTML = "<h6 class=\"subtitle is-size-6 my-4 has-text-grey-light\">Required Skills and Skill Levels</h6>";
       t23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      a5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon4.$$.fragment);
       t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if_block5.c();
       t25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div15.innerHTML = "<h6 class=\"subtitle is-size-6 my-3 has-text-danger-dark\">Language Knowledge</h6>";
+      div15.innerHTML = "<h6 class=\"subtitle is-size-6 my-4 has-text-grey-light\">Language Knowledge</h6>";
       t27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      a6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon5.$$.fragment);
       t28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if_block6.c();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h1, "class", "title has-text-weight-semibold");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h2, "class", "subtitle has-text-info");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "column");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span, "class", "icon");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(figure, "class", "image ");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value = "/roles/form/" +
-      /*item*/
-      ctx[0].id);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value = "/roles/form/" +
       /*item*/
       ctx[0].id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "column is-1 is-pulled-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "columns");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "column");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value = "/role-diploma/" +
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value = "/role-diploma/" +
       /*item*/
       ctx[0].id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "column is-1 is-pulled-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "columns");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "column");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "href", a3_href_value = "/role-profession/" +
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value = "/role-profession/" +
       /*item*/
       ctx[0].id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "column is-1 is-pulled-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "columns");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "column");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", a4_href_value = "/role-experience/" +
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "href", a3_href_value = "/role-experience/" +
       /*item*/
       ctx[0].id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div10, "class", "column is-1 is-pulled-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div11, "class", "columns");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div12, "class", "column");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a5, "href", a5_href_value = "/role-skills/" +
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", a4_href_value = "/role-skills/" +
       /*item*/
       ctx[0].id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "column is-1 is-pulled-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div14, "class", "columns");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div15, "class", "column");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a6, "href", a6_href_value = "/role-language/" +
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a5, "href", a5_href_value = "/role-language/" +
       /*item*/
       ctx[0].id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div16, "class", "column is-1 is-pulled-right");
@@ -15378,23 +15363,19 @@ function create_default_slot(ctx) {
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, section, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, h1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h1, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, h2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(notification_1, section, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, div2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h1, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, t6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, span);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, a0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a0, figure);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, a1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon0, a1, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(notification_1, section, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon0, a0, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t7);
       if (if_block0) if_block0.m(section, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t8);
@@ -15404,8 +15385,8 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div3);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, a2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon1, a2, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, a1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon1, a1, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t12);
       if_block2.m(section, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t13);
@@ -15413,8 +15394,8 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t15);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div7);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, a3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon2, a3, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, a2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon2, a2, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t16);
       if_block3.m(section, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t17);
@@ -15422,8 +15403,8 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, div9);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, t19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, div10);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, a4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon3, a4, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, a3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon3, a3, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t20);
       if_block4.m(section, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t21);
@@ -15431,8 +15412,8 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, div12);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, t23);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, div13);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, a5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon4, a5, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, a4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon4, a4, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t24);
       if_block5.m(section, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t25);
@@ -15440,8 +15421,8 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, div15);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t27);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, div16);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, a6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon5, a6, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, a5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon5, a5, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, t28);
       if_block6.m(section, null);
       current = true;
@@ -15452,6 +15433,13 @@ function create_default_slot(ctx) {
       1) && t0_value !== (t0_value =
       /*item*/
       ctx[0].title_en + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      var notification_1_changes = {};
+      if (dirty &
+      /*notification*/
+      32) notification_1_changes.notification =
+      /*notification*/
+      ctx[5];
+      notification_1.$set(notification_1_changes);
 
       if (!current || dirty &
       /*item*/
@@ -15460,22 +15448,6 @@ function create_default_slot(ctx) {
       ctx[0].id)) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value);
       }
-
-      if (!current || dirty &
-      /*item*/
-      1 && a1_href_value !== (a1_href_value = "/roles/form/" +
-      /*item*/
-      ctx[0].id)) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value);
-      }
-
-      var notification_1_changes = {};
-      if (dirty &
-      /*notification*/
-      32) notification_1_changes.notification =
-      /*notification*/
-      ctx[5];
-      notification_1.$set(notification_1_changes);
 
       if (
       /*item*/
@@ -15509,10 +15481,10 @@ function create_default_slot(ctx) {
 
       if (!current || dirty &
       /*item*/
-      1 && a2_href_value !== (a2_href_value = "/role-diploma/" +
+      1 && a1_href_value !== (a1_href_value = "/role-diploma/" +
       /*item*/
       ctx[0].id)) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value);
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value);
       }
 
       if (current_block_type === (current_block_type = select_block_type(ctx, dirty)) && if_block2) {
@@ -15529,10 +15501,10 @@ function create_default_slot(ctx) {
 
       if (!current || dirty &
       /*item*/
-      1 && a3_href_value !== (a3_href_value = "/role-profession/" +
+      1 && a2_href_value !== (a2_href_value = "/role-profession/" +
       /*item*/
       ctx[0].id)) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "href", a3_href_value);
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value);
       }
 
       if (current_block_type_1 === (current_block_type_1 = select_block_type_2(ctx, dirty)) && if_block3) {
@@ -15549,10 +15521,10 @@ function create_default_slot(ctx) {
 
       if (!current || dirty &
       /*item*/
-      1 && a4_href_value !== (a4_href_value = "/role-experience/" +
+      1 && a3_href_value !== (a3_href_value = "/role-experience/" +
       /*item*/
       ctx[0].id)) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", a4_href_value);
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "href", a3_href_value);
       }
 
       if (current_block_type_2 === (current_block_type_2 = select_block_type_4(ctx, dirty)) && if_block4) {
@@ -15569,10 +15541,10 @@ function create_default_slot(ctx) {
 
       if (!current || dirty &
       /*item*/
-      1 && a5_href_value !== (a5_href_value = "/role-skills/" +
+      1 && a4_href_value !== (a4_href_value = "/role-skills/" +
       /*item*/
       ctx[0].id)) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a5, "href", a5_href_value);
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", a4_href_value);
       }
 
       if (current_block_type_3 === (current_block_type_3 = select_block_type_5(ctx, dirty)) && if_block5) {
@@ -15589,10 +15561,10 @@ function create_default_slot(ctx) {
 
       if (!current || dirty &
       /*item*/
-      1 && a6_href_value !== (a6_href_value = "/role-language/" +
+      1 && a5_href_value !== (a5_href_value = "/role-language/" +
       /*item*/
       ctx[0].id)) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a6, "href", a6_href_value);
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a5, "href", a5_href_value);
       }
 
       if (current_block_type_4 === (current_block_type_4 = select_block_type_7(ctx, dirty)) && if_block6) {
@@ -15609,8 +15581,8 @@ function create_default_slot(ctx) {
     },
     i: function i(local) {
       if (current) return;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon0.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(notification_1.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon0.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon2.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon3.$$.fragment, local);
@@ -15619,8 +15591,8 @@ function create_default_slot(ctx) {
       current = true;
     },
     o: function o(local) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon0.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(notification_1.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon0.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon2.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon3.$$.fragment, local);
@@ -15630,8 +15602,8 @@ function create_default_slot(ctx) {
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(notification_1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon0);
       if (if_block0) if_block0.d();
       if (if_block1) if_block1.d();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon1);
@@ -22587,7 +22559,7 @@ function create_default_slot_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (90:0) <Layout>
+} // (83:0) <Layout>
 
 
 function create_default_slot(ctx) {
@@ -22619,13 +22591,15 @@ function create_default_slot(ctx) {
       header: {
         title:
         /*header*/
-        ctx[4]
+        ctx[5]
       }
     }
   });
   link = new _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.Link({
     props: {
-      href: "/profession",
+      href: "/simpleitem/" +
+      /*pagetype*/
+      ctx[0],
       "class": "navbar-item",
       $$slots: {
         "default": [create_default_slot_1]
@@ -22639,12 +22613,12 @@ function create_default_slot(ctx) {
     props: {
       props:
       /*editorProps*/
-      ctx[0]
+      ctx[1]
     }
   });
   editorquill.$on("editordata",
   /*readContent*/
-  ctx[6]);
+  ctx[7]);
   return {
     c: function c() {
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -22659,7 +22633,7 @@ function create_default_slot(ctx) {
       label = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label.textContent = "".concat(
       /*pageprops*/
-      ctx[5].form.input.label);
+      ctx[6].form.input.label);
       t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       input = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
@@ -22670,7 +22644,7 @@ function create_default_slot(ctx) {
       button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(
       /*submitbutton*/
-      ctx[3]);
+      ctx[4]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "column has-text-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label, "class", "label");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label, "for", "titleid");
@@ -22678,14 +22652,14 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "type", "text");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "placeholder", input_placeholder_value =
       /*pageprops*/
-      ctx[5].form.input.placeholder);
+      ctx[6].form.input.placeholder);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "control");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "id", "titleid");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "field");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "button is-info");
       button.disabled =
       /*processing*/
-      ctx[2];
+      ctx[3];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "buttons is-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "box");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "class", "mx-4");
@@ -22707,7 +22681,7 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, input);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input,
       /*title*/
-      ctx[1]);
+      ctx[2]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(editorquill, div4, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t5);
@@ -22721,7 +22695,7 @@ function create_default_slot(ctx) {
         /*input_input_handler*/
         ctx[10]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*handleSubmit*/
-        ctx[7]))];
+        ctx[8]))];
         mounted = true;
       }
     },
@@ -22729,13 +22703,18 @@ function create_default_slot(ctx) {
       var header_1_changes = {};
       if (dirty &
       /*header*/
-      16) header_1_changes.header = {
+      32) header_1_changes.header = {
         title:
         /*header*/
-        ctx[4]
+        ctx[5]
       };
       header_1.$set(header_1_changes);
       var link_changes = {};
+      if (dirty &
+      /*pagetype*/
+      1) link_changes.href = "/simpleitem/" +
+      /*pagetype*/
+      ctx[0];
 
       if (dirty &
       /*$$scope*/
@@ -22750,33 +22729,33 @@ function create_default_slot(ctx) {
 
       if (dirty &
       /*title*/
-      2 && input.value !==
+      4 && input.value !==
       /*title*/
-      ctx[1]) {
+      ctx[2]) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input,
         /*title*/
-        ctx[1]);
+        ctx[2]);
       }
 
       var editorquill_changes = {};
       if (dirty &
       /*editorProps*/
-      1) editorquill_changes.props =
+      2) editorquill_changes.props =
       /*editorProps*/
-      ctx[0];
+      ctx[1];
       editorquill.$set(editorquill_changes);
       if (!current || dirty &
       /*submitbutton*/
-      8) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t6,
+      16) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t6,
       /*submitbutton*/
-      ctx[3]);
+      ctx[4]);
 
       if (!current || dirty &
       /*processing*/
-      4) {
+      8) {
         button.disabled =
         /*processing*/
-        ctx[2];
+        ctx[3];
       }
     },
     i: function i(local) {
@@ -22811,7 +22790,7 @@ function create_fragment(ctx) {
   var current;
   document.title = title_value = "" + (_config_config_js__WEBPACK_IMPORTED_MODULE_1__.params.app.name + " - " +
   /*header*/
-  ctx[4]);
+  ctx[5]);
   layout = new _Pages_Shared_Layout_svelte__WEBPACK_IMPORTED_MODULE_5__["default"]({
     props: {
       $$slots: {
@@ -22842,17 +22821,17 @@ function create_fragment(ctx) {
 
       if ((!current || dirty &
       /*params, header*/
-      16) && title_value !== (title_value = "" + (_config_config_js__WEBPACK_IMPORTED_MODULE_1__.params.app.name + " - " +
+      32) && title_value !== (title_value = "" + (_config_config_js__WEBPACK_IMPORTED_MODULE_1__.params.app.name + " - " +
       /*header*/
-      ctx[4]))) {
+      ctx[5]))) {
         document.title = title_value;
       }
 
       var layout_changes = {};
 
       if (dirty &
-      /*$$scope, processing, submitbutton, editorProps, title, header*/
-      4127) {
+      /*$$scope, processing, submitbutton, editorProps, title, pagetype, header*/
+      4159) {
         layout_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -22916,23 +22895,21 @@ function instance($$self, $$props, $$invalidate) {
 
     if (item) {
       values.id = item.id;
-      console.log("update", values);
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_4__.Inertia.put('/simpleitem-upsert/' + pagetype, values, {
         onStart: function onStart() {
-          $$invalidate(2, processing = true);
+          $$invalidate(3, processing = true);
         },
         onFinish: function onFinish() {
-          $$invalidate(2, processing = false);
+          $$invalidate(3, processing = false);
         }
       });
     } else {
-      console.log("insert", values);
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_4__.Inertia.post('/simpleitem-upsert/' + pagetype, values, {
         onStart: function onStart() {
-          $$invalidate(2, processing = true);
+          $$invalidate(3, processing = true);
         },
         onFinish: function onFinish() {
-          $$invalidate(2, processing = false);
+          $$invalidate(3, processing = false);
         }
       });
     }
@@ -22940,15 +22917,15 @@ function instance($$self, $$props, $$invalidate) {
 
   function input_input_handler() {
     title = this.value;
-    $$invalidate(1, title);
+    $$invalidate(2, title);
   }
 
   $$self.$$set = function ($$props) {
-    if ('pagetype' in $$props) $$invalidate(8, pagetype = $$props.pagetype);
+    if ('pagetype' in $$props) $$invalidate(0, pagetype = $$props.pagetype);
     if ('item' in $$props) $$invalidate(9, item = $$props.item);
   };
 
-  return [editorProps, title, processing, submitbutton, header, pageprops, readContent, handleSubmit, pagetype, item, input_input_handler];
+  return [pagetype, editorProps, title, processing, submitbutton, header, pageprops, readContent, handleSubmit, item, input_input_handler];
 }
 
 var Form = /*#__PURE__*/function (_SvelteComponent) {
@@ -22963,7 +22940,7 @@ var Form = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      pagetype: 8,
+      pagetype: 0,
       item: 9
     });
     return _this;
@@ -24297,42 +24274,39 @@ function create_if_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(notification_1, detaching);
     }
   };
-} // (67:12) <Link href="/simpleitem/{pagetype}" class="navbar-item">
+} // (95:24) <Link href="/simpleitem/{pagetype}" class="navbar-item">
+
+
+function create_default_slot_2(ctx) {
+  var t;
+  return {
+    c: function c() {
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("List All");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t, anchor);
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
+    }
+  };
+} // (100:24) <Link href="/simpleitem-form/{pagetype}" class="navbar-item">
 
 
 function create_default_slot_1(ctx) {
-  var icon;
+  var t_value =
+  /*pageprops*/
+  ctx[3].addcommand.label + "";
   var t;
-  var current;
-  icon = new _Pages_Shared_Icon_svelte__WEBPACK_IMPORTED_MODULE_6__["default"]({
-    props: {
-      name: "list",
-      size: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.size,
-      color: _config_config_js__WEBPACK_IMPORTED_MODULE_1__.gui.icons.color
-    }
-  });
   return {
     c: function c() {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon.$$.fragment);
-      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Back to List");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
     },
     m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon, target, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t, anchor);
-      current = true;
     },
     p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
-    i: function i(local) {
-      if (current) return;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon.$$.fragment, local);
-      current = true;
-    },
-    o: function o(local) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon.$$.fragment, local);
-      current = false;
-    },
     d: function d(detaching) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon, detaching);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
@@ -24340,58 +24314,75 @@ function create_default_slot_1(ctx) {
 
 
 function create_default_slot(ctx) {
-  var div6;
-  var header;
-  var t0;
+  var div8;
+  var h1;
   var t1;
+  var h2;
+  var t3;
+  var t4;
+  var div7;
   var div0;
-  var link;
-  var t2;
+  var aside;
+  var p0;
+  var t6;
+  var ul;
+  var li0;
+  var link0;
+  var t7;
+  var li1;
+  var link1;
+  var t8;
+  var div6;
   var div5;
   var div4;
   var div2;
   var div1;
-  var p;
-  var t3_value =
+  var p1;
+  var t9_value =
   /*item*/
   ctx[1].title + "";
-  var t3;
-  var t4;
+  var t9;
+  var t10;
   var div3;
   var raw_value =
   /*item*/
   ctx[1].remarks + "";
-  var t5;
+  var t11;
   var footer;
   var a0;
   var icon0;
-  var t6;
+  var t12;
   var a0_href_value;
-  var t7;
+  var t13;
   var a1;
   var icon1;
-  var t8;
+  var t14;
   var a1_href_value;
-  var t9;
+  var t15;
   var iteminfo;
   var current;
   var mounted;
   var dispose;
-  header = new _Pages_Shared_Header_Header_svelte__WEBPACK_IMPORTED_MODULE_7__["default"]({
-    props: {
-      header: {
-        title:
-        /*pageprops*/
-        ctx[3].headers.show
-      }
-    }
-  });
   var if_block =
   /*notification*/
   ctx[2] && create_if_block(ctx);
-  link = new _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.Link({
+  link0 = new _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.Link({
     props: {
       href: "/simpleitem/" +
+      /*pagetype*/
+      ctx[0],
+      "class": "navbar-item",
+      $$slots: {
+        "default": [create_default_slot_2]
+      },
+      $$scope: {
+        ctx: ctx
+      }
+    }
+  });
+  link1 = new _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.Link({
+    props: {
+      href: "/simpleitem-form/" +
       /*pagetype*/
       ctx[0],
       "class": "navbar-item",
@@ -24426,35 +24417,57 @@ function create_default_slot(ctx) {
   });
   return {
     c: function c() {
-      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(header.$$.fragment);
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      if (if_block) if_block.c();
+      div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      h1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
+      h1.textContent = "".concat(
+      /*pageprops*/
+      ctx[3].headers.show);
       t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h2");
+      h2.textContent = "View Properties";
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      if (if_block) if_block.c();
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(link.$$.fragment);
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      aside = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("aside");
+      p0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      p0.textContent = "MENU";
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      ul = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      li0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(link0.$$.fragment);
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(link1.$$.fragment);
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      p = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
-      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t3_value);
-      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t9_value);
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       footer = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("footer");
       a0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon0.$$.fragment);
-      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Edit");
-      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Edit");
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(icon1.$$.fragment);
-      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Delete");
-      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Delete");
+      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(iteminfo.$$.fragment);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "column has-text-right");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p, "class", "title is-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h1, "class", "title has-text-weight-light");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h2, "class", "subtitle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p0, "class", "menu-label");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul, "class", "menu-list");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(aside, "class", "menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "column is-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p1, "class", "title is-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "media-content");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "media");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "content");
@@ -24469,36 +24482,50 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "class", "card-footer-item");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(footer, "class", "card-footer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "card");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "section container");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "column");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "columns mt-6");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "section container");
     },
     m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div6, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(header, div6, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t0);
-      if (if_block) if_block.m(div6, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, div0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(link, div0, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div8, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, h1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, h2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t3);
+      if (if_block) if_block.m(div8, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, aside);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(aside, p0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(aside, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(aside, ul);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(link0, li0, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(link1, li1, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, div6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, div5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, p);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p, t3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, p1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p1, t9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t10);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div3);
       div3.innerHTML = raw_value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, footer);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(footer, a0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon0, a0, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a0, t6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(footer, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a0, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(footer, t13);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(footer, a1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(icon1, a1, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a1, t8);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a1, t14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t15);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(iteminfo, div6, null);
       current = true;
 
@@ -24535,7 +24562,7 @@ function create_default_slot(ctx) {
           if_block = create_if_block(ctx);
           if_block.c();
           (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(if_block, 1);
-          if_block.m(div6, t1);
+          if_block.m(div8, t4);
         }
       } else if (if_block) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.group_outros)();
@@ -24545,28 +24572,45 @@ function create_default_slot(ctx) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.check_outros)();
       }
 
-      var link_changes = {};
+      var link0_changes = {};
       if (dirty &
       /*pagetype*/
-      1) link_changes.href = "/simpleitem/" +
+      1) link0_changes.href = "/simpleitem/" +
       /*pagetype*/
       ctx[0];
 
       if (dirty &
       /*$$scope*/
       32) {
-        link_changes.$$scope = {
+        link0_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
         };
       }
 
-      link.$set(link_changes);
+      link0.$set(link0_changes);
+      var link1_changes = {};
+      if (dirty &
+      /*pagetype*/
+      1) link1_changes.href = "/simpleitem-form/" +
+      /*pagetype*/
+      ctx[0];
+
+      if (dirty &
+      /*$$scope*/
+      32) {
+        link1_changes.$$scope = {
+          dirty: dirty,
+          ctx: ctx
+        };
+      }
+
+      link1.$set(link1_changes);
       if ((!current || dirty &
       /*item*/
-      2) && t3_value !== (t3_value =
+      2) && t9_value !== (t9_value =
       /*item*/
-      ctx[1].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t3, t3_value);
+      ctx[1].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t9, t9_value);
       if ((!current || dirty &
       /*item*/
       2) && raw_value !== (raw_value =
@@ -24594,28 +24638,28 @@ function create_default_slot(ctx) {
     },
     i: function i(local) {
       if (current) return;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(header.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(if_block);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(link.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(link0.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(link1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon0.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(icon1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(iteminfo.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(header.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(if_block);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(link.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(link0.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(link1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon0.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(icon1.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(iteminfo.$$.fragment, local);
       current = false;
     },
     d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(header);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div8);
       if (if_block) if_block.d();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(link);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(link0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(link1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(iteminfo);
@@ -28033,14 +28077,14 @@ var sabitler = {
   },
   diploma: {
     headers: {
-      general: "Education/Diploma",
-      list: "List of Education/Diploma Levels",
+      general: "Diploma/Education",
+      list: "List of Diploma/Education Levels",
       "new": "New Education/Diploma",
-      show: "Education/Diploma Properties",
-      update: "Update Education/Diploma Properties"
+      show: "Diploma/Education Level",
+      update: "Update Diploma/Education Properties"
     },
     addcommand: {
-      label: "Add Education/Diploma"
+      label: "Add Diploma/Education"
     },
     filterbox: {
       placeholder: "Search in education/diploma ..."
