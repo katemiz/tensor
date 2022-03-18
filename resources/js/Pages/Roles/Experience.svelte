@@ -2,7 +2,7 @@
 
 <script>
     import {params,gui} from '@/config/config.js'
-    import {pageprops,formprops} from '@/config/config_roles.js'
+    import {formprops} from '@/config/config_roles.js'
 
     import Layout from '@/Pages/Shared/Layout.svelte'
     import EditorQuill from '@/Pages/Shared/Editor/EditorQuill.svelte'

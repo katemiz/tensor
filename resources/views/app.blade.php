@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     {{-- <link rel="icon" type="image/svg+xml" href="/images/{{ config('constants.COMPANY.LOGO'); }}" /> --}}
 
-    <link rel="icon" type="image/svg+xml" href="/images/tensor_favicon.svg" />
+    {{-- <link rel="icon" type="image/svg+xml" href="/images/tensor_favicon.svg" /> --}}
+
+    <link rel="icon" type="image/svg+xml" href="{{ config('constants.favicon') }}" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />

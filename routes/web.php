@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\EducationController;
-use App\Http\Controllers\ProfessionController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SimpleItemController;

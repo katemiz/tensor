@@ -28,8 +28,6 @@
         });
 
         professions = temp
-
-        console.log("professions,selected  ve temp ",professions,selected,temp)
     }
 
 
@@ -52,9 +50,6 @@
         temp.push({id:id,provision:null})
 
         professions = temp
-
-        console.log("ADD professions,selected  ve temp ",professions,selected,temp)
-
     }
 
 
