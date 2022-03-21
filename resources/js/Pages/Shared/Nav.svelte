@@ -108,8 +108,8 @@
 
 
             {:else}
-                <Link class="navbar-item" href="/aboutus"><Icon name="role" size="{iconSize}" color="{iconColor}"/>&nbsp;About Us</Link>
-                <Link class="navbar-item" href="/services"><Icon name="skill" size="{iconSize}" color="{iconColor}"/>&nbsp;Services</Link>
+                <Link class="navbar-item" href="/aboutus"><Icon name="people" size="{iconSize}" color="{iconColor}"/>&nbsp;Who Are We?</Link>
+                <Link class="navbar-item" href="/services"><Icon name="service" size="{iconSize}" color="{iconColor}"/>&nbsp;Services</Link>
             {/if}
 
         </div>

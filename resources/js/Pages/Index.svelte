@@ -7,26 +7,22 @@
   import Greet from '@/Pages/Components/Greet.svelte'
 
 
+  /* 
+    import Swal from "sweetalert2"
 
-  import Swal from "sweetalert2"
+    let urlparams = new URLSearchParams(window.location.search);
 
-let urlparams = new URLSearchParams(window.location.search);
+    if ( urlparams.get('logout') ) {
 
-if ( urlparams.get('logout') ) {
-
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Logout has been performed',
-        showConfirmButton: false,
-        timer: 1800
-    })
-} 
-
-
-
-
-
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Logout has been performed',
+            showConfirmButton: false,
+            timer: 1800
+        })
+    } 
+  */
 
 
 
@@ -40,8 +36,6 @@ if ( urlparams.get('logout') ) {
   <meta name="description" content="{params.app.description}" />
     
 </svelte:head>
-
-<h1>LOGIN DURUMUNDA</h1>
 
 
 <Layout>
