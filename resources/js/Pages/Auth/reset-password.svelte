@@ -1,31 +1,34 @@
 <script>
     import {params,gui} from '@/config/config.js'
-    import { Inertia } from '@inertiajs/inertia'
+    import { useForm } from '@inertiajs/inertia-svelte'
     import Icon from '@/Pages/Shared/Icon.svelte'
 
     export let errors = {}
-    export let status = false
+    export let request
 
-    let processing = false
+    let urlpath = window.location.pathname.split('/')
+    let token = urlpath[urlpath.length-1]
 
     let values = {
-        email:null,
         password:null,
+        password_confirmation:null,
     }
 
-    function handleSubmit() {
+    let form = useForm({
+        email:request.email,
+        password:null,
+        password_confirmation:null,
+        token:token
+    })
 
-        Inertia.post('/login', values,{
-            onStart: () => {processing = true},
-            onFinish: () => {processing = false},
-        })
+    let submit = () => {
+        $form.post('/reset-password',values)
     }
 
 </script>
 
 <svelte:head>
   <style>
-
     html {
         height:100%;
     }
@@ -35,7 +38,6 @@
     }
   </style>
 </svelte:head>
-
 
 <section class="section container is-max-desktop">
 
@@ -58,43 +60,40 @@
             <figure class="image"><img src="/images/{params.app.app_header_logo}" alt="deneme"></figure>
         </div>
 
-        {#if status}
-
-            <div class="notification is-primary is-light">
-            Your password has been successfully reset.
-            </div>
-
-        {/if}
-
-        <form on:submit|preventDefault={handleSubmit} class="mx-4">
+        <form on:submit|preventDefault={submit} class="mx-4">
 
             <!-- Email Address -->
             <div class="field">
 
-                <label class="label has-text-info has-text-weight-light" for="email">Email</label>
+                <label class="label has-text-weight-light" for="email">Email</label>
 
                 <div class="control has-icons-left has-icons-right">
 
-                    <input class="input" bind:value={values.email} type="email" placeholder="Enter email" required >
+                    <input class="input" bind:value={$form.email} type="email" placeholder="Enter email" required >
 
                     <span class="icon is-left">
                         <Icon name="mail" size="{gui.icons.size}" color="{gui.icons.color}"/>
                     </span>
 
-                    {#if errors.email}
-                        <p class="help is-danger">{errors.email}</p>
+                    {#if $form.errors.email}
+                        <p class="help is-danger">{$form.errors.email}</p>
                     {/if}
                 </div>
             </div>
 
+
+            <!-- Password Reset Token -->
+            <input type="hidden" name="token" bind:value="{$form.token}">
+
+
             <!-- Password -->
             <div class="field">
 
-                <label class="label has-text-info has-text-weight-light" for="password" >Password</label>
+                <label class="label has-text-weight-light" for="password">Password</label>
 
                 <div class="control has-icons-left has-icons-right">
 
-                    <input class="input" bind:value={values.password}  type="password" name="password" placeholder="Enter your password" required autocomplete="current-password">
+                    <input class="input" bind:value={$form.password} type="password" name="password" placeholder="Enter your password" autocomplete="current-password">
 
                     <span class="icon is-left">
                         <Icon name="password" size="{gui.icons.size}" color="{gui.icons.color}"/>
@@ -107,12 +106,32 @@
 
             </div>
 
-            <button class="button is-link my-6 is-fullwidth"  disabled={processing}>Login</button>
+            <!-- Confirmation Password -->
+            <div class="field">
+
+                <label class="label has-text-weight-light" for="password_confirmation">Confirm Password</label>
+
+                <div class="control has-icons-left has-icons-right">
+
+                    <input class="input" bind:value={$form.password_confirmation}  type="password" name="password_confirmation" placeholder="Enter your password (again)" autocomplete="current-password">
+
+                    <span class="icon is-left">
+                        <Icon name="password" size="{gui.icons.size}" color="{gui.icons.color}"/>
+                    </span>
+
+                    {#if errors.password_confirmation}
+                        <p class="help is-danger">{errors.password}</p>
+                    {/if}
+                </div>
+
+            </div>
+
+            <button class="button is-danger my-6 is-fullwidth">Reset My Password</button>
 
             <div class="columns">
                 <div class="column is-half">
                     <p class="is-size-6 has-text-weight-light my-3">
-                        <a href="/forgot-password">Forgot password?</a>
+                        <a href="/login">Login</a>
                     </p>
                 </div>
 

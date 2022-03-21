@@ -18,7 +18,6 @@
 
     function handleSubmit() {
         Inertia.post('/register', values,{
-
             onStart: () => {processing = true},
             onFinish: () => {processing = false},
         })
@@ -71,14 +70,14 @@
                     <!-- Name -->
                     <div class="field">
 
-                        <label class="label has-text-primary-dark" for="name">Name</label>
+                        <label class="label has-text-weight-light" for="name">Name</label>
 
                         <div class="control has-icons-left has-icons-right">
 
                             <input class="input" bind:value={values.name} type="text" placeholder="Enter your name">
 
                             <span class="icon is-left">
-                                <Icon name="user" size="{gui.icons.size}" color="{gui.icons.size}"/>
+                                <Icon name="user" size="{gui.icons.size}" color="{gui.icons.color}"/>
                             </span>
 
                             {#if errors.name}
@@ -94,7 +93,7 @@
                     <!-- Lastname -->
                     <div class="field">
 
-                        <label class="label has-text-primary-dark" for="lastname">Lastname</label>
+                        <label class="label has-text-weight-light" for="lastname">Lastname</label>
 
                         <div class="control has-icons-left has-icons-right">
 
@@ -117,7 +116,7 @@
             <!-- Email Address -->
             <div class="field">
 
-                <label class="label has-text-primary-dark" for="email">Email</label>
+                <label class="label has-text-weight-light" for="email">Email</label>
 
                 <div class="control has-icons-left has-icons-right">
 
@@ -140,7 +139,7 @@
                     <!-- Password -->
                     <div class="field">
 
-                        <label class="label has-text-primary-dark" for="password">Password</label>
+                        <label class="label has-text-weight-light" for="password">Password</label>
 
                         <div class="control has-icons-left has-icons-right">
 
@@ -162,7 +161,7 @@
                     <!-- Confirmation Password -->
                     <div class="field">
 
-                        <label class="label has-text-primary-dark" for="password">Confirm Password</label>
+                        <label class="label has-text-weight-light" for="password">Confirm Password</label>
 
                         <div class="control has-icons-left has-icons-right">
 
@@ -212,7 +211,7 @@
                 <img src="/images/{params.company.logo}" alt="Intro" width="24px">
             </div>
 
-            <div class="column has-text-right">{params.company.logo}</div>
+            <div class="column has-text-right">{params.company.name}</div>
 
         </div>
 

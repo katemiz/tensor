@@ -34,7 +34,12 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->route('dashboard');
+
+
+/*         dd(RouteServiceProvider::HOME);
+
+        return redirect()->intended(RouteServiceProvider::HOME); */
     }
 
     /**
@@ -46,21 +51,27 @@ class AuthenticatedSessionController extends Controller
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
-
+        
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('dashboard', ['logout' => 1]);
+        //return redirect()->route('homeguest');
 
-        // return redirect('/dashboard');
+        return redirect('/');
+
     }
 
-
+/* 
     public function greet() {
-
         return Inertia::render('Auth/GreetUser');
-
     }
+
+
+    public function goverify() {
+        return Inertia::render('Auth/EmailVerify');
+    }
+
+ */
 
 
 }

@@ -94,6 +94,22 @@
 
             </div>
 
+
+
+            <div class="navbar-item has-dropdown is-hoverable">
+
+                <p class="navbar-link" href="/Admin">About Us</p>
+                <div class="navbar-dropdown">
+
+                    <Link href="/aboutus" class="navbar-item">Who are we?</Link>
+                    <Link href="/services" class="navbar-item">Services we provide</Link>
+                </div>
+            </div>
+
+
+            {:else}
+                <Link class="navbar-item" href="/aboutus"><Icon name="role" size="{iconSize}" color="{iconColor}"/>&nbsp;About Us</Link>
+                <Link class="navbar-item" href="/services"><Icon name="skill" size="{iconSize}" color="{iconColor}"/>&nbsp;Services</Link>
             {/if}
 
         </div>

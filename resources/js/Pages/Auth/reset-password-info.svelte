@@ -1,10 +1,6 @@
 <script>
   import {params} from '@/config/config.js'
   import { inertia } from '@inertiajs/inertia-svelte'
-
-
-  export let user
-
 </script>
 
 <svelte:head>
@@ -20,16 +16,13 @@
   </style>
 </svelte:head>
 
-
 <section class="section container is-max-desktop">
 
     <div class="card">
 
         <div class="card-content">
-            <p class="title has-text-centered my-4">Wellcome</p>
-            <p class="subtitle has-text-centered my-4">{params.app.title}</p>
+            <p class="subtitle has-text-centered my-4">Password Reset Request</p>
         </div>
-
 
         <div class="columns is-mobile">
           <div class="column is-4 is-offset-4">
@@ -39,25 +32,19 @@
           </div>
         </div>
 
-
         <div class="card-content">
           <div class="content">
-            <p class="mb-4">Dear {user.fullname},</p>
-            <p>Your account has been successfully created.</p>
+
+            <p>We have sent you an email with a password reset <strong>link</strong> upon your request.</p>
+            <p>Password reset link will expire in 60 minutes.</p>
+
           </div>
         </div>
-
-<!--         <footer class="card-footer">
-          <Link href="/" class="card-footer-item" as="button" preserveScroll>Main Page</Link>
-          <Link href="/login" class="card-footer-item" as="button" preserveScroll>Login</Link>
-        </footer> -->
 
     </div>
 
     <div class="column has-text-centered">
-
-      <button use:inertia={{ method: 'post', href: '/email/verification-notification' }} class="button is-dark">Resend Verification Email</button>
-
-      </div>
+      <button use:inertia={{ method: 'get', href: '/login' }} class="button is-dark">Login Page</button>
+    </div>
 
 </section>

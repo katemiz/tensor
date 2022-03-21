@@ -56,7 +56,7 @@
             <!-- Email Address -->
             <div class="field">
 
-                <label class="label has-text-danger-dark" for="email">Email</label>
+                <label class="label has-text-weight-light" for="email">Email</label>
 
                 <div class="control has-icons-left has-icons-right">
 

@@ -19,21 +19,27 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Index');
+    return Inertia::render('IndexGuest',["logout"=>false]);
 });
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->name('dashboard');
-// ->middleware(['auth'])->name('dashboard');
+    return Inertia::render('Index');
+})->middleware(['auth','verified'])->name('dashboard');
+
+
+
+
+
+Route::get('/aboutus', function () {
+    return Inertia::render('AboutUs');
+});
+
+Route::get('/services', function () {
+    return Inertia::render('Services');
+});
+
 
 require __DIR__.'/auth.php';
-
-
-
-
-
-
 
 
 Route::middleware(['auth'])->group(function () {

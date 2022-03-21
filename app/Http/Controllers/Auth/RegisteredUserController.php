@@ -55,7 +55,7 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        return Inertia::render('Auth/GreetUser',[
+        return Inertia::render('Auth/EmailVerify',[
 
             "user" => [
                 "fullname" => $request->name.' '.$request->lastname,

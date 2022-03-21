@@ -6,6 +6,31 @@
   import Hero from '@/Pages/Components/Hero.svelte'
   import Greet from '@/Pages/Components/Greet.svelte'
 
+
+
+  import Swal from "sweetalert2"
+
+let urlparams = new URLSearchParams(window.location.search);
+
+if ( urlparams.get('logout') ) {
+
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Logout has been performed',
+        showConfirmButton: false,
+        timer: 1800
+    })
+} 
+
+
+
+
+
+
+
+
+
 </script>
 
 
@@ -16,10 +41,13 @@
     
 </svelte:head>
 
+<h1>LOGIN DURUMUNDA</h1>
+
 
 <Layout>
 
-  <Hero />
+  <!-- <Hero /> -->
+
 
   <Greet />
 

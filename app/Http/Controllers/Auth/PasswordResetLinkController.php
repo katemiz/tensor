@@ -44,8 +44,13 @@ class PasswordResetLinkController extends Controller
             $request->only('email')
         );
 
-        return $status == Password::RESET_LINK_SENT
+/*         return $status == Password::RESET_LINK_SENT
                     ? back()->with('status', __($status))
+                    : back()->withInput($request->only('email'))
+                            ->withErrors(['email' => __($status)]); */
+
+        return $status == Password::RESET_LINK_SENT
+                    ? Inertia::render('Auth/reset-password-info',['status' => $status])
                     : back()->withInput($request->only('email'))
                             ->withErrors(['email' => __($status)]);
     }

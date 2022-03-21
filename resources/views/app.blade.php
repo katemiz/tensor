@@ -6,7 +6,10 @@
 
     {{-- <link rel="icon" type="image/svg+xml" href="/images/tensor_favicon.svg" /> --}}
 
-    <link rel="icon" type="image/svg+xml" href="{{ config('constants.favicon') }}" />
+    {{-- <link rel="icon" type="image/svg+xml" href="{{ config('constants.favicon') }}" /> --}}
+
+    <link rel="icon" type="image/svg+xml" href="{{ asset('/images/tensor_favicon.svg') }}" />
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
