@@ -27,25 +27,11 @@
             <img src="/images/{params.app.app_header_logo}" alt="Skill Management Logo" width="112" height="28" >        
         </Link>
 
-
-        <!-- <a class="navbar-item has-text-white" href="/">
-            <img src="/images/{params.app.app_header_logo}" alt="Skill Management Logo" width="112" height="28" >
-        </a> -->
-
-<!--         <a role="button" onclick="BurgerMenu(this)" class="navbar-burger" data-target="navbar_ana" aria-label="menu" aria-expanded="false" id="nav-toggle">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a> -->
-
-
         <Link href="/" class="navbar-item has-text-white">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>      
         </Link>
-
-
 
     </div>
 
@@ -67,16 +53,9 @@
 
                 <div class="navbar-dropdown">
 
-                    <!-- <a class="navbar-item" href="/projects">Projects</a> -->
-                    <Link href="/projects" class="navbar-item">Projects</Link>
+                    <Link href="/simpleitem/project" class="navbar-item">Projects</Link>
 
                     <hr class="navbar-divider">
-
-                    <!-- <a class="navbar-item" href="/bcategory">Business Categories</a>
-                    <a class="navbar-item" href="/">Training Categories</a>
-                    <a class="navbar-item" href="/simpleitem/profession">Professions</a>
-                    <a class="navbar-item" href="/simpleitem/diploma">Diploma</a>
-                    <a class="navbar-item" href="/simpleitem/language">Language</a> -->
 
                     <Link href="/bcategory" class="navbar-item">Business Categories</Link>
                     <Link href="/" class="navbar-item">Training Categories</Link>
@@ -84,17 +63,13 @@
                     <Link href="/simpleitem/diploma" class="navbar-item">Diploma</Link>
                     <Link href="/simpleitem/language" class="navbar-item">Language</Link>
 
-
                     <hr class="navbar-divider">
-                    <!-- <a class="navbar-item" href="/slevels">Proficiency Levels</a> -->
 
                     <Link href="/slevels" class="navbar-item">Skill Levels</Link>
 
                 </div>
 
             </div>
-
-
 
             <div class="navbar-item has-dropdown is-hoverable">
 
@@ -105,7 +80,6 @@
                     <Link href="/services" class="navbar-item">Services we provide</Link>
                 </div>
             </div>
-
 
             {:else}
                 <Link class="navbar-item" href="/aboutus"><Icon name="people" size="{iconSize}" color="{iconColor}"/>&nbsp;Who Are We?</Link>

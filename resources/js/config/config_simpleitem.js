@@ -76,7 +76,6 @@ export const sabitler = {
         }
     },
 
-
     profession:{
         headers: {
             general:"Professions",
@@ -109,6 +108,43 @@ export const sabitler = {
             
                 update:{
                   label:"Update Profession"
+                }
+            }
+        }
+    },
+
+    project:{
+        headers: {
+            general:"Projects",
+            list:"List of Projects",
+            new:"New Project",
+            show:"Project Properties",
+            update:"Update Project Properties"
+        },
+        addcommand: {
+            label:"Add Project"
+        },
+        filterbox:{
+            placeholder:"Search in project ..."
+        },
+        form:{
+            input:{
+                label:"Project Description/Title",
+                placeholder:"eg. Wonderful Company Upper Management Project"
+            },
+            textarea:{
+                id:"edProject",
+                label:"Remarks/notes",
+                placeholder:"",
+                content:''
+            },
+            submit :{
+                new :{
+                  label:"Create Project"
+                },
+            
+                update:{
+                  label:"Update Project"
                 }
             }
         }

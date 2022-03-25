@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Config;
 use App\Models\Language;
 use App\Models\Diploma;
 use App\Models\Profession;
+use App\Models\Project;
+
 
 class SimpleItemController extends Controller
 {
@@ -94,10 +96,28 @@ class SimpleItemController extends Controller
                     ->withQueryString();
         }
 
+        if ($request->type == 'project') {
+
+            $getdata = Project::query()
+                    ->orderBy($sortcolumn,$sortorder)
+                    ->when($params,function($query,$params) {
+
+                        if (isset($params['search']) && !empty($params['search'])) {
+                            $query->where('title','like','%'.$params['search'].'%');
+                        }
+            
+                        if (isset($params['userid']) && !empty($params['userid'])) {
+                            $query->where('created_by','=',$params['userid']);
+                        }
+                    })
+                    ->paginate(Config::get('constants.table.no_of_results'))
+                    ->through(fn($item) =>Project::processItem($item))
+                    ->withQueryString();
+        }
+
+
         return $getdata;
     }
-
-
 
 
 
@@ -110,6 +130,7 @@ class SimpleItemController extends Controller
             "notification" => false
         ]);
     }
+
 
 
     public function form(Request $request)
@@ -126,6 +147,10 @@ class SimpleItemController extends Controller
 
             if ($request->type == 'profession') {
                 $item = Profession::find($request->id);
+            }
+
+            if ($request->type == 'project') {
+                $item = Project::find($request->id);
             }
 
         } else {
@@ -188,6 +213,21 @@ class SimpleItemController extends Controller
             $msg = 'New profession requirements has been created successfully.';
         }
 
+
+        if ($request->type == 'project') {
+
+            // Add new record
+            Project::create([
+                'title' => ucfirst($attributes['title']),
+                'remarks' => $request['remarks']['html'],
+                'remarks_text' => $request['remarks']['text']
+            ]);
+
+            $item = Project::getLatestItem();
+            $msg = 'New project has been created successfully.';
+        }
+
+
         return Inertia::render('SimpleItem/Show',[
             "pagetype" => $request->type,
             "item" => $item,
@@ -234,6 +274,13 @@ class SimpleItemController extends Controller
             $msg = 'Profession has been updated successfully.';
         }
 
+        if ($request->type == 'project') {
+            // Update record
+            Project::find($attributes['id'])->update($params);
+            $item = Project::getItemById($attributes['id']);
+            $msg = 'Project has been updated successfully.';
+        }
+
         return Inertia::render('SimpleItem/Show',[
             "pagetype" => $request->type,
             "item" => $item,
@@ -243,8 +290,6 @@ class SimpleItemController extends Controller
             ]
         ]); 
     }
-
-
 
 
 
@@ -260,6 +305,10 @@ class SimpleItemController extends Controller
 
         if ($request->type == 'profession') {
             $item = Profession::getItemById($request->id);
+        }
+
+        if ($request->type == 'project') {
+            $item = Project::getItemById($request->id);
         }
 
         return Inertia::render('SimpleItem/Show',[
@@ -289,6 +338,11 @@ class SimpleItemController extends Controller
                 Profession::find($request->id)->delete();
                 $msg = 'Profession has been deleted successfully.';
             }
+
+            if ($request->type == 'project') {
+                Project::find($request->id)->delete();
+                $msg = 'Project has been deleted successfully.';
+            }
         }
 
         return Inertia::render('SimpleItem/List',[
@@ -301,8 +355,5 @@ class SimpleItemController extends Controller
             ]
         ]);
     }
-
-
-
 
 }

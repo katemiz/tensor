@@ -19579,7 +19579,7 @@ function create_default_slot_21(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(img);
     }
   };
-} // (42:8) <Link href="/" class="navbar-item has-text-white">
+} // (30:8) <Link href="/" class="navbar-item has-text-white">
 
 
 function create_default_slot_20(ctx) {
@@ -19614,7 +19614,7 @@ function create_default_slot_20(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span2);
     }
   };
-} // (110:12) {:else}
+} // (84:12) {:else}
 
 
 function create_else_block_1(ctx) {
@@ -19701,7 +19701,7 @@ function create_else_block_1(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(link1, detaching);
     }
   };
-} // (56:12) {#if user }
+} // (42:12) {#if user }
 
 
 function create_if_block_1(ctx) {
@@ -19807,7 +19807,7 @@ function create_if_block_1(ctx) {
   });
   link5 = new _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.Link({
     props: {
-      href: "/projects",
+      href: "/simpleitem/project",
       "class": "navbar-item",
       $$slots: {
         "default": [create_default_slot_12]
@@ -20239,7 +20239,7 @@ function create_if_block_1(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(link13);
     }
   };
-} // (111:16) <Link class="navbar-item" href="/aboutus">
+} // (85:16) <Link class="navbar-item" href="/aboutus">
 
 
 function create_default_slot_19(ctx) {
@@ -20278,7 +20278,7 @@ function create_default_slot_19(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (112:16) <Link class="navbar-item" href="/services">
+} // (86:16) <Link class="navbar-item" href="/services">
 
 
 function create_default_slot_18(ctx) {
@@ -20317,7 +20317,7 @@ function create_default_slot_18(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (58:12) <Link class="navbar-item" href="/">
+} // (44:12) <Link class="navbar-item" href="/">
 
 
 function create_default_slot_17(ctx) {
@@ -20352,7 +20352,7 @@ function create_default_slot_17(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(icon, detaching);
     }
   };
-} // (59:12) <Link class="navbar-item" href="/roles">
+} // (45:12) <Link class="navbar-item" href="/roles">
 
 
 function create_default_slot_16(ctx) {
@@ -20391,7 +20391,7 @@ function create_default_slot_16(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (60:12) <Link class="navbar-item" href="/skills">
+} // (46:12) <Link class="navbar-item" href="/skills">
 
 
 function create_default_slot_15(ctx) {
@@ -20430,7 +20430,7 @@ function create_default_slot_15(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (61:12) <Link class="navbar-item" href="/">
+} // (47:12) <Link class="navbar-item" href="/">
 
 
 function create_default_slot_14(ctx) {
@@ -20469,7 +20469,7 @@ function create_default_slot_14(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (62:12) <Link class="navbar-item" href="/">
+} // (48:12) <Link class="navbar-item" href="/">
 
 
 function create_default_slot_13(ctx) {
@@ -20508,7 +20508,7 @@ function create_default_slot_13(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (71:20) <Link href="/projects" class="navbar-item">
+} // (56:20) <Link href="/simpleitem/project" class="navbar-item">
 
 
 function create_default_slot_12(ctx) {
@@ -20524,7 +20524,7 @@ function create_default_slot_12(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (81:20) <Link href="/bcategory" class="navbar-item">
+} // (60:20) <Link href="/bcategory" class="navbar-item">
 
 
 function create_default_slot_11(ctx) {
@@ -20540,7 +20540,7 @@ function create_default_slot_11(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (82:20) <Link href="/" class="navbar-item">
+} // (61:20) <Link href="/" class="navbar-item">
 
 
 function create_default_slot_10(ctx) {
@@ -20556,7 +20556,7 @@ function create_default_slot_10(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (83:20) <Link href="/simpleitem/profession" class="navbar-item">
+} // (62:20) <Link href="/simpleitem/profession" class="navbar-item">
 
 
 function create_default_slot_9(ctx) {
@@ -20572,7 +20572,7 @@ function create_default_slot_9(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (84:20) <Link href="/simpleitem/diploma" class="navbar-item">
+} // (63:20) <Link href="/simpleitem/diploma" class="navbar-item">
 
 
 function create_default_slot_8(ctx) {
@@ -20588,7 +20588,7 @@ function create_default_slot_8(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (85:20) <Link href="/simpleitem/language" class="navbar-item">
+} // (64:20) <Link href="/simpleitem/language" class="navbar-item">
 
 
 function create_default_slot_7(ctx) {
@@ -20604,7 +20604,7 @@ function create_default_slot_7(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (91:20) <Link href="/slevels" class="navbar-item">
+} // (68:20) <Link href="/slevels" class="navbar-item">
 
 
 function create_default_slot_6(ctx) {
@@ -20620,7 +20620,7 @@ function create_default_slot_6(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (104:20) <Link href="/aboutus" class="navbar-item">
+} // (79:20) <Link href="/aboutus" class="navbar-item">
 
 
 function create_default_slot_5(ctx) {
@@ -20636,7 +20636,7 @@ function create_default_slot_5(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (105:20) <Link href="/services" class="navbar-item">
+} // (80:20) <Link href="/services" class="navbar-item">
 
 
 function create_default_slot_4(ctx) {
@@ -20652,7 +20652,7 @@ function create_default_slot_4(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (140:16) {:else}
+} // (114:16) {:else}
 
 
 function create_else_block(ctx) {
@@ -20743,7 +20743,7 @@ function create_else_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(link1, detaching);
     }
   };
-} // (123:16) {#if user}
+} // (97:16) {#if user}
 
 
 function create_if_block(ctx) {
@@ -20905,7 +20905,7 @@ function create_if_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(link1);
     }
   };
-} // (142:20) <Link href="/login" class="button is-ghost" as="button" preserveScroll>
+} // (116:20) <Link href="/login" class="button is-ghost" as="button" preserveScroll>
 
 
 function create_default_slot_3(ctx) {
@@ -20944,7 +20944,7 @@ function create_default_slot_3(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (146:20) <Link href="/register" class="button is-ghost" as="button" preserveScroll>
+} // (120:20) <Link href="/register" class="button is-ghost" as="button" preserveScroll>
 
 
 function create_default_slot_2(ctx) {
@@ -20983,7 +20983,7 @@ function create_default_slot_2(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (134:28) <Link href="/projects" class="navbar-item">
+} // (108:28) <Link href="/projects" class="navbar-item">
 
 
 function create_default_slot_1(ctx) {
@@ -20999,7 +20999,7 @@ function create_default_slot_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
     }
   };
-} // (135:28) <Link href="/logout" class="navbar-item" method="post">
+} // (109:28) <Link href="/logout" class="navbar-item" method="post">
 
 
 function create_default_slot(ctx) {
@@ -31289,6 +31289,41 @@ var sabitler = {
         },
         update: {
           label: "Update Profession"
+        }
+      }
+    }
+  },
+  project: {
+    headers: {
+      general: "Projects",
+      list: "List of Projects",
+      "new": "New Project",
+      show: "Project Properties",
+      update: "Update Project Properties"
+    },
+    addcommand: {
+      label: "Add Project"
+    },
+    filterbox: {
+      placeholder: "Search in project ..."
+    },
+    form: {
+      input: {
+        label: "Project Description/Title",
+        placeholder: "eg. Wonderful Company Upper Management Project"
+      },
+      textarea: {
+        id: "edProject",
+        label: "Remarks/notes",
+        placeholder: "",
+        content: ''
+      },
+      submit: {
+        "new": {
+          label: "Create Project"
+        },
+        update: {
+          label: "Update Project"
         }
       }
     }
