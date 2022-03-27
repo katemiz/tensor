@@ -40,18 +40,14 @@
 <section class="section container is-max-desktop">
 
     <div class="column is-half is-offset-one-quarter">
-        <nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
-            <ul>
-                <li id="tr">
-                    <a href="xx" aria-current="page">TR</a>
-                </li>
-                <li id="en">
-                    <a href="xx" aria-current="page">EN</a>
-                </li>
-            </ul>
-        </nav>
+
+        <a href="{params.company.link}">
+            <img src="/images/{params.company.logo}" alt="Intro" width="24px">
+        </a>
+
     </div>
 
+    
     <div class="column is-half is-offset-one-quarter has-background-white">
 
         <div class="column is-offset-3 is-offset-4-mobile is-6 is-4-mobile my-6">
@@ -128,18 +124,8 @@
     </div>
 
 
-    <div class="column is-half is-offset-one-quarter">
-
-        <div class="columns is-vcentered">
-
-            <div class="column">
-                <img src="/images/{params.company.logo}" alt="Intro" width="24px">
-            </div>
-
-            <div class="column has-text-right">{params.company.name}</div>
-
-        </div>
-
+    <div class="column is-half is-offset-one-quarter has-text-right">
+        <a href="{params.company.link}">{params.company.name}</a>
     </div>
 
 </section>

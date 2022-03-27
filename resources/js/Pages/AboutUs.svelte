@@ -1,7 +1,7 @@
 <script>
-  import {params} from '@/config/config.js'
+  import {params,gui} from '@/config/config.js'
   import Layout from '@/Pages/Shared/Layout.svelte'
-
+  import Icon from '@/Pages/Shared/Icon.svelte'
 
   let kurucular = [
     {
@@ -9,7 +9,23 @@
       image:"csenyilmaz.jpg",
       email:"cmsnylmz@gmail.com",
       profession:"Mechanical Engineer",
-      linkedin:"",
+
+      links:[
+        {
+          name:"linkedin",
+          link:"https://www.linkedin.com/in/k%C4%B1l%C4%B1%C3%A7-ali-temiz-134a1262/"
+        },
+        {
+          name:"twitter",
+          link:'https://twitter.com/katemiz1'
+        },
+        {
+          name:'github',
+          link:'https://github.com/katemiz'
+        }
+      ],
+
+
       cv:"has more than 30 years of expertise in various areas in aerospace industry. ",
       areas:[
         "Manufacturing Engineering/Planning",
@@ -39,7 +55,24 @@
       image:"katemiz.jpg",
       email:"katemiz@gmail.com",
       profession:"Mechanical Engineer",
-      linkedin:"",
+
+      links:[
+        {
+          name:"linkedin",
+          link:"https://www.linkedin.com/in/k%C4%B1l%C4%B1%C3%A7-ali-temiz-134a1262/"
+        },
+        {
+          name:"twitter",
+          link:'https://twitter.com/katemiz1'
+        },
+        {
+          name:'github',
+          link:'https://github.com/katemiz'
+        }
+      ],
+
+
+
       cv:"has more than 30 years of expertise in various areas in aerospace industry. ",
       areas:[
         "Manufacturing Engineering/Planning",
@@ -144,11 +177,22 @@
             </div>
         
             <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-              <a href="#">#css</a> <a href="#">#responsive</a>
-              <br>
-              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+
+
+              <p class="buttons">
+
+              {#each kurucu.links as link}
+
+              <a href="{link.link}">
+
+                <Icon name="{link.name}" size="{gui.icons.size}" color="{gui.icons.color}"/>
+
+              </a>
+
+              {/each}
+
+              </p>
+
             </div>
           </div>
         </div>
